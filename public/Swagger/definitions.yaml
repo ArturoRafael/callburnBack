@@ -1,0 +1,157 @@
+components:
+  responses:
+    UnprocessableEntity:
+      description: Unprocessable Entity
+    InternalServerError:
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Unauthorized:
+      description: Unauthorized
+    Success:
+      description: Success
+    NotFound:
+      description: Not Found
+    SignUp:
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/components/schemas/User' 
+    AuthToken:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AuthToken'   
+    UserUpdated:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/User'    
+  schemas:
+    Error:
+      type: object
+      properties:
+        message:
+          type: string
+        errors:
+          type: string
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Id of the user
+        name:
+          type: string
+          description: Name of the user
+        email:
+          type: string
+          description: Email of the user
+    AuthToken:
+      type: object
+      properties:
+        access_token:
+          type: string
+          description: Token
+        token_type:
+          type: string
+          description: Type of the token
+        expires_at:
+          type: string
+          format: date-time
+          description: Token expiration date
+  parameters:
+    id:
+      name: id
+      in: query
+      required: true
+      schema:
+        type: integer
+      description: Unique identifier of the entity
+    username:
+      name: name
+      in: query
+      required: true
+      schema:
+        type: string
+      description: User name
+    email:
+      name: email
+      in: query
+      required: true
+      schema:
+        type: string
+      description: User email 
+    password:
+      name: password
+      in: query
+      required: true
+      schema:
+        type: string
+      description: User password
+    password_confirmation:
+      name: password_confirmation
+      in: query
+      required: true
+      schema:
+        type: string
+      description: User confirmation passwordconfirmation 
+    remember_me:
+      name: remember_me
+      in: query
+      required: true
+      schema:
+        type: integer
+        minimum: 0
+        maximum: 1
+      description: Flag of remember password
+    token:
+      name: token
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Verification Token
+    token_query:
+      name: token
+      in: query
+      required: true
+      schema:
+        type: string
+      description: Verification Token
+    redirect_url:
+      name: redirect_url
+      in: query
+      required: true
+      schema:
+        type: string
+      description: URL of the link to which the token will be added in the email to reset password
+    id_path:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+      description: Unique identifier of the entity
+    name:
+      name: name
+      in: query
+      required: true
+      schema:
+        type: string
+      description: Entity name
+    language:
+      name: language
+      in: query
+      required: true
+      schema:
+        type: string
+      description: Code lenguage

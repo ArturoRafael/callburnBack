@@ -1,0 +1,112 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Callburn API",
+        "description": "Callburn API OpenApi description",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://127.0.0.1:8000",
+            "description": "L5 Swagger OpenApi server"
+        }
+    ],
+    "paths": {
+        "/api/auth/postRegistration": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Send registration eail to the user and create basic account",
+                "operationId": "postRegistration",
+                "parameters": [
+                    {
+                        "$ref": "../Swagger/definitions.yaml#/components/parameters/email"
+                    },
+                    {
+                        "$ref": "../Swagger/definitions.yaml#/components/parameters/language"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "$ref": "../Swagger/definitions.yaml#/components/responses/AuthToken"
+                    },
+                    "401": {
+                        "$ref": "../Swagger/definitions.yaml#/components/responses/Unauthorized"
+                    },
+                    "422": {
+                        "$ref": "../Swagger/definitions.yaml#/components/responses/UnprocessableEntity"
+                    },
+                    "500": {
+                        "$ref": "../Swagger/definitions.yaml#/components/responses/InternalServerError"
+                    }
+                }
+            }
+        },
+        "/api/auth/postLogin": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Try to login the user",
+                "operationId": "postLogin",
+                "parameters": [
+                    {
+                        "$ref": "../Swagger/definitions.yaml#/components/parameters/email"
+                    },
+                    {
+                        "$ref": "../Swagger/definitions.yaml#/components/parameters/password"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "$ref": "../Swagger/definitions.yaml#/components/responses/AuthToken"
+                    },
+                    "401": {
+                        "$ref": "../Swagger/definitions.yaml#/components/responses/Unauthorized"
+                    },
+                    "422": {
+                        "$ref": "../Swagger/definitions.yaml#/components/responses/UnprocessableEntity"
+                    },
+                    "500": {
+                        "$ref": "../Swagger/definitions.yaml#/components/responses/InternalServerError"
+                    }
+                }
+            }
+        },
+        "/api/auth/getLogout": {
+            "get": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Logout the user",
+                "operationId": "getLogout",
+                "responses": {
+                    "200": {
+                        "$ref": "../Swagger/definitions.yaml#/components/responses/Success"
+                    },
+                    "401": {
+                        "$ref": "../Swagger/definitions.yaml#/components/responses/Unauthorized"
+                    },
+                    "500": {
+                        "$ref": "../Swagger/definitions.yaml#/components/responses/InternalServerError"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "tokenBased": {
+                "type": "http",
+                "scheme": "bearer"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Auth",
+            "description": "Authentication endpoints"
+        }
+    ]
+}
