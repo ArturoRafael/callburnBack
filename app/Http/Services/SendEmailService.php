@@ -15,8 +15,8 @@ class SendEmailService{
 
 	private function checkNewsletterEmail (&$user)
 	{
-		if (is_null($user->newsletter_email)) {
-			$user->newsletter_email = $user->email;
+		if (is_null($user->email)) {
+			$user->email = $user->email;
 			$user->save();
 		}
 	}
@@ -46,21 +46,16 @@ class SendEmailService{
 	 * @param User $user
 	 * @return void
 	 */
-	public function sendConfirmRegistrationEmail($user)
+	public function sendConfirmRegistrationEmail($user, $confirmation_code, $type_business, $rol)
 	{	
-		$this->checkNewsletterEmail($user);
-		$this->setUsersLanguage($user);
-		$plainText = $this->stripHtmlTags((string)view('emails.new.confirm_registration', ['user' => $user]));
-		\Mail::send('emails.new.confirm_registration', ['user' => $user], function ($m) use($user, $plainText) {
+		
+		$plainText = $this->stripHtmlTags((string)view('emails.new.confirm_registration', ['users' => $user, 'confirmation' => $confirmation_code,'business' => $type_business, 'rol' => $rol]));
+		
+		\Mail::send('emails.new.confirm_registration', ['users' => $user, 'confirmation' => $confirmation_code, 'business' => $type_business, 'rol' => $rol], function ($m) use($user, $plainText) {
             $m->from('support@callburn.com', 'Callburn');
             $m->to($user->email, $user->first_name)->subject(trans('main.emails.subject_activate_your_account'));
         	$m->addPart($plainText, 'text/plain');
-		});
-		/*\Mail::send('emails.new.confirm_registration', ['user' => $user], function ($m) {
-			$m->subject('Prueba Callburn');
-            $m->from('angelica.informatik@gmail.com');
-            $m->to($user->email);
-        });*/
+		});		
 	}
 
 	/**

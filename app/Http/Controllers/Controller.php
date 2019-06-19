@@ -26,10 +26,54 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
  *     type="http",
  *     scheme="bearer",
  * )
- *
-* @OA\Tag(
- *     name="Auth",
- *     description="Authentication endpoints",
+ * 
+ * @OA\Tag(
+ *     name="Account",
+ *     description="Accounts endpoints",
+ * )
+ * @OA\Tag(
+ *     name="Users",
+ *     description="Users endpoints",
+ * )
+ * @OA\Tag(
+ *     name="Workflows",
+ *     description="Workflows endpoints",
+ * )
+ * @OA\Tag(
+ *     name="Times",
+ *     description="Times endpoints",
+ * )
+ * @OA\Tag(
+ *     name="Days",
+ *     description="Days endpoints",
+ * )
+ * @OA\Tag(
+ *     name="KeyEventTypes",
+ *     description="Key Event Types endpoints",
+ * )
+ * @OA\Tag(
+ *     name="WorkflowsContact",
+ *     description="Workflows Contact endpoints",
+ * )
+ * @OA\Tag(
+ *     name="Contacts",
+ *     description="Contacts endpoints",
+ * )
+ * @OA\Tag(
+ *     name="Groups",
+ *     description="Groups endpoints",
+ * )
+ * @OA\Tag(
+ *     name="Rols",
+ *     description="Rols endpoints",
+ * )
+ * @OA\Tag(
+ *     name="Business",
+ *     description="Business endpoints",
+ * )
+ * @OA\Tag(
+ *     name="Reservations",
+ *     description="Reservations endpoints",
  * )
  */
 class Controller extends BaseController

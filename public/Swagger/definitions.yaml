@@ -83,6 +83,181 @@ components:
       schema:
         type: string
       description: User name
+    name:
+      name: name
+      in: query
+      required: true
+      schema:
+        type: string
+      description: Name of the register 
+    business_name:
+      name: name
+      in: query
+      required: true
+      schema:
+        type: string
+      description: Business name
+    welcome_message:
+      name: welcome_message
+      in: query
+      required: true
+      schema:
+        type: string
+      description: Welcome message
+    firstname:
+      name: firstname
+      in: query
+      required: true
+      schema:
+        type: string
+      description: First name
+    lastname:
+      name: lastname
+      in: query
+      required: true
+      schema:
+        type: string
+      description: Last name
+    first_name:
+      name: firstname
+      in: query
+      required: false
+      schema:
+        type: string
+      description: First name
+    last_name:
+      name: lastname
+      in: query
+      required: false
+      schema:
+        type: string
+      description: Last name
+    born_date:
+      name: born_date
+      in: query
+      required: false
+      schema:
+        type: date
+      description: Born date
+    date_register:
+      name: date_register
+      in: query
+      required: false
+      schema:
+        type: date
+      description: Register date workflow
+    date_begin:
+      name: date_begin
+      in: query
+      required: false
+      schema:
+        type: date
+      description: Begin date workflow
+    date_end:
+      name: date_end
+      in: query
+      required: false
+      schema:
+        type: date
+      description: End date workflow
+    date_reservation:
+      name: date_reservation
+      in: query
+      required: false
+      schema:
+        type: date
+      description: Reservation date
+    gender:
+      name: gender
+      in: query
+      required: false
+      schema:
+        type: string
+      description: Gender
+    status:
+      name: status
+      in: query
+      required: true
+      schema:
+        type: bool
+      description: Status
+    phone:
+      name: phone
+      in: query
+      required: true
+      schema:
+        type: string
+      description: Phone
+    businessname:
+      name: businessname
+      in: query
+      required: true
+      schema:
+        type: string
+      description: Business name
+    sms:
+      name: sms
+      in: query
+      required: true
+      schema:
+        type: string
+      description: Sms text
+    event:
+      name: event
+      in: query
+      required: false
+      schema:
+        type: integer
+      description: Event type
+    cost:
+      name: cost
+      in: query
+      required: true
+      schema:
+        type: integer
+      description: Cost
+    type:
+      name: type
+      in: query
+      required: false
+      schema:
+        type: integer
+      description: Cost
+    type_business:
+      name: type_business
+      in: query
+      required: true
+      schema:
+        type: integer
+      description: Type business
+    email_business_user:
+      name: email_business_user
+      in: query
+      required: false
+      schema:
+        type: string
+      description: Email business user
+    idrol:
+      name: idrol
+      in: query
+      required: true
+      schema:
+        type: integer
+      description: ID rol the user
+    email_contact:
+      name: email_contact
+      in: query
+      required: false
+      schema:
+        type: string
+      description: Contact email
+    user_email:
+      name: user_email
+      in: query
+      required: true
+      schema:
+        type: string
+      description: User email
     email:
       name: email
       in: query
@@ -97,13 +272,20 @@ components:
       schema:
         type: string
       description: User password
-    password_confirmation:
-      name: password_confirmation
+    c_password:
+      name: c_password
       in: query
       required: true
       schema:
         type: string
-      description: User confirmation passwordconfirmation 
+      description: User password confirmation
+    description:
+      name: description
+      in: query
+      required: true
+      schema:
+        type: string
+      description: Description of the entity 
     remember_me:
       name: remember_me
       in: query
@@ -141,17 +323,47 @@ components:
       schema:
         type: integer
       description: Unique identifier of the entity
-    name:
-      name: name
+    id_workflow:
+      name: id_workflow
       in: query
       required: true
       schema:
-        type: string
-      description: Entity name
-    language:
-      name: language
+        type: integer
+      description: Unique identifier of the entity workflow 
+    id_contact:
+      name: id_contact
       in: query
       required: true
       schema:
-        type: string
-      description: Code lenguage
+        type: integer
+      description: Unique identifier of the entity contact
+    id_day:
+      name: id_day
+      in: query
+      required: true
+      schema:
+        type: integer
+      description: Identifier the day
+    audio:
+      name: audio
+      in: query
+      required: true
+      schema:
+        type: file
+      description: Audio the workflow
+    start_time:
+      name: start_time
+      in: query
+      required: true
+      schema:
+        type: time
+      description: Start time the workflow
+    end_time:
+      name: end_time
+      in: query
+      required: true
+      schema:
+        type: time
+      description: End time the workflow
+    
+   

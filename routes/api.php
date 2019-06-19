@@ -17,21 +17,41 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 */
-Route::post('auth/postRegistration', 'AuthController@postRegistration');
-Route::post('auth/postLogin', 'AuthController@postLogin');
 
 
-	    
-		// Route::post('auth/postActivateAccount', 'AuthController@postActivateAccount');  		
-		
-		// Route::get('auth/getLogout', 'AuthController@getLogout');
-		// Route::post('auth/postSendResetLink', 'AuthController@postSendResetLink'); 
-		// Route::post('auth/postMakeResetPassword', 'AuthController@postMakeResetPassword'); 
-		// Route::get('auth/getConfirmEmailAddress', 'AuthController@getConfirmEmailAddress'); 
+Route::post('registration', 'AuthController@registration');
+Route::get('registration/verify/{code}', 'AuthController@verify');
+Route::post('login', 'AuthController@login');
 
-		// Route::post('auth/postRecoverUsername', 'AuthController@postRecoverUsername'); 
-		// Route::post('auth/checkPhonenumberCodeAndAddToAccount/{code}/{newuser}', 'AuthController@checkPhonenumberCodeAndAddToAccount');  
+Route::group(['prefix' => 'auth', 'middleware' => 'jwt.auth'], function () {
 
+    Route::get('user', 'AuthController@user');
+    Route::post('logout', 'AuthController@logout');
 
-  //       Route::get('getShowUser', 'UsersController@getShowUser');
+    Route::get('users','UsersController@listar_usuarios');
+    Route::post('user_profile/{user_profile}','UsersController@update_profile');
+
+    Route::apiResource('contact','ContactController');
+	Route::post('contact_save','ContactController@save_file_contacts');
+
+	Route::apiResource('reservation','ReservationController');
+
+	Route::apiResource('group','GroupController');
+	Route::apiResource('rol','RolController');
+	Route::apiResource('typebusiness','TypeBusinessController');
+	Route::apiResource('groupcontact','GroupContactController');
+
+	Route::apiResource('workflow','WorkflowController');
+	Route::post('update_workflow/{update_workflow}','WorkflowController@update_workflow');
+	Route::get('workflow_user/{workflow_user}','WorkflowController@workflow_user');
+
+	Route::apiResource('workflowcontact','WorkflowContactController');
+
+	Route::apiResource('time','TimeController');
+	Route::apiResource('day','DayController');
+	Route::apiResource('keyeventype','KeyEventTypeController');
+
+});
+
+Route::middleware('jwt.refresh')->get('/token/refresh', 'AuthController@refresh');
 
