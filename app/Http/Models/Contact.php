@@ -2,7 +2,7 @@
 
 namespace App\Http\Models;
 
-use Reliese\Database\Eloquent\Model as Eloquent;
+use Illuminate\Database\Eloquent\Model as Eloquent;
 
 
 class Contact extends Eloquent
@@ -21,9 +21,25 @@ class Contact extends Eloquent
     ];
     
     
+
    
     public function usuario()
     {
         return $this->belongsTo(\App\Http\Models\Users::class, 'user_email');
+    }
+
+    public function workflows_key()
+    {
+        return $this->hasMany(\App\Http\Models\WorkflowContactKey::class, 'id_contact_workflow');
+    }
+
+    public function reservations()
+    {
+        return $this->hasMany(\App\Http\Models\Reservation::class, 'id_contact');
+    }
+
+    public function groups()
+    {
+        return $this->belongsToMany(\App\Http\Models\Group::class, 'group_contact', 'id_contact', 'id_group');
     }
 }

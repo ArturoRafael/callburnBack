@@ -17,6 +17,10 @@ class TypeBusiness extends Eloquent
         'id', 'description'
     ];
     
-   
+    
+    public function users()
+    {
+        return $this->hasMany(\App\Http\Models\TypeBusiness::class, 'id_type_business');
+    }
    
 }

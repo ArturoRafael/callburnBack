@@ -2,8 +2,8 @@
 
 namespace App\Http\Services;
 
-use App\Models\Tariff;
-use App\Services\IspService;
+use App\Http\Models\Tariff;
+use App\Http\Services\IspService;
 
 class TariffService{
 	/**

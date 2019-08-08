@@ -6,7 +6,7 @@ use App\Http\Models\WorkflowContact;
 use App\Http\Models\Workflow;
 use App\Http\Models\Contact;
 use Illuminate\Http\Request;
-
+use Validator;
 class WorkflowContactController extends Controller
 {
     /**

@@ -23,5 +23,7 @@ class Reservation extends Eloquent
 		return $this->belongsTo(\App\Http\Models\Contact::class, 'id_contact');
 	}
 
+    
+
 	
 }

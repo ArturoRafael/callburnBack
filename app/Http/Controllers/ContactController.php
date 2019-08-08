@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Input;
 use App\Http\Models\Contact;
+use App\Http\Models\Group;
 use App\Http\Models\Users;
+use App\Http\Models\GroupContact;
 use App\Http\Models\Reservation;
 use Illuminate\Http\Request;
-use JWTAuth;
-use Illuminate\Support\Facades\Input;
 use App\Http\Requests\Contact\CreateRequest;
+
+use JWTAuth;
 use Validator;
+
 class ContactController extends BaseController
 {
 
@@ -72,8 +76,11 @@ class ContactController extends BaseController
      *   @OA\Parameter(
      *      ref="../Swagger/definitions.yaml#/components/parameters/gender"
      *    ), 
-      *   @OA\Parameter(
+     *   @OA\Parameter(
      *      ref="../Swagger/definitions.yaml#/components/parameters/status"
+     *    ),
+     *   @OA\Parameter(
+     *      ref="../Swagger/definitions.yaml#/components/parameters/array_group"
      *    ),   
      *   @OA\Response(
      *      response=200,
@@ -94,15 +101,32 @@ class ContactController extends BaseController
        
         $user_now = JWTAuth::parseToken()->authenticate();        
         
-        $contact_exist = Contact::where('phone', $request->input('phone'))->get();
-        if (!is_null($contact_exist)) {
+        $contact_exist = Contact::where('phone', $request->input('phone'))->first();
+        if ($contact_exist != null) {
 
-            $reser_contact = new Reservation();
-            $reser_contact->reservation_date = $request->input('date_reservation');
-            $reser_contact->id_contact = $contact_exist->id;
-            $reser_contact->save();
-            return $this->sendResponse($contactos->toArray(), 'El contacto ya existe, se ha registrado la fecha de reservación con éxito');
+            if($request->input('date_reservation') != null){
+                $reser_contact = new Reservation();
+                $reser_contact->reservation_date = $request->input('date_reservation');
+                $reser_contact->id_contact = $contact_exist->id;
+                $reser_contact->save();
+                return $this->sendResponse($contactos->toArray(), 'El contacto ya existe, se ha registrado la fecha de reservación con éxito');
+            }else{
+                return $this->sendResponse($contact_exist->toArray(), "Contacto ya existe");
+            }
+            
         }else{
+
+
+            if($request->input('array_group') != null && sizeof($request->input('array_group')) > 0){
+                $groups = $request->input('array_group');
+
+                for ($i=0; $i < sizeof($groups); $i++) { 
+                    $group = Group::find($groups[$i]);
+                    if (is_null($group)) {
+                        return $this->sendError('No existe el Id: '.$groups[$i].' en la tabla Group.');
+                    }
+                }
+            }
 
             $contactos= new Contact();
             $contactos->email = $request->input('email_contact');
@@ -110,17 +134,44 @@ class ContactController extends BaseController
             $contactos->first_name =$request->input('first_name');
             $contactos->last_name = $request->input('last_name');
             $contactos->born_date = $request->input('born_date');            
-            $contactos->gender = $request->input('gender');
             $contactos->status = $request->input('status');
             $contactos->user_email = $user_now->email;
-            $contactos->save(); 
+            
+            if($request->input('gender') != null){
+                $contactos->gender = $request->input('gender');
+            }
 
-            $reser_contact = new Reservation();
-            $reser_contact->reservation_date = $request->input('date_reservation');
-            $reser_contact->id_contact = $contactos->id;
-            $reser_contact->save();
+            $contactos->save();
 
-            return $this->sendResponse($contactos->toArray(), 'Contacto creado con éxito');
+            $c_id = $contactos->id; 
+
+
+
+            if($request->input('date_reservation') != null){
+                $reser_contact = new Reservation();
+                $reser_contact->reservation_date = $request->input('date_reservation');
+                $reser_contact->id_contact = $contactos->id;
+                $reser_contact->save();
+            }
+
+            if($request->input('array_group') != null && sizeof($request->input('array_group')) > 0){
+                $groups = $request->input('array_group');
+                
+                
+                for ($i=0; $i < sizeof($groups); $i++) { 
+
+                    $group_contacto = new GroupContact();
+                    $group_contacto->id_contact = $c_id;
+                    $group_contacto->id_group = $groups[$i];
+                    $group_contacto->save();
+                }
+
+                $contactos_groups = GroupContact::with('contacto')->with('grupo')->whereIn('id_group', $groups)->get();
+
+                return $this->sendResponse($contactos_groups->toArray(), 'Contactos creados y asociados a los grupo(s) con éxito');
+            }
+
+            return $this->sendResponse($contactos->toArray(), 'Contactos creado con éxito');
         }       
         
     }
@@ -158,7 +209,7 @@ class ContactController extends BaseController
             $linea = $linea + 1;
             $validator = Validator::make($key, [
                 'email' => 'nullable|email',            
-                'phone' => 'required|numeric',
+                'phone' => 'required|regex:/^[0-9]{7,15}$/|min:7|max:15',
                 'first_name' => 'nullable',
                 'last_name' => 'nullable',
                 'born_date' => 'nullable|date|date_format:Y-m-d',
@@ -178,7 +229,7 @@ class ContactController extends BaseController
             $user_now = JWTAuth::parseToken()->authenticate();
             
             $arrayContact = array();
-            foreach ($list as $key) {                
+            foreach ($list as $key){                
                 $search = $this->searchContact($key["phone"]);
                 if(!$search){
 
@@ -192,12 +243,12 @@ class ContactController extends BaseController
                     $contactos->user_email = $user_now->email;
                     $contactos->save();
 
-                    if(!is_null($key['reservation_date'])){
-                        $reser_contact = new Reservation();
-                        $reser_contact->reservation_date = $key['reservation_date'];
-                        $reser_contact->id_contact = $contactos->id;
-                        $reser_contact->save();
-                    }
+                    // if(isset($key['reservation_date']) && !is_null($key['reservation_date'])){
+                    //     $reser_contact = new Reservation();
+                    //     $reser_contact->reservation_date = $key['reservation_date'];
+                    //     $reser_contact->id_contact = $contactos->id;
+                    //     $reser_contact->save();
+                    // }
 
                     array_push($arrayContact, $contactos->toArray());
                 }
@@ -254,10 +305,102 @@ class ContactController extends BaseController
         if (is_null($contact)) {
             return $this->sendError('Contacto no encontrado');
         }
-        return $this->sendResponse($contact->toArray(), 'Contacto por usuario devuelto con éxito');
+        $contact_array = array();
+        foreach ($contact as $key) {
+            $groups = $this->groups_contact($key->id);
+            $ar = array("id" => $key->id,"email" => $key->email, "phone" => $key->phone, "first_name" => $key->first_name, "last_name" => $key->last_name, "born_date" => (!is_null($key->born_date)) ? date_format($key->born_date, "d-m-Y") : null, "gender" => $key->gender, "status" => $key->status,"groups" => $groups );
+            array_push($contact_array, $ar);
+        }
+        
+        return $this->sendResponse($contact_array, 'Contactos por usuario devuelto con éxito');
     }
 
 
+    public function groups_contact($id_contact){
+
+        $groups = GroupContact::with('grupo')->where('id_contact','=',$id_contact)
+                                ->get();
+        return $groups;
+    }
+
+
+
+
+    /**
+     *
+     * @OA\Get(
+     *   path="/api/auth/groupsContactUser",
+     *   summary="List of groups for user and number of contacts.",
+     *   operationId="groupsContactUser",   
+     *   tags={"Contacts"},         
+     *   @OA\Response(
+     *      response=200,
+     *      ref="../Swagger/definitions.yaml#/components/responses/Success"
+     *    ),
+     *   @OA\Response(
+     *      response=401,
+     *      ref="../Swagger/definitions.yaml#/components/responses/Unauthorized"
+     *    ),
+     *   @OA\Response(
+     *      response=500,
+     *      ref="../Swagger/definitions.yaml#/components/responses/InternalServerError"
+     *   ),
+     *  )
+     */
+    public function groupsContactUser()
+    {
+        
+        $user_now = JWTAuth::parseToken()->authenticate();        
+        $emailUser = $user_now->email;
+        
+        $group = Contact::with('groups')
+                    ->where('user_email', $emailUser)
+                    ->get();
+       
+        $arrayIds = array();
+        
+        foreach ($group as $key) {  
+            
+                  
+            if(sizeof($key->groups) > 0 ){
+                foreach($key->groups as $vkey){
+                    if($this->searh_group_array($vkey->id , $arrayIds) == true){
+                    
+                    for ($i=0; $i < sizeof($arrayIds); $i++){
+                    
+                        if((int)$arrayIds[$i]["id_group"] == (int)$vkey->id){
+                            $arrayIds[$i]["cantidad"] = ($arrayIds[$i]["cantidad"] + 1);                            
+                        }
+                    }
+
+                    }else{
+                        array_push($arrayIds, array('id_group' => $vkey->id, 'descrip_group' => $vkey->description, 'cantidad' => 1) );
+                    }
+
+                }
+                
+            }
+        }
+        
+        if (is_null($arrayIds)) {
+            return $this->sendError('Grupos no encontrados');
+        }
+        return $this->sendResponse($arrayIds, 'Grupos devueltos con éxito');
+    }
+
+    public function searh_group_array($id_group, $arrayAll){
+        
+        if( count($arrayAll) > 0){
+            for ($i=0; $i < sizeof($arrayAll); $i++) {            
+                if($arrayAll[$i]["id_group"] == $id_group){
+                    return true;
+                }
+            }
+            return false;
+        }
+        return false;
+
+    }
 
 
     /**
@@ -310,7 +453,7 @@ class ContactController extends BaseController
      */
     public function update(CreateRequest $request, $id)
     {
-        $input = $request->all();
+        $input = $request->validated();
         
         $Contacto = Contact::find($id);        
         if (is_null($contact)) {

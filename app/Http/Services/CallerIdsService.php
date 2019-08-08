@@ -45,15 +45,11 @@ class CallerIdsService{
 
 
 
-
-
-
         //Send the email to the old owner of the callerId, notifying that it will be removed from its account .
         if($isAddingToOtherAccount) {
         	$olduserEmail = $callerId->user ? $callerId->user->email : 'Unknown';
         	$emailRepo = new \App\Services\SendEmailService();
         	$emailRepo->callerIdAddedToOtherAccount($user, $callerId->phone_number);
-			SlackNotificationService::notify('User with email - ' . $user->email . ' re-added callerid - ' . $callerId->phone_number . 'which was belonging to user with email - ' . $olduserEmail);
         }
 	}
 

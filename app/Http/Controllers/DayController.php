@@ -6,7 +6,7 @@ use App\Http\Models\Day;
 use App\Http\Models\Workflow;
 use Illuminate\Http\Request;
 
-class DayController extends Controller
+class DayController extends BaseController
 {
     /**
      *

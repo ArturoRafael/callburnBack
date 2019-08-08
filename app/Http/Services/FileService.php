@@ -1,11 +1,10 @@
 <?php 
-namespace App\Services;
+namespace App\Http\Services;
 
-use App\Models\File;
-use App\Contracts\FileInterface;
+use App\Http\Models\File;
 use File as LaravelFile;
 use App\Helper;
-use App\User;
+use App\Http\Models\Users;
 use Carbon\Carbon;
 use Storage;
 use Illuminate\Support\Facades\DB;
@@ -102,13 +101,15 @@ class FileService{
      * @param string $userId
      * @return File
      */
-    public function createFromText($text, $language, $userId, $savedFrom = null)
+    public function createFromText($text, $language, $gender, $userEmail, $savedFrom = null)
     {
         $response = (object)[
             'file' => NULL,
             'error' => NULL,
         ];
-        $user = \App\User::find($userId);
+
+
+        $user = Users::find($userEmail);
 
         $pattern = '/\d{4,}/';
         preg_match_all($pattern, $text, $matches);
@@ -119,92 +120,42 @@ class FileService{
         }
         $text = preg_replace($patterns, $replacement, $text);
 
-        // $country = $user->country;
-        // if(!$country){
-        //     $response->error = "country_of_the_caller_id_is_not_defined_Please_add_caller_id";
-        //     return $response;
-        // }
-        // $dailyTTSLimit = $country->free_tts_count_per_day;
-        
-        // $todayCreatedTTSCount = $user->today_created_tts_count;
-        // if($user->last_tts_created_at){
-        //     $lastCreatedTTS = Carbon::createFromFormat( 'Y-m-d H:i:s', $user->last_tts_created_at );
-        //     $now = Carbon::now();
-        //     $diffInHours = $lastCreatedTTS->diffInHours($now);
-        //     $ifLastCreatedToday = ($diffInHours < 24);
-        // } else{
-        //     $ifLastCreatedToday = false;
-        // }
-
-        // if(!$ifLastCreatedToday){
-        //     $user->today_created_tts_count = 0;
-        //     $todayCreatedTTSCount = 0;
-        //     $user->last_tts_created_at = Carbon::now();
-        // }
-        // if( $user->role == 'administrator' || 
-        //     $dailyTTSLimit == 0 ||
-        //     $todayCreatedTTSCount < $dailyTTSLimit
-        // ){
-        //     $ttsPrice = 0;
-        // } else{
-        //     if($user->country && $user->country->tts_price){
-        //         $ttsPrice = $user->country->tts_price;
-        //     } else{
-        //         $ttsPrice = 0.01;
-        //     }
-        // }
-
-        // if($user->balance < $ttsPrice){
-        //     $response->error = "balance_is_not_enough";
-        //     return $response;
-        // } else{
-        //     User::where('_id', $userId)->update([
-        //                'balance' => \DB::raw('balance - ' . $ttsPrice),
-        //                'billed_amount' => \DB::raw('billed_amount + ' . $ttsPrice)
-        //             ]);
-        // }
-
         $ttsPrice = 0;
-        $isFile = $this->file->where('tts_language', $language)->where('tts_text', $text)->first();
-        if($isFile){
+        $isFile = $this->file->where('tts_language', $language)->where('tts_text', $text)->get();
+        if(count($isFile) > 0){
             $isFile->saved_from = $savedFrom;
-            $file = $this->copyFile($isFile, $user->_id, 1);
+            $file = $this->copyFile($isFile, $user->email, 1);
+            if($file == false){
+                $response->error = "Ocurrio un error al copiar el audio";
+                return $response;
+            }
+            $file->save();
+            
             $response->file = $file;
             return $response;
         }
         $ttsEngine = config('tts.engine');
-        if($ttsEngine == 'GOOGLE'){
-            $googleTTSRepo = new \App\Services\TTS\GoogleTTSService();
-            $resp = $googleTTSRepo->createFromText($text, $language, $user, $ttsPrice, $savedFrom);
-        } elseif($ttsEngine == 'NUANCE'){
-            $nuanceTTSRepo = new \App\Services\TTS\NuanceTTSService();
-            $resp = $nuanceTTSRepo->createFromText($text, $language, $user, $ttsPrice, $savedFrom);
-
-        } elseif($ttsEngine == 'BING'){
-            $bingTTSRepo = new \App\Services\TTS\BingTTSService();
-            $resp = $bingTTSRepo->createFromText($text, $language, $user, $ttsPrice, $savedFrom);
-        } else{
+        if($ttsEngine == 'SPEECH'){
+            $nuanceTTSRepo = new \App\Http\Services\TTS\TextToSpeechTTSService();
+            $resp = $nuanceTTSRepo->createFromText($text, $language, $gender, $user, $ttsPrice, $savedFrom);
+        }else{
             $response->error = "no_tts_configured";
             return $response;
         }
+        
         if(!$resp){
             $response->error = "endpoint_connecting_failed";
             return $response;
         }
-
-        $user->today_created_tts_count++;
-
-        $user->save();
-
-        $cacheService = new \App\Services\Cache\UserDataRedisCacheService();
-        $cacheService->incrementAudioTemplates($user->_id, 1);
+        
 
         if(!$resp->was_copied) {
             $this->moveAudioFileToAmazon($resp->map_filename);
-            $this->moveAudioFileToAmazon($resp->stripped_name . '.gsm');
+            $this->moveAudioFileToAmazon($resp->stripped_name . '.mp3');
         }
         unset($resp->was_copied);
         $response->file = $resp;
+        
         return $response;
     }
 
@@ -217,28 +168,37 @@ class FileService{
      */
     public function copyFile( $file, $userId, $isTemplate = false )
     {
+       
         $newName = str_random();
-        $uploadFolder = public_path() . '/uploads/audio/';
+        $uploadFolder = public_path() . '/uploads/audios_calls/';
 
-        $fileExtension = $file->extension;
-        Storage::copy($file->map_filename, $newName . '.' . $fileExtension);
-        Storage::copy($file->stripped_name . '.gsm', $newName . '.gsm');
-        //\File::copy($uploadFolder . $file->map_filename, $uploadFolder . $newName . '.' . $fileExtension);
-        //\File::copy($uploadFolder . $file->stripped_name . '.gsm', $uploadFolder . $newName . '.gsm');
+        $fileExtension = $file[0]['extension'];
+        if(file_exists(public_path('/uploads/audios_calls/'.$file[0]['map_filename']))){
+            
+            $files = public_path().'/uploads/audios_calls/'.$file[0]['map_filename'];
+            $destination = public_path().'/uploads/audios_calls/'.$newName.'.'.$fileExtension;            
+           
+            copy($files,$destination);
+        }
+        else{
+            return false;
+        }
+
         $newFile = $this->file->create([
-            'orig_filename' => $newName . '.' . $fileExtension,
+            'orig_filename' => env('APP_URL', 'http://api.nelumbo.com.co/').'uploads/audios_calls/'.$newName . '.' . $fileExtension,
             'map_filename' => $newName . '.' . $fileExtension,
             'extension' => $fileExtension,
             'stripped_name' => $newName,
-            'user_id' => $userId,
-            'length' => $file->length,
-            'type' => $file->type,
-            'tts_language' => $file->tts_language,
-            'tts_text' => $file->tts_text,
-            'saved_from' => $file->saved_from,
-            'cost' => $file->cost,
-            'is_template' => $isTemplate
+            'user_email' => $userId,
+            'length' => $file[0]['length'],
+            'type' => $file[0]['type'],
+            'tts_language' => $file[0]['tts_language'],
+            'tts_text' => $file[0]['tts_text'],
+            'saved_from' => $file[0]['saved_from'],
+            'cost' => $file[0]['cost'],
+            'is_template' => $isTemplate,            
             ]);
+
         //$this->moveAudioFileToAmazon($newFile->map_filename);
         //$this->moveAudioFileToAmazon($newFile->stripped_name . '.gsm');
         return $newFile;
@@ -256,12 +216,18 @@ class FileService{
 
         //return $file ? $file->length : false;
         //$gsmAudioFileName = $file->stripped_name  . '.wav';
-        $gsmAudioFileName = $file->stripped_name  . '.gsm';
+        $gsmAudioFileName = $file->stripped_name  . '.mp3';
 //        if(file_exists(public_path() . '/uploads/audio/' . $gsmAudioFileName)){
 //
 //        }
-        $path = public_path() . '/uploads/audio/' . $gsmAudioFileName;
-        $gsmFileSize = LaravelFile::size(public_path() . '/uploads/audio/' . $gsmAudioFileName);
+
+        $path = public_path() . '/uploads/audios_calls/' . $gsmAudioFileName;
+
+        if(!LaravelFile::exists($path)){
+            return false;
+        }
+
+        $gsmFileSize = LaravelFile::size(public_path() . '/uploads/audios_calls/' . $gsmAudioFileName);
         return round( $gsmFileSize / 1.716 );
     }
 
@@ -275,12 +241,14 @@ class FileService{
      */
     public function moveAudioFileToAmazon($fileName)
     {
-        $filePath = public_path() . '/uploads/audio/' . $fileName;
+        
 
-//        if(!LaravelFile::exists($filePath)){
-//            return false;
-//        }
-        //dd($fileName);
+        $filePath = public_path() . '/uploads/audios_calls/' . $fileName;
+
+        if(!file_exists($filePath)){
+            return false;
+        }
+       
 
         $status = Storage::put($fileName, file_get_contents($filePath));
         //LaravelFile::delete($filePath);

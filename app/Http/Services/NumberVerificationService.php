@@ -1,7 +1,9 @@
-<?php namespace App\Services;
+<?php 
 
-use App\Contracts\NumberVerificationInterface;
-use App\Models\NumberVerification;
+namespace App\Http\Services;
+
+use App\Http\Contracts\NumberVerificationInterface;
+use App\Http\Models\NumberVerification;
 
 class NumberVerificationService{
 

@@ -62,6 +62,7 @@ class AuthController extends BaseController
         $user->confirmed = true;
         $user->confirmation_code = null;
         $user->save();
+
         return $this->sendResponse($user->toArray(), 'Has confirmado correctamente tu correo!');
     }
 
@@ -191,7 +192,7 @@ class AuthController extends BaseController
 
             if (is_null($newUser)) {
 				
-                $newUser = Users::create($userData); 
+                $newUser = Users::create($userData);                 
 			
 			} else {
                 return $this->sendError('Usuario ya se encuentra registrado');			
@@ -230,7 +231,7 @@ class AuthController extends BaseController
      */
     public function user(Request $request)
     {
-        $user = Users::find(Auth::user()->email);
+        $user = Users::with('call_id')->find(Auth::user()->email);
         return $this->sendResponse($user->toArray(), 'Información del usuario');
     }
 
@@ -295,7 +296,7 @@ class AuthController extends BaseController
         if ($token = JWTAuth::attempt($credentials)) {
         	 
              $success['usuario'] =  $tempUser;
-             $success['token'] =  $token;
+             $success['access_token'] =  $token;
              $success['token_type'] = 'Bearer';
              $success['message'] =  "Login Exitoso";
 

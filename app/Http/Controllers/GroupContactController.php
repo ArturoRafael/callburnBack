@@ -5,15 +5,32 @@ namespace App\Http\Controllers;
 use App\Http\Models\GroupContact;
 use App\Http\Models\Contact;
 use App\Http\Models\Group;
-use Illuminate\Http\Request;
+use App\Http\Requests\GroupContact\GroupCreateContacts;
+use App\Http\Requests\GroupContact\CreateGroupContact;
 use Validator;
 
 class GroupContactController extends BaseController
 {
     /**
-     * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @OA\Get(
+     *   path="/api/auth/groupcontact",
+     *   summary="List of group contact",
+     *   operationId="index",   
+     *   tags={"GroupContact"},     
+     *   @OA\Response(
+     *      response=200,
+     *      ref="../Swagger/definitions.yaml#/components/responses/Success"
+     *    ),
+     *   @OA\Response(
+     *      response=401,
+     *      ref="../Swagger/definitions.yaml#/components/responses/Unauthorized"
+     *    ),
+     *   @OA\Response(
+     *      response=500,
+     *      ref="../Swagger/definitions.yaml#/components/responses/InternalServerError"
+     *   ),
+     *  )
      */
     public function index()
     {
@@ -26,23 +43,35 @@ class GroupContactController extends BaseController
  
 
     /**
-     * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @OA\Post(
+     *   path="/api/auth/groupcontact",
+     *   summary="create a specific group contact",
+     *   operationId="store",   
+     *   tags={"GroupContact"},
+     *   @OA\Parameter(
+     *      ref="../Swagger/definitions.yaml#/components/parameters/id_contact"
+     *    ), 
+     *   @OA\Parameter(
+     *      ref="../Swagger/definitions.yaml#/components/parameters/id_group"
+     *    ),    
+     *   @OA\Response(
+     *      response=200,
+     *      ref="../Swagger/definitions.yaml#/components/responses/Success"
+     *    ),
+     *   @OA\Response(
+     *      response=401,
+     *      ref="../Swagger/definitions.yaml#/components/responses/Unauthorized"
+     *    ),
+     *   @OA\Response(
+     *      response=500,
+     *      ref="../Swagger/definitions.yaml#/components/responses/InternalServerError"
+     *   ),
+     *  )
      */
-    public function store(Request $request)
+    public function store(CreateGroupContact $request)
     {
-        $validator = Validator::make($request->all(), [
-            'id_contact' => 'integer|required',            
-            'id_group' => 'integer|required'
-
-        ]);
-        if($validator->fails()){
-            return $this->sendError('Error de validación.', $validator->errors());       
-        }
-
-
+        
         $group_contact_search = $this->group_contact_search($request->input('id_contact'), $request->input('id_group'));
 
         if(count($group_contact_search) != 0){
@@ -63,11 +92,106 @@ class GroupContactController extends BaseController
         return $this->sendResponse($group_contacto->toArray(), 'Contacto asignado a grupo con éxito');
     }
 
-    /**
-     * Display the specified resource.
+
+
+     /**
      *
-     * @param  \App\Http\Models\GroupContact  $id
-     * @return \Illuminate\Http\Response
+     * @OA\Post(
+     *   path="/api/auth/createGroupContact",
+     *   summary="create a specific group for multi contact (array)",
+     *   operationId="createGroupContact",   
+     *   tags={"GroupContact"},
+     *   @OA\Parameter(
+     *      ref="../Swagger/definitions.yaml#/components/parameters/array_contact"
+     *    ), 
+     *   @OA\Parameter(
+     *      ref="../Swagger/definitions.yaml#/components/parameters/description"
+     *    ),    
+     *   @OA\Response(
+     *      response=200,
+     *      ref="../Swagger/definitions.yaml#/components/responses/Success"
+     *    ),
+     *   @OA\Response(
+     *      response=401,
+     *      ref="../Swagger/definitions.yaml#/components/responses/Unauthorized"
+     *    ),
+     *   @OA\Response(
+     *      response=500,
+     *      ref="../Swagger/definitions.yaml#/components/responses/InternalServerError"
+     *   ),
+     *  )
+     */
+    public function createGroupContact(GroupCreateContacts $request)
+    {
+        
+        $array_new_ids = array();
+        $array_contact = $request->input('array_contact');
+
+        for ($i=0; $i < sizeof($array_contact); $i++) { 
+
+            $contact = Contact::find($array_contact[$i]);
+            if (is_null($contact)) {
+                return $this->sendError('El contacto con el ID: '.$array_contact[$i].' no existe');
+            }
+        }
+
+        $group = new Group();
+        $group->description = $request->input('description');
+        $group->save();
+
+        $_id = $group->id;
+
+        for ($i=0; $i < sizeof($array_contact); $i++) { 
+
+            $group_contact_search = $this->group_contact_search($array_contact[$i], $_id);
+            if(count($group_contact_search) == 0){
+
+                $group_contacto = new GroupContact();
+                $group_contacto->id_contact = $array_contact[$i];
+                $group_contacto->id_group = $_id;
+                $group_contacto->save();
+
+                array_push($array_new_ids, $array_contact[$i]);
+            }
+            
+        }
+
+        $search_new = GroupContact::with('grupo')->with('contacto')->whereIn('id_contact',$array_new_ids)
+                                ->where('id_group','=', $_id)->get();
+       
+          
+        return $this->sendResponse($search_new->toArray(), 'Contactos asignados a grupo con éxito');
+    }
+
+
+
+
+
+    
+
+   /**
+     *
+     * @OA\Get(
+     *   path="/api/auth/groupcontact/{groupcontact}",
+     *   summary="List the contacts for group a specific",
+     *   operationId="show",   
+     *   tags={"GroupContact"}, 
+     *   @OA\Parameter(
+     *      ref="../Swagger/definitions.yaml#/components/parameters/id"
+     *    ),    
+     *   @OA\Response(
+     *      response=200,
+     *      ref="../Swagger/definitions.yaml#/components/responses/Success"
+     *    ),
+     *   @OA\Response(
+     *      response=401,
+     *      ref="../Swagger/definitions.yaml#/components/responses/Unauthorized"
+     *    ),
+     *   @OA\Response(
+     *      response=500,
+     *      ref="../Swagger/definitions.yaml#/components/responses/InternalServerError"
+     *   ),
+     *  )
      */
     public function show($id)
     {
@@ -78,63 +202,95 @@ class GroupContactController extends BaseController
         return $this->sendResponse($group_contacto->toArray(), 'Contactos por grupo devueltos con éxito');
     }
 
+
+
  
 
-    /**
-     * Update the specified resource in storage.
+     /**
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Http\Models\GroupContact  $id
-     * @return \Illuminate\Http\Response
+     * @OA\Post(
+     *   path="/api/auth/deleteContactGroup",
+     *   summary="update a specific group deleting a contact",
+     *   operationId="deleteContactGroup",   
+     *   tags={"GroupContact"},
+     *   @OA\Parameter(
+     *      ref="../Swagger/definitions.yaml#/components/parameters/id_group"
+     *    ), 
+     *   @OA\Parameter(
+     *      ref="../Swagger/definitions.yaml#/components/parameters/id_contact"
+     *    ),    
+     *   @OA\Response(
+     *      response=200,
+     *      ref="../Swagger/definitions.yaml#/components/responses/Success"
+     *    ),
+     *   @OA\Response(
+     *      response=401,
+     *      ref="../Swagger/definitions.yaml#/components/responses/Unauthorized"
+     *    ),
+     *   @OA\Response(
+     *      response=500,
+     *      ref="../Swagger/definitions.yaml#/components/responses/InternalServerError"
+     *   ),
+     *  )
      */
-    public function update(Request $request, $id)
+    public function deleteContactGroup(CreateGroupContact $request)
     {
+        
         $input = $request->all();
-        $validator = Validator::make($input, [            
-            'id_contact_old' => 'required',
-            'id_contact_new' => 'required',     
-        ]);
-        if($validator->fails()){
-            return $this->sendError('Error de validación.', $validator->errors());      
-        }
-        $group_contact_search = $this->group_contact_search($id, $input['id_contact_old']);
-
+        
+        $group_contact_search = $this->group_contact_search($input['id_contact'], $input['id_group']);
+       
         if(count($group_contact_search) != 0){
 
-            $group = Group::find($id);
+            $group = Group::find($input['id_group']);
             if (is_null($group)) {
                 return $this->sendError('El grupo indicado no existe');
             }
 
-            $contact = Contact::find($input['id_contact_new']);
+            $contact = Contact::find($input['id_contact']);
             if (is_null($contact)) {
                 return $this->sendError('La contacto indicado no existe');
             }
 
-            $group_contact_search2 = $this->group_contact_search($id, $input['id_contact_new']);
-            
-            if(count($group_contact_search2) != 0){
-                return $this->sendError('El contacto ya se encuentra asignado al grupo'); 
-            }
+            GroupContact::where('id_group','=', $input['id_group'])
+                            ->where('id_contact','=', $input['id_contact'])
+                            ->delete();
+
+             return $this->sendResponse_message('Contacto por grupo eliminado con éxito');
             
         }else{
            return $this->sendError('El contacto por grupo no se encuentra'); 
         }
 
-        GroupContact::where('id_group','=',$id)
-                            ->where('id_contact','=', $input['id_contact_old'])
-                            ->update(['id_contact' => $input['id_contact_new']]);  
-        
-        $group_contacto = $this->group_contact_search($id, $input['id_contact_new']);
                             
-        return $this->sendResponse($group_contacto->toArray(), 'Contacto por grupo actualizado con éxito');
+       
     }
 
+    
+
     /**
-     * Remove the specified resource from storage.
      *
-     * @param  \App\Http\Models\GroupContact $id
-     * @return \Illuminate\Http\Response
+     * @OA\Delete(
+     *   path="/api/auth/groupcontact/{groupcontact}",
+     *   summary="Delete the group and contact associate",
+     *   operationId="destroy",   
+     *   tags={"GroupContact"}, 
+     *   @OA\Parameter(
+     *      ref="../Swagger/definitions.yaml#/components/parameters/id"
+     *    ),    
+     *   @OA\Response(
+     *      response=200,
+     *      ref="../Swagger/definitions.yaml#/components/responses/Success"
+     *    ),
+     *   @OA\Response(
+     *      response=401,
+     *      ref="../Swagger/definitions.yaml#/components/responses/Unauthorized"
+     *    ),
+     *   @OA\Response(
+     *      response=500,
+     *      ref="../Swagger/definitions.yaml#/components/responses/InternalServerError"
+     *   ),
+     *  )
      */
     public function destroy($id)
     {
@@ -143,7 +299,8 @@ class GroupContactController extends BaseController
             return $this->sendError('Contactos por grupo no encontrados');
         }
         GroupContact::where('id_group','=',$id)->delete();
-        return $this->sendResponse($group_contacto->toArray(), 'Contactos por grupo eliminados con éxito');
+        Group::find($id)->delete();
+        return $this->sendResponse($group_contacto->toArray(), 'Contactos desasociados y grupo eliminado con éxito');
     }
 
 

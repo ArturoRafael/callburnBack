@@ -13,4 +13,9 @@ class KeyEventType extends Eloquent
     protected $fillable = [
         'id', 'name', 'description'
     ];
+
+    public function keys()
+    {
+		return $this->hasMany(\App\Http\Models\Key::class, 'id_key_event_type');
+	}
 }

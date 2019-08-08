@@ -1,12 +1,14 @@
-<?php namespace App\Services;
+<?php 
 
-use App\Models\Coupon;
-use App\Models\Invoice;
-use App\Contracts\InvoiceInterface;
-use App\Services\SendEmailService;
-use App\Services\SlackNotificationService;
-use App\Services\ActivityLogService;
-use App\User;
+namespace App\Http\Services;
+
+use App\Http\Models\Coupon;
+use App\Http\Models\Invoice;
+use App\Http\Contracts\InvoiceInterface;
+use App\Http\Services\SendEmailService;
+use App\Http\Services\SlackNotificationService;
+use App\Http\Services\ActivityLogService;
+use App\Http\Users;
 use Carbon\Carbon;
 use DB;
 

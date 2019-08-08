@@ -101,16 +101,13 @@ class GroupController extends BaseController
     public function show($id)
     {
         
-         $group = Group::find($id);
-
-
+        $group = Group::find($id);
         if (is_null($group)) {
             return $this->sendError('Grupo no encontrado');
         }
-
-
         return $this->sendResponse($group->toArray(), 'Grupo devuelto con éxito');
     }
+
 
 
 
@@ -145,7 +142,6 @@ class GroupController extends BaseController
     {
          //
         $input = $request->all();
-
 
         $validator = Validator::make($input, [
             'description' => 'required',            

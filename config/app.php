@@ -26,7 +26,8 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
+    //'env' => env('APP_ENV', 'production'),
+    'env' => env('APP_ENV', 'local'),
 
     /*
     |--------------------------------------------------------------------------
@@ -53,7 +54,8 @@ return [
     */
 
     'url' => env('APP_URL', 'http://localhost'),
-
+    'website_url' => env('WEBSITE_URL', 'https://callburn.com/'),
+    'path_to_email_images_root' => 'assets/emails/',
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
@@ -65,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Europe/Madrid',
 
     /*
     |--------------------------------------------------------------------------

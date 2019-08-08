@@ -17,6 +17,9 @@ class Rol extends Eloquent
         'id', 'description'
     ];
     
-   
+    public function users()
+    {
+        return $this->hasMany(\App\Http\Models\Users::class, 'idrol');
+    }
    
 }

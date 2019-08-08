@@ -40,12 +40,24 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
  *     description="Workflows endpoints",
  * )
  * @OA\Tag(
+ *     name="GroupWorkflows",
+ *     description="Groups Workflows endpoints",
+ * )
+ * @OA\Tag(
  *     name="Times",
  *     description="Times endpoints",
  * )
  * @OA\Tag(
  *     name="Days",
  *     description="Days endpoints",
+ * )
+ * @OA\Tag(
+ *     name="WorkflowContactKeys",
+ *     description="Workflow Contact Key endpoints",
+ * )
+ * @OA\Tag(
+ *     name="Keys",
+ *     description="Keys endpoints",
  * )
  * @OA\Tag(
  *     name="KeyEventTypes",
@@ -62,6 +74,10 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
  * @OA\Tag(
  *     name="Groups",
  *     description="Groups endpoints",
+ * )
+ * @OA\Tag(
+ *     name="GroupContact",
+ *     description="GroupContact endpoints",
  * )
  * @OA\Tag(
  *     name="Rols",

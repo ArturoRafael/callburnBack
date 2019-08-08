@@ -6,7 +6,7 @@ use App\Http\Models\Time;
 use App\Http\Models\Workflow;
 use Illuminate\Http\Request;
 
-class TimeController extends Controller
+class TimeController extends BaseController
 {
     /**
      *

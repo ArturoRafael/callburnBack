@@ -53,6 +53,16 @@ class Users extends Authenticatable implements JWTSubject
         return $this->belongsTo(\App\Http\Models\Rol::class, 'idrol');
     }
 
+    public function call_id()
+    {
+        return $this->hasMany(\App\Http\Models\CallerId::class,  'user_email', 'email')->where('is_verified', 1);
+    }
+
+    public function balance()
+    {
+        return $this->belongsTo(\App\Http\Models\BalanceUser::class, 'email', 'user_email');
+    }
+
     public function type_business()
     {
         return $this->belongsTo(\App\Http\Models\TypeBusiness::class, 'id_type_business');
@@ -71,5 +81,7 @@ class Users extends Authenticatable implements JWTSubject
              ]
         ];      
     }
+
+   
 
 }
