@@ -26,10 +26,10 @@ class CallerId extends Eloquent {
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['user_email', 'phone_number', 'is_verified', 'name', 'tariff_id'];
+	protected $fillable = ['user_email', 'phone_number', 'is_verified', 'name', 'is_verified'];
 
-	protected $hidden = [
-        'is_verified'
+	protected $hidden = [        
+        'tariff_id'
     ];
 
 	/**

@@ -2,7 +2,7 @@
 
 namespace App\Http\Models;
 
-use Illuminate\Database\Eloquent\Model as Eloquent;
+use Reliese\Database\Eloquent\Model as Eloquent;
 
 class StripeCard extends Eloquent {
 
@@ -26,7 +26,7 @@ class StripeCard extends Eloquent {
 	 * @var array
 	 */
 	protected $fillable = [
-		'user_id',
+		'user_email',
 		'last_4_digits',
 		'expiration_month',
 		'expiration_year',
@@ -35,5 +35,11 @@ class StripeCard extends Eloquent {
 		'is_default',
 		'fails_count',
 	];
+
+
+	public function user()
+    {
+        return $this->belongsTo(\App\Http\Models\Users::class, 'user_email', 'email');
+    }
 
 }

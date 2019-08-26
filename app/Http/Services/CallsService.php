@@ -4,6 +4,7 @@ namespace App\Http\Services;
 
 use App\Http\Services\AsteriskServersService;
 use App\Http\Services\AsteriskService;
+use App\Http\Services\NumberVerification;
 use App\Http\Services\BillingService;
 use App\Http\Services\LogService;
 use App\Http\Services\Cache\AdminsDashboardRedisCacheService as DashboardRedisCacheService;
@@ -77,7 +78,6 @@ class CallsService{
 	public function makeVerificationCall($phonenumber, $asteriskServer)
 	{
 		
-
 
 		$tariff = $phonenumber->tariff;
 		if(!$tariff || $tariff->is_blocked || $tariff->is_deleted || $tariff->is_disabled) {

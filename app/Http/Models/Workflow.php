@@ -83,7 +83,10 @@ class Workflow extends Eloquent
         return $this->hasMany(\App\Http\Models\WorkflowContactKey::class, 'id_workflow');
     }
 
-   
+     public function invoices()
+    {
+        return $this->hasMany(\App\Http\Models\Invoice::class, 'id_workflow');
+    }   
 
     public function sms_recurrent()
     {

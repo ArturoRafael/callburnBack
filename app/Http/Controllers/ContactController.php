@@ -10,6 +10,8 @@ use App\Http\Models\GroupContact;
 use App\Http\Models\Reservation;
 use Illuminate\Http\Request;
 use App\Http\Requests\Contact\CreateRequest;
+use App\Http\Requests\Contact\CreateWriteRequest;
+use App\Http\Services\VerificationService;
 
 use JWTAuth;
 use Validator;
@@ -17,7 +19,20 @@ use Validator;
 class ContactController extends BaseController
 {
 
-	/**
+	
+
+    /**
+     * Create a new instance of ContactController class
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->verificationRepo = new VerificationService();
+    }
+
+
+    /**
      *
      * @OA\Get(
      *   path="/api/auth/contact",
@@ -44,6 +59,94 @@ class ContactController extends BaseController
         $contactos = Contact::with('usuario')->paginate(15);
 
         return $this->sendResponse($contactos->toArray(), 'Contactos devueltos con éxito');
+    }
+
+
+    /**
+     *
+     * @OA\Post(
+     *   path="/api/auth/store_write",
+     *   summary="create contact Just Numbers",
+     *   operationId="store_write",   
+     *   tags={"Contacts"},
+     *   @OA\Parameter(
+     *      ref="../Swagger/definitions.yaml#/components/parameters/phone"
+     *    ),    
+     *   @OA\Parameter(
+     *      ref="../Swagger/definitions.yaml#/components/parameters/array_group"
+     *    ),   
+     *   @OA\Response(
+     *      response=200,
+     *      ref="../Swagger/definitions.yaml#/components/responses/Success"
+     *    ),
+     *   @OA\Response(
+     *      response=401,
+     *      ref="../Swagger/definitions.yaml#/components/responses/Unauthorized"
+     *    ),
+     *   @OA\Response(
+     *      response=500,
+     *      ref="../Swagger/definitions.yaml#/components/responses/InternalServerError"
+     *   ),
+     *  )
+     */
+    public function store_write(CreateWriteRequest $request)
+    {
+        
+        $user_now = JWTAuth::parseToken()->authenticate(); 
+        $phones = $request->input('phone');
+        $groups = $request->input('array_group');
+        $addGroup = false;
+        if($request->input('array_group') != null && sizeof($request->input('array_group')) > 0){
+            
+
+            for ($i=0; $i < sizeof($groups); $i++) { 
+                $group = Group::find($groups[$i]);
+                if (is_null($group)) {
+                    return $this->sendError('No existe el Id: '.$groups[$i].' en la tabla Group.');
+                }
+            }
+        }
+        $arrayContact = array();
+        foreach ($phones as $phone) {            
+            $contact_exist = Contact::where('phone', $phone)->first();
+
+            if (!$contact_exist) {
+
+                $phonenumber = $this->verificationRepo->verifyPhonenumbers($phone);
+                if(!$phonenumber){
+                    return $this->sendError('Número no válido: '.$phone);
+                }
+
+                $contactos= new Contact();
+                $contactos->phone = $phone;
+                $contactos->user_email = $user_now->email;
+                $contactos->status = 1;
+                $contactos->save();   
+
+                array_push($arrayContact, $contactos->toArray());              
+                
+                if($request->input('array_group') != null && sizeof($request->input('array_group')) > 0){
+                    for ($i=0; $i < sizeof($groups); $i++) { 
+                        $group_contacto = new GroupContact();
+                        $group_contacto->id_contact = $contactos->id;
+                        $group_contacto->id_group = $groups[$i];
+                        $group_contacto->save();
+                    }
+                    $addGroup = true;
+                }
+
+            }
+        }
+        
+        if ($addGroup) {
+            $contactos_groups = GroupContact::with('contacto')->with('grupo')->whereIn('id_group', $groups)->get();
+            return $this->sendResponse($contactos_groups->toArray(), 'Contactos creados y asociados a los grupo(s) con éxito');
+        }else{
+            return $this->sendResponse($arrayContact, 'Contactos creado con éxito');
+        }
+        
+
+        
     }
     
 
@@ -102,7 +205,7 @@ class ContactController extends BaseController
         $user_now = JWTAuth::parseToken()->authenticate();        
         
         $contact_exist = Contact::where('phone', $request->input('phone'))->first();
-        if ($contact_exist != null) {
+        if ($contact_exist) {
 
             if($request->input('date_reservation') != null){
                 $reser_contact = new Reservation();
@@ -126,6 +229,11 @@ class ContactController extends BaseController
                         return $this->sendError('No existe el Id: '.$groups[$i].' en la tabla Group.');
                     }
                 }
+            }
+
+            $phonenumber = $this->verificationRepo->verifyPhonenumbers($request->input('phone'));
+            if(!$phonenumber){
+                return $this->sendError('Número no válido: '.$request->input('phone'));
             }
 
             $contactos= new Contact();
@@ -208,14 +316,8 @@ class ContactController extends BaseController
         foreach ($list as $key) {
             $linea = $linea + 1;
             $validator = Validator::make($key, [
-                'email' => 'nullable|email',            
                 'phone' => 'required|regex:/^[0-9]{7,15}$/|min:7|max:15',
-                'first_name' => 'nullable',
-                'last_name' => 'nullable',
-                'born_date' => 'nullable|date|date_format:Y-m-d',
-                'reservation_date' => 'nullable|date|date_format:Y-m-d',
-                'status' => 'integer|required',
-                'gender' => 'nullable|in:M,F',
+                'info' => 'nullable|array'                
             ]);
             if($validator->fails()){
                array_push($error, array("Linea: ".$linea => $validator->errors()));       
@@ -227,36 +329,55 @@ class ContactController extends BaseController
         }else{
 
             $user_now = JWTAuth::parseToken()->authenticate();
-            
+            $band = false;
             $arrayContact = array();
-            foreach ($list as $key){                
-                $search = $this->searchContact($key["phone"]);
-                if(!$search){
+            $arrayContactBad = array();
+            foreach ($list as $key){  
 
-                    $contactos = new Contact();
-                    $contactos->email = $key["email"];
-                    $contactos->phone = $key["phone"];
-                    $contactos->first_name = $key["first_name"];
-                    $contactos->last_name = $key["last_name"];
-                    $contactos->born_date = $key["born_date"];
-                    $contactos->status = $key["status"];
-                    $contactos->user_email = $user_now->email;
-                    $contactos->save();
+                $phonenumber = $this->verificationRepo->verifyPhonenumbers($key["phone"]);
+                if(!$phonenumber){                    
+                    array_push($arrayContactBad, $key["phone"]);                
+                }else{
 
-                    // if(isset($key['reservation_date']) && !is_null($key['reservation_date'])){
-                    //     $reser_contact = new Reservation();
-                    //     $reser_contact->reservation_date = $key['reservation_date'];
-                    //     $reser_contact->id_contact = $contactos->id;
-                    //     $reser_contact->save();
-                    // }
+                    $search = $this->searchContact($key["phone"]);
+                    if(!$search){
 
-                    array_push($arrayContact, $contactos->toArray());
+                        $contactos = new Contact();
+                        $contactos->phone = $key["phone"];
+                        $contactos->info_file = json_encode($key["info"]);
+                        $contactos->status = 1;
+                        $contactos->user_email = $user_now->email;
+                        $contactos->save();
+
+                        $contactos->info_file = json_decode($contactos->info_file);
+
+                        array_push($arrayContact, $contactos->toArray());
+                    }else{
+                        
+                        Contact::where('phone', $key["phone"])->update(['info_file' => json_encode($key["info"])]);
+                        $cont = Contact::where('phone', $key["phone"])->first();
+                        
+                        $cont->info_file = json_decode($cont->info_file);
+
+                        array_push($arrayContact, $cont->toArray());
+
+                    }
+
                 }
+                
             }
 
-            if(count($arrayContact)>0){
-                return $this->sendResponse($arrayContact, 'Contactos agregados con éxito');
-            }else{
+            if(count($arrayContactBad) > 0){
+                if(count($arrayContact) > 0){
+                    $contacts_good = $arrayContact;
+                    $contacts_bad = $arrayContactBad;
+                    $contacts = compact('contacts_good', 'contacts_bad');
+                    return $this->sendResponse($contacts, 'Contactos agregados y actualizados con éxito');
+                }
+                $contacts_bad = $arrayContactBad;
+                $contacts = compact('contacts_bad');
+                return $this->sendResponse($contacts, 'Contactos con números inválidos');
+            }else{               
                 return $this->sendError('Los contactos ya se encuentran registrados');
             }    
         }
@@ -308,7 +429,7 @@ class ContactController extends BaseController
         $contact_array = array();
         foreach ($contact as $key) {
             $groups = $this->groups_contact($key->id);
-            $ar = array("id" => $key->id,"email" => $key->email, "phone" => $key->phone, "first_name" => $key->first_name, "last_name" => $key->last_name, "born_date" => (!is_null($key->born_date)) ? date_format($key->born_date, "d-m-Y") : null, "gender" => $key->gender, "status" => $key->status,"groups" => $groups );
+            $ar = array("id" => $key->id,"email" => $key->email, "phone" => $key->phone, "first_name" => $key->first_name, "last_name" => $key->last_name, "born_date" => (!is_null($key->born_date)) ? date_format($key->born_date, "d-m-Y") : null, "gender" => $key->gender, "info_file" => json_decode($key->info_file), "status" => $key->status,"groups" => $groups );
             array_push($contact_array, $ar);
         }
         
@@ -458,6 +579,11 @@ class ContactController extends BaseController
         $Contacto = Contact::find($id);        
         if (is_null($contact)) {
             return $this->sendError('Contacto no encontrado');
+        }
+
+        $phonenumber = $this->verificationRepo->verifyPhonenumbers($input['phone']);
+        if(!$phonenumber){
+            return $this->sendError('Número no válido: '.$input['phone']);
         }
 
         $fecha_reser_old = Reservation::where('id_contact', $id)

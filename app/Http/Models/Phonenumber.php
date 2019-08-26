@@ -27,7 +27,31 @@ class Phonenumber extends Eloquent {
 	 *
 	 * @var array
 	 */
-	protected $fillable = [];
+	protected $fillable = [
+		'site_language',
+		'user_email',
+		'workflow_id',
+		'country_id',
+		'phone_no',
+		'type',
+		'action_type',
+		'should_put_three_asterisks',
+		'status',
+		'total_cost',
+		'total_duration',
+		'to_be_called_at',
+		'last_called_at',
+		'delivered_on',
+		'is_current',
+		'is_pending',
+		'retries',
+		'ip_address',
+		'first_scheduled_date',
+		'is_from_not_eu_to_eu',
+		'is_locked',
+		'is_call_scheduled',
+		'locked_at'
+	];
 
 
 	/************************* Define all scopes for the phonenumbers table *************/
@@ -104,25 +128,13 @@ class Phonenumber extends Eloquent {
 	}
 
 	
-	public function user_balance()
-	{
-		return $this->belongsTo('App\Http\Models\BalanceUser');
-	}
-
-	/**
-	 * Get isp of the contact
-	 */
-	public function isp()
-	{
-		return $this->belongsTo('App\Http\Models\Isp');
-	}
 
 	/**
 	 * Get campaign of the contact
 	 */
 	public function user()
 	{
-		return $this->belongsTo('App\Http\Models\Users');
+		return $this->belongsTo(App\Http\Models\Users::class, 'user_email');
 	}
 
 
@@ -131,7 +143,7 @@ class Phonenumber extends Eloquent {
 	 */
 	public function workflow()
 	{
-		return $this->belongsTo('App\Http\Models\Workflow');
+		return $this->belongsTo(App\Http\Models\Workflow::class, 'workflow_id');
 	}
 
 	// /**

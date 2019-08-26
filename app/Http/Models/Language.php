@@ -12,7 +12,7 @@ class Language extends Eloquent {
 	 *
 	 * @var string
 	 */
-	protected $primaryKey = '_id';
+	protected $primaryKey = 'id';
 
 	/**
 	 * The database table used by the model.
@@ -31,6 +31,12 @@ class Language extends Eloquent {
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['name', 'code'];
+	protected $fillable = ['name', 'full_name', 'code', 'json' ];
+
+	
+	public function users()
+    {
+        return $this->hasMany(App\Http\Models\Users::class, 'language_id', 'id');
+    }
 
 }

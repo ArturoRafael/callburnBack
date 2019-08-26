@@ -1,4 +1,6 @@
-<?php namespace App\Services\Cache;
+<?php 
+
+namespace App\Http\Services\Cache;
 
 /**
 * This calss is responsible for caching all data to show in metronic.
@@ -10,7 +12,7 @@ class AdminsDashboardRedisCacheService
 {
 	function __construct()
 	{
-		$this->redis = \LaravelRedis::connection();
+		$this->redis = \Redis::connection();
 	}
 
 	/**

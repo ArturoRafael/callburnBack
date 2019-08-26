@@ -278,7 +278,7 @@ return [
 
 		['languageCode' => 'sk-SK', 'languageName' => 'Slovak (Slovakia)',  'languageVoiceName' => 'Laura', 'ttsEngine' => 'FEMALE'],
 
-		['languageCode' => 'es-ES', 'languageName' => 'Spanish (Spain)',  'languageVoiceName' => 'Jorge', 'ttsEngine' => 'FEMALE'],
+		['languageCode' => 'es-ES', 'languageName' => 'Spanish (Spain)',  'languageVoiceName' => 'Catarina', 'ttsEngine' => 'FEMALE'],
 
 		['languageCode' => 'sv-SE', 'languageName' => 'Swedish (Sweden)',  'languageVoiceName' => 'Alva', 'ttsEngine' => 'FEMALE'],
 

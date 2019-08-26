@@ -17,7 +17,7 @@ class Contact extends Eloquent
     ];
     
     protected $fillable = [
-        'id', 'email', 'phone', 'first_name', 'last_name', 'born_date', 'status','gender', 'user_email'
+        'id', 'email', 'phone', 'first_name', 'last_name', 'born_date', 'status','gender', 'info_file','user_email'
     ];
     
     

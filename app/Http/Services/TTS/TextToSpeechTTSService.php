@@ -49,6 +49,7 @@ class TextToSpeechTTSService{
 		    ->setText($text);
 		// build the voice request, select the language code ("en-US") and the ssml
 		// voice gender	
+
 		if($gender == "FEMALE"){
 			$voice = (new VoiceSelectionParams())
 		    ->setLanguageCode($language)
@@ -61,14 +62,18 @@ class TextToSpeechTTSService{
 			$voice = (new VoiceSelectionParams())
 		    ->setLanguageCode($language)
 		    ->setSsmlGender(SsmlVoiceGender::NEUTRAL);
-		}	
+		}
+
 		
 		// Effects profile
 		$effectsProfileId = "telephony-class-application";
 		// select the type of audio file you want returned
 		$audioConfig = (new AudioConfig())
 		    ->setAudioEncoding(AudioEncoding::MP3)
-		    ->setEffectsProfileId(array($effectsProfileId));
+		    ->setEffectsProfileId(array($effectsProfileId))
+		    ->setSpeakingRate(1);
+
+
 		// perform text-to-speech request on the text input with selected voice
 		// parameters and audio file type
 		$response = $client->synthesizeSpeech($synthesisInputText, $voice, $audioConfig);
@@ -78,11 +83,11 @@ class TextToSpeechTTSService{
 		file_put_contents($path, $audioContent);
 
 		$file = \App\Http\Models\File::create([
-			'orig_filename' => env('APP_URL', 'http://api.nelumbo.com.co/').'uploads/audios_calls/'.$newName . '.mp3',
+			'orig_filename' => env('APP_URL').'uploads/audios_calls/'.$newName . '.mp3',
 			'map_filename' => $newName . '.mp3',
 			'extension' => "mp3",
 			'stripped_name' => $newName,
-			'tts_language' => $language,
+			'tts_language' => $gender.' / '.$language,
 			'tts_text' => $text,
 			'user_email' => $user->email,
 			'type' => 'TTS',

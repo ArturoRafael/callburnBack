@@ -3,7 +3,7 @@
 namespace App\Http\Services;
 
 use App\Http\Models\Tariff;
-use App\Http\Services\IspService;
+
 
 class TariffService{
 	/**
@@ -47,18 +47,4 @@ class TariffService{
 		return false;
 	}
 
-	/**
-	 * Detect isp .
-	 *
-	 * @param string $phonenumber
-	 * @return string
-	 */
-	public function detectIsp($phonenumber)
-	{
-		$tariff = $phonenumber->tariff;
-		if(!$tariff){
-			return false;
-		}
-		return $tariff->bestIsp;
-	}
 }

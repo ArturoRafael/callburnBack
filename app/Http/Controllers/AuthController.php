@@ -11,6 +11,7 @@ use App\Http\Models\Users;
 use App\Http\Models\Rol;
 use App\Http\Models\TypeBusiness;
 use Session;
+use Redirect;
 use Validator;
 
 class AuthController extends BaseController
@@ -63,7 +64,7 @@ class AuthController extends BaseController
         $user->confirmation_code = null;
         $user->save();
 
-        return $this->sendResponse($user->toArray(), 'Has confirmado correctamente tu correo!');
+        return Redirect::to(env('APP_URL_REDIRECT'));
     }
 
     /**

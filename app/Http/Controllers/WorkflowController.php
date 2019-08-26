@@ -21,11 +21,28 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7;
 use App\Http\Services\FileService;
+use App\Http\Services\InvoiceService;
+use App\Http\Services\VerificationService;
 use Validator;
 use JWTAuth;
 
 class WorkflowController extends BaseController
 {
+    
+
+    /**
+     * Create a new instance of WorkflowController class
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->invoiceRepo = new InvoiceService();
+        $this->verificationRepo = new VerificationService();
+    }
+
+
+
     /**
      *
      * @OA\Get(
@@ -678,6 +695,7 @@ class WorkflowController extends BaseController
             'audio' => 'nullable|mimes:mpga,wav,oga,ogg,spx',
             'save' => 'required|boolean',
             'simulacion' => 'required|boolean',
+            'id_invoice' => 'nullable|string',
             'groups' =>'nullable|array',
             'groups.*' =>'nullable|integer|min:1',
             'phonenumbers' =>'nullable|array',
@@ -697,6 +715,8 @@ class WorkflowController extends BaseController
             return $this->sendError('Error de validación', $validator->errors());       
         }
 
+
+
         if((is_null($request->input("phonenumbers")) || 
             count($request->input("phonenumbers")) < 1) && 
             (is_null($request->input("groups")) &&  
@@ -714,7 +734,7 @@ class WorkflowController extends BaseController
             $phonenumbers = $request->input("phonenumbers");
             for ($i=0; $i < sizeof($phonenumbers); $i++) { 
                 
-                $number = $this->sanitizePhonenumbers($phonenumbers[$i]);
+                $number = $this->verificationRepo->sanitizePhonenumbers($phonenumbers[$i]);
                 
                 if($number != false){
                     $phonenumbers[$i] = $number[0];
@@ -747,6 +767,12 @@ class WorkflowController extends BaseController
         try{
 
             DB::beginTransaction();
+
+            $invoice = $this->invoiceRepo->setInvoiceWorkflow($request->input("id_invoice"), $id);
+            if(!$invoice){
+                return $this->sendError('No se pudo encontrar el pago');
+            }
+
             $workflow = Workflow::with('usuario')->with('keys')->where('user_email', $email)->lockForUpdate()->find($id);
         
             if (is_null($workflow)) {
@@ -783,16 +809,14 @@ class WorkflowController extends BaseController
            
             for ($i=0; $i < sizeof($phonenumbers); $i++) { 
                 $phonconvert = $phonenumbers[$i];
-                $prefix = substr($phonconvert[0], 0, 2);            
-                $countries = Country::where('phonenumber_prefix', $prefix)->first();
-                if($countries){
-                    $cost = ((float) $countries->customer_price - (float)$countries->sms_customer_price);
-                    $value = round($cost, 2, PHP_ROUND_HALF_UP);
-                }else{
-                    $value = 0.15;
+                if($workflow->filter_type == 3){
+                    $value = $this->tarff_phone($phonconvert, 1);
+                    $valuetotal = $valuetotal + $value;
                 }
-                array_push($number_cost, array("phone" =>  $phonconvert, "cost" => ($value * $part)));  
-                $valuetotal = $valuetotal + ($value * $part);      
+                else{
+                    $value = $this->tarff_phone($phonconvert, 0);
+                    $valuetotal = $valuetotal + ($value * $part);
+                }
             }
 
 
@@ -873,7 +897,7 @@ class WorkflowController extends BaseController
                         if($request->hasfile('audio')){
                             $file = $request->file('audio');               
                             $fileUrl = Storage::disk('public')->put('audios', $file);            
-                            $urlFile = env('APP_URL', 'http://api.nelumbo.com.co/').'storage/'.$fileUrl;
+                            $urlFile = env('APP_URL').'storage/'.$fileUrl;
 
                         }else{
                             return $this->sendError('Debes agregar un audio o un texto para ser usado en la llamada.');
@@ -960,6 +984,11 @@ class WorkflowController extends BaseController
 
 
 
+
+/**
+                               ADD INTERACCION WORKFLOW
+-------------------------------------------------------------------------------------------------------
+**/
     public function addInteraccion($interaccion, $camping_id, $delete_iter = false){
         
         if($delete_iter){
@@ -1016,6 +1045,114 @@ class WorkflowController extends BaseController
 
 
 /**
+                            CALCULA COSTO ESTIMADO
+-------------------------------------------------------------------------------------------------------
+**/ 
+    public function calculate_cost(Request $request){
+
+        $validator = Validator::make($request->all(), [
+            'type_service' => 'integer',
+            'text_sms' => 'nullable|string',
+            'groups' =>'nullable|array',
+            'groups.*' =>'nullable|integer|min:1',
+            'phonenumbers' =>'nullable|array',
+            'phonenumbers.*' =>'nullable|integer|min:1',
+            'interaccion' => 'boolean'
+        ]);
+
+        if($validator->fails()){
+            return $this->sendError('Error de validación', $validator->errors());       
+        } 
+
+        if((is_null($request->input("phonenumbers")) || 
+            count($request->input("phonenumbers")) < 1) && 
+            (is_null($request->input("groups")) &&  
+            count($request->input("groups")) < 1) ){
+            return $this->sendError('Debe agregar al menos un número telefónico o un grupo de contacto');
+        }
+
+
+        $phonenumbers = array();
+        if(!is_null($request->input("phonenumbers"))){
+            $phonenumbers = $request->input("phonenumbers");
+            for ($i=0; $i < sizeof($phonenumbers); $i++) { 
+                
+                $number = $this->verificationRepo->sanitizePhonenumbers($phonenumbers[$i]);
+                
+                if($number != false){
+                    $phonenumbers[$i] = $number[0];
+                
+                }else{
+                    return $this->sendError('Solo se aceptan valores numéricos y con una longitud mínima de 7 y máxima de 15 numeros.', $phonenumbers[$i]);
+                    break;
+                }
+            }
+        }
+
+        if(!is_null($request->input("groups"))){
+            $groups = $request->input("groups");
+            for ($i=0; $i < sizeof($groups); $i++){ 
+
+                $ids_contact = GroupContact::where('id_group','=', $groups[$i])
+                            ->select('id_contact')
+                            ->get();
+
+                foreach ($ids_contact as $key) {
+                   $contact = Contact::where('id', $key->id_contact)->first();
+                   if (!in_array($contact->phone, $phonenumbers)) {
+                        array_push($phonenumbers, $contact->phone);
+                   }
+                }
+            }
+
+        }
+
+        $type_service = $request->input("type_service");
+        $part = 1;
+        $value = 0;
+        $valuetotal = 0;
+
+        if($type_service == 0){
+            $smsText = $request->input("text_sms");
+            if(strlen($smsText) > 153){
+                $cut = 153;
+                $i = 1 ;
+                $part = 1;            
+                do{
+                    $i = $i + 1;
+                    if(strlen($smsText) > $cut){
+                        $part = $part + 1;
+                    }else{
+                        break;
+                    }
+                    $cut = 153 * $i;
+                }while(1);
+            }
+        }
+
+        for ($i=0; $i < sizeof($phonenumbers); $i++) { 
+            
+            $phonconvert = $phonenumbers[$i];
+            $value = $this->tarff_phone($phonconvert, $type_service);            
+            
+            if($type_service == 0)
+                $valuetotal = ((float)$valuetotal + ($value * $part));
+            else
+                $valuetotal = ((float)$valuetotal + $value);
+        }
+
+        $valuetotal = round($valuetotal, 2, PHP_ROUND_HALF_UP);
+        if($request->input("interaccion"))
+            $valuetotal = ($valuetotal * 2);
+        
+        return $this->sendResponse(['costo' => $valuetotal], 'Costo estimado');       
+
+    }
+
+
+
+
+/**
                                 SMS
 -------------------------------------------------------------------------------------------------------
 **/ 
@@ -1026,6 +1163,7 @@ class WorkflowController extends BaseController
             'name' => 'required|max:200',
             'sender_name' =>'required|max:11',
             'text_sms' =>'required',
+            'id_invoice' => 'nullable|string',
             'save' =>'required|boolean',
             'groups' =>'nullable|array',
             'groups.*' =>'nullable|integer|min:1',
@@ -1052,7 +1190,7 @@ class WorkflowController extends BaseController
             $phonenumbers = $request->input("phonenumbers");
             for ($i=0; $i < sizeof($phonenumbers); $i++) { 
                 
-                $number = $this->sanitizePhonenumbers($phonenumbers[$i]);
+                $number = $this->verificationRepo->sanitizePhonenumbers($phonenumbers[$i]);
                 
                 if($number != false){
                     $phonenumbers[$i] = $number[0];
@@ -1103,27 +1241,19 @@ class WorkflowController extends BaseController
                 $cut = 153 * $i;
             }while(1);
         }
-       
+        
+        $value = 0;
         for ($i=0; $i < sizeof($phonenumbers); $i++) { 
+            
             $phonconvert = $phonenumbers[$i];
-            $prefix = substr($phonconvert[0], 0, 2);            
-            $countries = Country::where('phonenumber_prefix', $prefix)->first();
-            if($countries){
-                $cost = ((float) $countries->customer_price - (float)$countries->sms_customer_price);
-                $value = round($cost, 2, PHP_ROUND_HALF_UP);
-            }else{
-                $value = 0.15;
-            }
-            
-            
+            $value = $this->tarff_phone($phonconvert,0);            
             array_push($number_cost, array("phone" =>  $phonconvert, "cost" => ($value * $part)));
             array_push($phoneNumbersForSendSms,  $phonconvert);
             
             $valuetotal = ((float)$valuetotal + ($value * $part));
         }
 
-        
-        
+
         $senderName = $request->input("sender_name");
         $name = $request->input("name");
         $user_now = JWTAuth::parseToken()->authenticate(); 
@@ -1138,11 +1268,16 @@ class WorkflowController extends BaseController
         $new_camping->filter_type = 3;
         $new_camping->user_email = $user_now->email;
         $new_camping->date_register = Carbon::now();
-
         $new_camping->save();
 
         $camping_id = $new_camping->id;
         $camping_sms = $new_camping->sms;
+
+        // $invoice = $this->invoiceRepo->setInvoiceWorkflow($request->input("id_invoice"), $camping_id);
+        // if(!$invoice){
+        //     Workflow::find($camping_id)->delete();
+        //     return $this->sendError('No se pudo encontrar el pago');
+        // }
 
         $simulacion = true;
         if(!is_null($request->input("simulacion"))){
@@ -1158,8 +1293,8 @@ class WorkflowController extends BaseController
             }
             
             if($smsResponse->status == false){
-                Workflow::where('id', $camping_id)->delete();
-                return $this->sendError('Error SMS', $smsResponse);
+                Workflow::find($camping_id)->delete();
+                return $this->sendError('Ocurrió errores al enviar los SMS', $smsResponse);
             }
             
             Workflow::find($camping_id)->update(['updated_at' => Carbon::now(), 'date_end' => Carbon::now(), 'date_begin' => Carbon::now()]);
@@ -1168,7 +1303,7 @@ class WorkflowController extends BaseController
         
         }else{
             for ($i=0; $i < sizeof($number_cost); $i++) { 
-                $this->setSmsResponse(null, $number_cost[$i], $senderName, $camping_id, 99);
+                $this->setSmsResponse(null, $part, $number_cost[$i], $senderName, $camping_id, 99);
             }
             Workflow::find($camping_id)->update(['updated_at' => Carbon::now(), 'date_begin' => Carbon::now()]);           
             return $this->sendResponse_message('El workflow SMS se ha guardado de forma exitosa.');
@@ -1193,6 +1328,7 @@ class WorkflowController extends BaseController
             'audio' => 'nullable|mimes:mpga,wav,oga,ogg,spx',
             'save' =>'required|boolean',
             'simulacion' =>'required|boolean',
+            'id_invoice' => 'nullable|string',
             'groups' =>'nullable|array',
             'groups.*' =>'nullable|integer|min:1',
             'phonenumbers' =>'nullable|array',
@@ -1236,7 +1372,7 @@ class WorkflowController extends BaseController
             if($request->hasfile('audio')){
                 $file = $request->file('audio');               
                 $fileUrl = Storage::disk('public')->put('audios', $file);            
-                $urlFile = env('APP_URL', 'http://api.nelumbo.com.co/').'storage/'.$fileUrl;
+                $urlFile = env('APP_URL').'storage/'.$fileUrl;
 
             }else{
                 return $this->sendError('Debes agregar un audio o un texto para ser usado en la llamada.');
@@ -1257,14 +1393,7 @@ class WorkflowController extends BaseController
 
             for ($i=0; $i < sizeof($phonenumbers); $i++) { 
                 $phonconvert = $phonenumbers[$i];
-                $prefix = substr($phonconvert, 0, 2);            
-                $countries = Country::where('phonenumber_prefix', $prefix)->first();
-                if($countries){
-                    $cost = ((float) $countries->customer_price - (float)$countries->sms_customer_price);
-                    $value = round($cost, 2, PHP_ROUND_HALF_UP);
-                }else{
-                    $value = 0.15;
-                }
+                $value = $this->tarff_phone($phonconvert, 1);
                 
                 array_push($number_cost, array("phone" =>  $phonconvert, "cost" => $value));
                 array_push($phoneNumbersForSendCall,  $phonconvert);
@@ -1280,7 +1409,7 @@ class WorkflowController extends BaseController
             
             for ($i=0; $i < sizeof($groups); $i++) {
                 
-                $arrays = $this->tarff_group($groups[$i]);  
+                $arrays = $this->tarff_group($groups[$i], 1);  
 
                 for ($j=0; $j < sizeof($arrays); $j++) { 
                     
@@ -1325,8 +1454,14 @@ class WorkflowController extends BaseController
         $new_camping->save();
         $camping_id = $new_camping->id;
 
+        // $invoice = $this->invoiceRepo->setInvoiceWorkflow($request->input("id_invoice"), $camping_id);
+        // if(!$invoice){
+        //     Workflow::find($camping_id)->delete();
+        //     return $this->sendError('No se pudo encontrar el pago');
+        // }
 
-        if(count($request->input("interaccion")) > 0 || !is_null($request->input("interaccion")) ){
+
+        if( !is_null($request->input("interaccion")) ){
             $this->addInteraccion($request->input("interaccion"), $camping_id);            
         }
 
@@ -1383,6 +1518,7 @@ class WorkflowController extends BaseController
             'url_audio' => 'nullable|string',
             'audio' => 'nullable|mimes:mpga,wav,oga,ogg,spx',
             'save' => 'required|boolean',
+            'id_invoice' => 'nullable|string',
             'simulacion' => 'required|boolean',
             'groups' => 'nullable|array',
             'groups.*' => 'nullable|integer',
@@ -1428,7 +1564,7 @@ class WorkflowController extends BaseController
             if($request->hasfile('audio')){
                 $file = $request->file('audio');                 
                 $fileUrl = Storage::disk('public')->put('audios', $file);            
-                $urlFile = env('APP_URL', 'http://api.nelumbo.com.co/').'storage/'.$fileUrl;
+                $urlFile = env('APP_URL').'storage/'.$fileUrl;
 
             }else{
                 return $this->sendError('Debes agregar un audio o un texto para ser usado en la llamada.');
@@ -1450,14 +1586,7 @@ class WorkflowController extends BaseController
 
             for ($i=0; $i < sizeof($phonenumbers); $i++) { 
                 $phonconvert = $phonenumbers[$i];
-                $prefix = substr($phonconvert, 0, 2);            
-                $countries = Country::where('phonenumber_prefix', $prefix)->first();
-                if($countries){
-                    $cost = ((float) $countries->customer_price - (float)$countries->sms_customer_price);
-                    $value = round($cost, 2, PHP_ROUND_HALF_UP);
-                }else{
-                    $value = 0.15;
-                }
+                $value = $this->tarff_phone($phonconvert, 1);                
                 
                 array_push($number_cost, array("phone" =>  $phonconvert, "cost" => $value));
                 
@@ -1489,7 +1618,7 @@ class WorkflowController extends BaseController
 
                 for ($i=0; $i < sizeof($groups); $i++) {
                     
-                    $arrays = $this->tarff_group($groups[$i]);  
+                    $arrays = $this->tarff_group($groups[$i], 1);  
                     
                     for ($j=0; $j < sizeof($arrays); $j++) { 
                         
@@ -1560,8 +1689,15 @@ class WorkflowController extends BaseController
         $new_camping->save();
         $camping_id = $new_camping->id;
 
+        
+        // $invoice = $this->invoiceRepo->setInvoiceWorkflow($request->input("id_invoice"), $camping_id);
+        // if(!$invoice){
+        //     Workflow::find($camping_id)->delete();
+        //     return $this->sendError('No se pudo encontrar el pago');
+        // }
 
-        if(count($request->input("interaccion")) > 0 || !is_null($request->input("interaccion")) ){
+
+        if( !is_null($request->input("interaccion")) ){
             $this->addInteraccion($request->input("interaccion"), $camping_id);            
         }
 
@@ -1621,7 +1757,7 @@ class WorkflowController extends BaseController
 /*********
         Endpoint para calcular el costo total de todos los números contenidos en un grupo
 *********/
-    public function tarff_group($id_group){
+    public function tarff_group($id_group, $type_service){
 
         $user_now = JWTAuth::parseToken()->authenticate();
         $search = GroupContact::with(array('contacto' => function($query) use ($user_now)
@@ -1636,15 +1772,7 @@ class WorkflowController extends BaseController
         
         foreach ($search as $key) {
                 $phonconvert = $key->contacto->phone;
-                $prefix = substr($phonconvert, 0, 2); 
-                $countries = Country::where('phonenumber_prefix', $prefix)->first();
-                if($countries){
-                    $cost = ((float) $countries->customer_price - (float)$countries->sms_customer_price);
-                    $value = round($cost, 2, PHP_ROUND_HALF_UP);
-                }else{
-                    $value = 0.15;
-                }
-
+                $value = $this->tarff_phone($phonconvert, $type_service);
                 array_push($number_cost, array("phone" =>  $phonconvert, "cost" => $value));
         }
 
@@ -1653,12 +1781,53 @@ class WorkflowController extends BaseController
 
 
 /*********
+        Function para calcular el costo total de un número
+        $type_service : 0 --> SMS
+                        1 --> CALL, CALL-SMS
+*********/
+
+    public function tarff_phone($phone, $type_service){
+        
+        $value = 0;
+        $prefix = substr($phone, 0, 2);            
+        $countries = Country::where('phonenumber_prefix', $prefix)->first();
+        if($countries){
+            
+            if($type_service == 0)
+                $cost = (float)$countries->sms_customer_price;
+            else
+                $cost = (float) $countries->customer_price ;
+            
+            $value = round($cost, 2, PHP_ROUND_HALF_UP);
+        }else{
+            $prefix = substr($phone, 0, 3);            
+            $countries_2 = Country::where('phonenumber_prefix', $prefix)->first();
+            if($countries_2){
+                
+                if($type_service == 0)
+                    $cost = (float) $countries->sms_customer_price;
+                else
+                    $cost = (float) $countries->customer_price ;
+            
+                $value = round($cost, 2, PHP_ROUND_HALF_UP);
+            }                    
+        }
+        
+        if($value < 0.50){
+            $value = 0.50;
+        }
+        return $value;
+
+    }
+
+
+/*********
        REAL : Endpoint para enviar los SMS al proveedor
 *********/
     public function sendSmsToMultipleRecipients($phoneNumbers,$smsText,$senderName, $message_parts, $idCampaign) {
 
-        $userName = env("SMS_SERVICE_USERNAME", "callburn360");
-        $password = env("SMS_SERVICE_PASSWORD", "GI54juhT");
+        $userName = env("SMS_SERVICE_USERNAME");
+        $password = env("SMS_SERVICE_PASSWORD");
 
         $result = (object) [
             'error' => '',
@@ -1725,7 +1894,7 @@ class WorkflowController extends BaseController
             foreach ($resArray->result as $key) {
                if($key->accepted){
                     
-                    $this->setSmsResponse($key->id, $key->to, $senderName, $idCampaign, 1);                    
+                    $this->setSmsResponse($key->id, $message_parts, $key->to, $senderName, $idCampaign, 1);                    
                 }
             }                                
             $result->status = true;
@@ -1737,10 +1906,10 @@ class WorkflowController extends BaseController
             
             foreach ($resArray->result as $key) {                                 
                 if($key->accepted){
-                    $this->setSmsResponse($key->id, $key->to, $senderName, $idCampaign, 1);                                    
+                    $this->setSmsResponse($key->id, $message_parts, $key->to, $senderName, $idCampaign, 1);                                    
                 }
                 else{ 
-                    $this->setSmsResponse(null, $key->to, $senderName, $idCampaign, 2, $key->error);
+                    $this->setSmsResponse(null, $message_parts, $key->to, $senderName, $idCampaign, 2, $key->error);
                     
                 }                                                               
             }
@@ -1794,7 +1963,7 @@ class WorkflowController extends BaseController
 /*********
         Endpoint para guardar el registro del envío del SMS. Dependiendo del tipo (success, error)
 *********/
-    public function setSmsResponse($referenceId, $message_parts, $phoneNumbers,$sender, $idCampaign, $type, $arrayError = null, $simulacion = true){
+    public function setSmsResponse($referenceId, $message_parts, $phoneNumbers, $sender, $idCampaign, $type, $arrayError = null, $simulacion = true){
         
         if($type == 1){
 
@@ -1936,22 +2105,7 @@ class WorkflowController extends BaseController
 
 
 
-/***********
-    Metodo para limpiar los números telefónicos
-***********/
-    public function sanitizePhonenumbers($phonenumbers){
-        $phonenumbers_leng = preg_match("/^[0-9]{7,15}$/", $phonenumbers);
-        if(!$phonenumbers_leng){
-           return false;
-        }
-        $phonenumbers = str_replace(chr(13), ',', $phonenumbers);
-        $phonenumbers = str_replace(chr(10), ',', $phonenumbers);
-        $phonenumbers = str_replace(';', ',', $phonenumbers);
-        $phonenumbers = str_replace('|', ',', $phonenumbers);
-        $phonenumbers = str_replace(' ', '', $phonenumbers);
-        $phonenumbers = explode(',', $phonenumbers);
-
-        return $phonenumbers;
-    }
-
 }
+
+
+

@@ -121,17 +121,17 @@ class FileService{
         $text = preg_replace($patterns, $replacement, $text);
 
         $ttsPrice = 0;
-        $isFile = $this->file->where('tts_language', $language)->where('tts_text', $text)->get();
-        if(count($isFile) > 0){
-            $isFile->saved_from = $savedFrom;
-            $file = $this->copyFile($isFile, $user->email, 1);
-            if($file == false){
-                $response->error = "Ocurrio un error al copiar el audio";
-                return $response;
-            }
-            $file->save();
+        $isFile = $this->file->where('tts_language', $gender.' / '.$language)->where('tts_text', $text)->where('user_email', $user->email)->first();
+        if($isFile){
+            // $isFile->saved_from = $savedFrom;
+            // $file = $this->copyFile($isFile, $user->email, 1);
+            // if($file == false){
+            //     $response->error = "Ocurrio un error al copiar el audio";
+            //     return $response;
+            // }
+            // $file->save();
             
-            $response->file = $file;
+            $response->file = $isFile;
             return $response;
         }
         $ttsEngine = config('tts.engine');
@@ -169,39 +169,31 @@ class FileService{
     public function copyFile( $file, $userId, $isTemplate = false )
     {
        
-        $newName = str_random();
-        $uploadFolder = public_path() . '/uploads/audios_calls/';
+       
+        if(file_exists(public_path('/uploads/audios_calls/'.$file[0]['map_filename']))){            
+        
+            $newFile = $this->file->create([
+                'orig_filename' => $file[0]['orig_filename'],
+                'map_filename' => $file[0]['map_filename'],
+                'extension' => $file[0]['extension'],
+                'stripped_name' => $file[0]['stripped_name'],
+                'user_email' => $userId,
+                'length' => $file[0]['length'],
+                'type' => $file[0]['type'],
+                'tts_language' => $file[0]['tts_language'],
+                'tts_text' => $file[0]['tts_text'],
+                'saved_from' => $file[0]['saved_from'],
+                'cost' => $file[0]['cost'],
+                'is_template' => $isTemplate,            
+                ]);
 
-        $fileExtension = $file[0]['extension'];
-        if(file_exists(public_path('/uploads/audios_calls/'.$file[0]['map_filename']))){
-            
-            $files = public_path().'/uploads/audios_calls/'.$file[0]['map_filename'];
-            $destination = public_path().'/uploads/audios_calls/'.$newName.'.'.$fileExtension;            
-           
-            copy($files,$destination);
-        }
-        else{
+            //$this->moveAudioFileToAmazon($newFile->map_filename);
+            //$this->moveAudioFileToAmazon($newFile->stripped_name . '.gsm');
+            return $newFile;
+        
+        }else{
             return false;
         }
-
-        $newFile = $this->file->create([
-            'orig_filename' => env('APP_URL', 'http://api.nelumbo.com.co/').'uploads/audios_calls/'.$newName . '.' . $fileExtension,
-            'map_filename' => $newName . '.' . $fileExtension,
-            'extension' => $fileExtension,
-            'stripped_name' => $newName,
-            'user_email' => $userId,
-            'length' => $file[0]['length'],
-            'type' => $file[0]['type'],
-            'tts_language' => $file[0]['tts_language'],
-            'tts_text' => $file[0]['tts_text'],
-            'saved_from' => $file[0]['saved_from'],
-            'cost' => $file[0]['cost'],
-            'is_template' => $isTemplate,            
-            ]);
-
-        //$this->moveAudioFileToAmazon($newFile->map_filename);
-        //$this->moveAudioFileToAmazon($newFile->stripped_name . '.gsm');
-        return $newFile;
     }
 
     /**

@@ -5,22 +5,12 @@ namespace App\Http\Services;
 use DB;
 use App\Http\Models\Phonenumber;
 use App\Http\Models\Workflow;
-use App\Http\Models\Schedulation;
+use App\Http\Models\Country;
 use Carbon\Carbon;
-use App\Http\Services\AsteriskServersService;
 
 class VerificationService{
 
-	/**
-	 * Create a new instance of CampaignCronService class
-	 *
-	 * @return void
-	 */
-	public function __construct(AsteriskServersService $asteriskServersRepo, Phonenumber $phonenumberModel)
-	{
-		$this->asteriskServersRepo = $asteriskServersRepo;
-		$this->phonenumberModel = $phonenumberModel;
-	}
+	
 
 	/**
 	 * Get phonenumbers for calling
@@ -45,7 +35,7 @@ class VerificationService{
 					$query->whereIn('call_status', ['SENT_TO_ASTERISK', 'DIALLED']);
 				 }, '=', 0)
                 ->doesntHave('calls')
-				->with(['tariff.isps', 'user','workflow'])
+				->with(['user','workflow'])
 				->orderBy('updated_at', 'ASC')
 				->orderBy('id', 'ASC')
 				#TODO should implement server availability instead of 200
@@ -89,5 +79,50 @@ class VerificationService{
 				'locked_at' => NULL
 			]);
 	}
+
+
+
+	/***********
+        Sanitize PhoneNumbers
+    ***********/
+    public function sanitizePhonenumbers($phonenumbers){
+        $phonenumbers_leng = preg_match("/^[0-9]{9,15}$/", $phonenumbers);
+        if(!$phonenumbers_leng){
+           return false;
+        }
+        $phonenumbers = str_replace(chr(13), ',', $phonenumbers);
+        $phonenumbers = str_replace(chr(10), ',', $phonenumbers);
+        $phonenumbers = str_replace(';', ',', $phonenumbers);
+        $phonenumbers = str_replace('|', ',', $phonenumbers);
+        $phonenumbers = str_replace(' ', '', $phonenumbers);
+        $phonenumbers = explode(',', $phonenumbers);
+
+        return $phonenumbers;
+    }
+
+
+    /***********
+    Metodo para Verificar numeros
+***********/
+    public function verifyPhonenumbers($phonenumber){
+       
+            $phonenumber = $this->sanitizePhonenumbers($phonenumber);
+            if(!$phonenumber){
+                return false;
+            }
+            $phonconvert = $phonenumber[0];
+            $prefix = substr($phonconvert, 0, 2);            
+            $countries = Country::where('phonenumber_prefix', $prefix)->first();            
+            if(!$countries){
+                $prefix = substr($phonconvert, 0, 3);            
+                $countries = Country::where('phonenumber_prefix', $prefix)->first();   
+            }
+            if(is_null($countries)){
+                return false;
+            }
+
+            return true;
+        
+    }
 
 }

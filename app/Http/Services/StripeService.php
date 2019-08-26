@@ -27,6 +27,7 @@ class StripeService{
 		$customer = $this->stripe->customers()->create([
 		    'email' => $user->email
 		]);
+
 		return $customer['id'];
 	}
 
@@ -53,6 +54,21 @@ class StripeService{
 		return $cards;
 	}
 
+	
+	/**
+	 * Get one cards of the user
+	 *
+	 * @param string $userStripeId
+	 * @return array
+	 */
+	public function getCard($userStripeId , $stripe_id)
+	{
+		
+		$cards = $this->stripe->cards()->find($userStripeId, $stripe_id);
+		return $cards;
+	}
+
+
 	/**
 	 * Get all cards of the user
 	 *
@@ -72,9 +88,24 @@ class StripeService{
 	 * @param array $cardData
 	 * @return array
 	 */
-	public function createCard($userStripeId, $cardData)
+	public function createCard($userStripeId, $cardDataToken)
 	{
-		$card = $this->stripe->cards()->create($userStripeId, $cardData);
+		
+		$card = $this->stripe->cards()->create($userStripeId, $cardDataToken);
+		
+		return $card;
+	}
+
+
+	/**
+	 * Create a new token object for the stripe user
+	 *
+	 * @param array $cardData
+	 * @return array
+	 */
+	public function createCardToken($cardData)
+	{
+		$card = $this->stripe->tokens()->create([ 'card' => $cardData]);
 		return $card;
 	}
 
@@ -124,24 +155,17 @@ class StripeService{
 	/**
 	 * Recharge user
 	 */
-	public function makeRecharge($user, $amount, $cardId, $isApplePay = false)
-	{
-		if($isApplePay) {
-			$array = [
-			    'currency' => 'EUR',
-			    'amount'   => $amount,
-			    'source' => $cardId,
-			    'description' =>  $user->email . ' - ' . $user->_id,
-			];
-		} else {
-			$array = [
-			    'customer' => $user->stripe_customer_id,
-			    'currency' => 'EUR',
-			    'amount'   => $amount,
-			    'source' => $cardId,
-			    'description' =>  $user->email . ' - ' . $user->_id,
-			];
-		}
+	public function makeRechargeCapture($user, $amount, $cardId)
+	{		
+		$array = [
+		    'customer' => $user->stripe_customer_id,
+		    'currency' => 'EUR',
+		    'amount'   => $amount,
+		    'source' => $cardId,
+		    'description' =>  $user->email,
+		    'capture' => false,
+		];
+		
 		$charge = $this->stripe->charges()->create($array);
 		return $charge;
 	}
@@ -153,14 +177,17 @@ class StripeService{
 	 */
 	public function syncStripeWithLocal($user)
 	{
+		
 		$cards = $this->getAllCards($user->stripe_customer_id);
-		$cardsData = $cards['data'];
+		$cardsData = $cards['data'];		
 		$customer = $this->getCustomerByPK($user->stripe_customer_id);
 		$defaultCardId = $customer['default_source'];
-		$cardsIdsThatExist = [];
+		$cardsIdsThatExist = [];		
+
 		foreach ($cardsData as $cardData) {
+
 			$localCardObject = [
-				//'user_id' => $user->_id,
+				'user_email' => $user->email,
 				'last_4_digits' => $cardData['last4'],
 				'expiration_month' => $cardData['exp_month'],
 				'expiration_year' => $cardData['exp_year'],
@@ -176,6 +203,7 @@ class StripeService{
 				$user->localCards()->create($localCardObject);
 			}
 		}
+		
 		$user->localCards()->whereNotIn('stripe_id', $cardsIdsThatExist)->delete();
 		return true;
 	}

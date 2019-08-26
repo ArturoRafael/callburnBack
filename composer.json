@@ -6,16 +6,20 @@
     "type": "project",
     "require": {
         "php": "^7.1.3",
+        "barryvdh/laravel-cors": "^0.11.3",
         "darkaonline/l5-swagger": "5.7.*",
         "fideloper/proxy": "^4.0",
         "google/cloud-text-to-speech": "^0.4.4",
         "guzzlehttp/guzzle": "~6.0",
+        "jackiedo/timezonelist": "5.*",
+        "laravel/cashier": "^9.3",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
         "phansys/getid3": " ^2.1@dev",
         "predis/predis": "^1.1",
         "sendinblue/api-v3-sdk": "^6.1.0",
-        "webup/laravel-sendinblue": "^1.1"
+        "webup/laravel-sendinblue": "^1.1",
+        "cartalyst/stripe-laravel": "9.0.*"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

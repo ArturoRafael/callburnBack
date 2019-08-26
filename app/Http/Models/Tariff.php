@@ -32,6 +32,11 @@ class Tariff extends Eloquent {
 	{
 		return $this->belongsTo(\App\Http\Models\Country::class, 'country_id');
 	}
+
+
+	public function bestIsp(){
+		return $this->belongsTo(App\Http\Models\Isp::class, 'best_isp_id', 'id');
+	}
 	
 	
 

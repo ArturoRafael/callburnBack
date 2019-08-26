@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "crafty-water-248514",
+  "private_key_id": "4bb0e9b76ecfe4438c1fdf3af7e41bce893f4ccc",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDCePhGK3HFSQWD\n+2TqonfLIT5913/C29wtCx0uIBmITNEOOSMgAjuWawXXQz1qvfhdView6TJemVS9\nC6/waqN98edLFExf824kmPlT2tC+w594DXLQcZPPHi0GJwc3u8qa4rjKzbfrD3Dd\nIlWnPy8xALu4x/fBYceonO0OLA5hj1kG5KelV0A32zTdgvIURQ7MZYhdIJGE64+0\nl99j/h4acsVtk8xn/M5UvWLO/V7FiVhKV2n7PTf6xw48xeNysrJen12v5bVT4fdH\n7yJiaoSrVSSi6XwM2zwn5GEm2p3oAqLPLZkiuZCPo63XOh8hgc8W54XILRSSH48x\nli8FmsxzAgMBAAECggEAXYDZaq+fy6og50T70B7et0GcMNho+vFIKzYhSRiw/gpl\nJ9AMFetM6DU8ATS4tnZxkLsIaXSuPbK+fgi9BrzXMAqb2UsAr8+1AQ62Ln3SiS44\nofnhXtyFI3wQTNl+DGuT7iWdkREZYYEylHhaM4hbMdX27FDlTEstuuH8zqgbIAd7\n9cZPTqb2Ve0n+bGphuvzQVG8vcyZdhcpppqByCj7/NvNeW1SCVY5qoAXFnNbVa0O\nC61Q3WDnwuliyC3p4D+YRsSdFmNQ/c8Sh/jAfrGaCxvJxmRmDLxcteb4tbrC+epx\n25SzJBokdMGFx49YvRVknc8myFdCxdVkKK/sVbdMwQKBgQDrrZkYVZQwYhUdO/PX\n3Z2g+/EHZBdktpo28Qf9MKM6DAb4FU4qT8cBrztIlya1NSD+L4x5ia9udFz/HbBl\nRVd44LfiDq35SsnA6rL6HgT/ka/HCS6Oe3sdF64HS4XDP1ozFhdu7dIxz+cNt2N4\nx7qpSlHt9Q8D0iGPZi2c1BiPMwKBgQDTPcrTcCB7pi+YTwPmNZX7C2SI+ImY7zdM\nYFSy/TRfWPmoS9bnViS43sUkqmU0W+So41AsRvwJW+YVK17OT0V4vIG5NjWn2pMP\nkxF13uYxwGPVBI0Ck38i3g48iebuVqPU8GeA2X/TY9jtFcBMKNxPTOWg7ZDP0OCN\nhZy2ZenNwQKBgQCC58/rlk1Teodjz5Mnye7uJkLA6jWcOVj7P3JCjit76IZOcfcS\nxXEyXFS/g0V6zWHgDiUmtPV+kp+9DI6YEaX+fENnCuRTXdkmkLaM+vOnyRIrqcv0\nVF4T0L1XS/mmc5/0VEb71Jk2Fdau5bgYtEfYFHHhjIakhqkhb43SWHSzxQKBgBJf\nWXiyU+DtP0578Nbg6j5/aysOkskeZSzbZAJ9S0TPtEcS8YoFUARUO8lImKzJIUYf\nHyX6tokJ2SUWNJS1CFHL82xsbpY+yHOeUvJxhIvnM8efMbR7p58cuRhC1jb8ihtH\nHXlzcU6tbHySW7tEAoVTJtWsU9//RsiISm0CyCcBAoGAFr1is6zlDIuLMma8uULU\nI/XTcZXbXVtEOsyv73uka1sSVECi5pw1hYRzndEQhEVidw6A7R+s1JIPJwQHsLVJ\npo+OJCjlid2VdiALjUuDWue7aV4jp1OpYpFgEPgDHzKdjJX8vnsPIy4GRWZdWL5x\nL299Ua/uJ9j+yr9IdjYjDCM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "text-to-audio@crafty-water-248514.iam.gserviceaccount.com",
+  "client_id": "109496159342305558419",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/text-to-audio%40crafty-water-248514.iam.gserviceaccount.com"
+}

@@ -1,11 +1,13 @@
-<?php namespace App\Services\Cache;
+<?php 
+
+namespace App\Http\Services\Cache;
 
 
 class AsteriskLoadCacheService
 {
 	function __construct()
 	{
-		$this->redis = \LaravelRedis::connection();
+		$this->redis = \Redis::connection();
 	}
 
 	/**

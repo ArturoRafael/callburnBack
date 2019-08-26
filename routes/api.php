@@ -29,9 +29,15 @@ Route::group(['prefix' => 'auth', 'middleware' => 'jwt.auth'], function () {
     Route::post('logout', 'AuthController@logout');
 
     Route::get('users','UsersController@listar_usuarios');
-    Route::post('user_profile/{user_profile}','UsersController@update_profile');
+    Route::post('update_profile','UsersController@update_profile');
+    Route::post('block_user','UsersController@block_user');
+    Route::get('user_invoice','UsersController@user_invoice');
+    Route::post('languages_site','UsersController@languages_site');
+    Route::get('language_json','UsersController@language_json');
+
 
     Route::apiResource('contact','ContactController');
+	Route::post('store_write','ContactController@store_write');
 	Route::post('contact_save','ContactController@save_file_contacts');
 	Route::get('groupsContactUser','ContactController@groupsContactUser');
 
@@ -59,6 +65,7 @@ Route::group(['prefix' => 'auth', 'middleware' => 'jwt.auth'], function () {
 	Route::post('editRecurrent', 'WorkflowController@editRecurrent');
 	Route::get('templates_workflows', 'WorkflowController@templates_workflows');
 	Route::get('groupworkflow_user/{email}', 'WorkflowController@groupworkflow_user');
+	Route::post('calculate_cost','WorkflowController@calculate_cost');
 	
 	Route::apiResource('groupworkflow', 'GroupWorkflowController');
 	
@@ -78,6 +85,14 @@ Route::group(['prefix' => 'auth', 'middleware' => 'jwt.auth'], function () {
 
 	Route::apiResource('workflowcontactkey','WorkflowContactKeyController');
 
+	Route::post('verification/send-verification', 'VerificationsController@postSendVerificationCode');
+    Route::get('verification/check-status', 'VerificationsController@getCheckCallStatus');
+    Route::get('verification/caller-list', 'VerificationsController@getCaller');
+    Route::post('verification/verify-number', 'VerificationsController@verifyPhonenumbers');
+
+    Route::post('stripe/makepayment', 'StripeController@postMakePayment');
+    Route::get('stripe/getCards', 'StripeController@getCards');
+     
 });
 
 Route::middleware('jwt.refresh')->get('/token/refresh', 'AuthController@refresh');

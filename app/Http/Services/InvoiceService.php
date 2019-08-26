@@ -4,10 +4,6 @@ namespace App\Http\Services;
 
 use App\Http\Models\Coupon;
 use App\Http\Models\Invoice;
-use App\Http\Contracts\InvoiceInterface;
-use App\Http\Services\SendEmailService;
-use App\Http\Services\SlackNotificationService;
-use App\Http\Services\ActivityLogService;
 use App\Http\Users;
 use Carbon\Carbon;
 use DB;
@@ -78,79 +74,16 @@ class InvoiceService{
        	return ['count' => $count, 'invoices' => $invoices];
 	}
 
-	/**
-	 * Get the invoice number code
-	 *
-	 * @param string $type
-	 * @return string
-	 */
-	public function getNextInvoiceNumber($type)
-	{
-		if($type == 'TRANSACTION' || $type == 'GIFT'){
-			$types = ['TRANSACTION', 'GIFT'];
-			$orderField = 'transaction_id';
-		} else{
-			$types = ['REFUND'];
-			$orderField = 'refund_id';
-		}
-		$yearMonth = date('Ym');
-		$lastInvoice = \App\Models\Invoice::whereIn('type', $types)->where('is_paid', 1)
-			->orderBy('yearmonth_id', 'DESC')
-			->orderBy($orderField, 'DESC')
-			->first();
-		if(!$lastInvoice){ return 1; }
-		if($type == 'TRANSACTION' || $type == 'GIFT'){
-			if($yearMonth != $lastInvoice->yearmonth_id || !$lastInvoice->transaction_id){
-				return 1;
-			}
-			return $lastInvoice->transaction_id + 1;
-		}
-		if($yearMonth != $lastInvoice->yearmonth_id || !$lastInvoice->refund_id){
-			return 1;
-		}
-		return $lastInvoice->refund_id + 1;
-	}
+	
+	public function setInvoiceWorkflow($id_invoice, $id_workflow){
 
-	/**
-	 * Create a new GIFT invoice for welcome credit
-	 * and for importation
-	 *
-	 * @param User $user
-	 * @param float $amount
-	 * @param string $countryCode
-	 * @return bool
-	 */
-	public function createGiftInvoice($user, $amount, $countryCode, $minimumMargin = 0)
-	{
-		$countryCode = $countryCode ? $countryCode: 'N/A';
-		$invoiceData = [
-			'user_id' => $user->_id,
-			'order_number' => date('Y') . '-#' . rand(1000000, 9999999),
-			'purchased_amount' => 0,
-			'vat_amount' => 0,
-			'vat_percentage' => 0,
-			'total_amount' => 0,
-			'discount_percentage' => 0,
-			'discount_amount' => $amount,
-			'remaining_gift_amount' => $amount,
-			'type' => 'GIFT',
-			'customer_country_code' => $countryCode,
-			'customer_name' => $user->email,
-			'customer_address' => NULL,
-			'customer_postal_code' => NULL,
-			'customer_city' => NULL,
-			'minimum_margin_criteria_for_gift' => $minimumMargin,
-			'current_balance_after_billing' => $user->balance
-		];
-		$transactionId = $this->getNextInvoiceNumber('GIFT');
-		$invoice = $this->invoice->create($invoiceData);
-		$invoice->invoice_number = strtoupper( $invoice->customer_country_code ) . '-I-' . date('Ym') . '-' . str_pad($transactionId, 5, '0', STR_PAD_LEFT);
-		$invoice->is_paid = 1;
-		$invoice->transaction_id = $transactionId;
-		$invoice->yearmonth_id = date('Ym');
-		$invoice->invoice_date = date('Y-m-d H:i:s');
-		$invoice->save();
-		return $invoice;
+		$invoice = Invoice::find($id_invoice);
+        if(!$invoice){
+            return false;
+        }
+        $invoice->id_workflow = $id_workflow;
+        $invoice->save();
+        return true;
 	}
 
 	/**
@@ -159,65 +92,35 @@ class InvoiceService{
 	 * @param User $user
 	 * 
 	 */
-	public function createOrder($user, $amount, $vatId, $couponCode)
+	public function createOrder($user, $stripeCaptured)
 	{
-        $vatRepo = new \App\Services\VatService();
-        $vatJson = json_decode( file_get_contents( public_path() . '/rates.json' ), 1);
-		//If user does not have name, use email instead
         $firstName = $user->first_name? $user->first_name: $user->email;
         $countryCode = strtoupper( $user->country_code );
 
-        //By default we will consider that should charge VAT . if the vatId is valid, we will make it false
-        $vatAmount = 0;
-        $vatPercentage = 0;
-        if( isset($vatJson['rates'][$countryCode]) && (!$vatId || !$vatRepo->checkIfVatIdValid($vatId)) ){
-    		$vat = $vatRepo->calculateVat($amount, $countryCode);
-        	$vatAmount = $vat->getTax();
-        	$vatPercentage = $vatJson['rates'][$countryCode]['standard_rate'];
-
+        if($stripeCaptured['captured']){
+        	$type = 'TRANSACTION';
+        	$method = 'stripe';
+        }else{        	
+        	$type = 'CAPTURED';
+        	$method = 'stripe_automatic_billing';
         }
-        $discountPercentage = NULL;
-        if($couponCode){
-            $now = Carbon::now();
-            $coupon = $user->coupons()->where('is_used', 0)
-                ->where('promotion_end','>',$now)
-                    ->whereRaw('lower(`code`) = ?',[$couponCode])->first();
-            if(!$coupon) {
-                $coupon = Coupon::whereRaw('lower(`code`) = ?',[$couponCode])->where('type','UNLIMITED')->where('promotion_end','>',$now)->first();
-            }
-            if($coupon){
-                if($coupon->type == 'UNLIMITED' && $amount >= $coupon->minimum_amount) {
-                    $discountPercentage = $coupon->discount_percentage;
-                }
-
-                if($coupon->type != 'UNLIMITED') {
-                    $discountPercentage = $coupon->discount_percentage;
-                    $coupon->is_used = 1;
-                    $coupon->save();
-                }
-            }
-        }
-        $total = (float) $amount + $vatAmount;
-        $formattedToatal = number_format($total, 2);
         $invoiceData = [
-            'user_id' => $user->_id,
-            'order_number' => date('Y') . '-#' . rand(1000000, 9999999),
-            'purchased_amount' => $amount,
-            'vat_amount' => $vatAmount,
-            'vat_percentage' => $vatPercentage,
-            'vat_id' => $vatId,
-            'total_amount' => $total,
-            'discount_percentage' => $discountPercentage,
-            'discount_coupon_code' => $couponCode,
+            'user_email' => $user->email,
+            'order_number' => $stripeCaptured['id'],
+            'total_amount' => ($stripeCaptured['amount'] / 100),
             'customer_country_code' => $countryCode,
             'customer_name' => $firstName,
             'customer_address' => $user->address,
             'customer_postal_code' => $user->postal_code,
             'customer_city' => $user->city,
-            //'current_balance_after_billing' => $user->balance
+            'type' => $type,
+            'invoice_date' => date('Y-m-d H:i:s'),
+            'method' => $method,
+            'receipt_url' => $stripeCaptured['receipt_url'],
+            'description' => $stripeCaptured['description'] 
         ];
 
-        $invoice = \App\Models\Invoice::create($invoiceData);
+        $invoice = Invoice::create($invoiceData);
         return $invoice;
 	}
 

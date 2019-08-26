@@ -42,8 +42,7 @@ class FileController extends BaseController
         $user_now = JWTAuth::parseToken()->authenticate(); 
 
         $file = $fileservie->createFromText($text, $code,  $gender, $user_now->email);
-        $file = (array) $file;
-       
+        $file = (array) $file;       
 
         return $this->sendResponse($file, 'Audio');
 

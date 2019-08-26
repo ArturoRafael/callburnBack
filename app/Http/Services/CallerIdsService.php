@@ -1,8 +1,6 @@
 <?php 
 namespace App\Http\Services;
 
-use App\Services\SlackNotificationService;
-
 class CallerIdsService{
 
 	/**
