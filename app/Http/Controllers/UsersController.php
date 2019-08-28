@@ -9,6 +9,7 @@ use App\Http\Models\Language;
 use App\Http\Models\Invoice;
 use Illuminate\Http\Request;
 use Validator;
+use Hash;
 use JWTAuth;
 
 class UsersController extends BaseController
@@ -101,6 +102,68 @@ class UsersController extends BaseController
     /**
      *
      * @OA\Post(
+     *   path="/api/auth/update_timezones",
+     *   summary="update timezone the user",
+     *   operationId="update_timezones",   
+     *   tags={"Users"},
+     * @OA\Parameter(
+     *      ref="../Swagger/definitions.yaml#/components/parameters/timezone"
+     *    ), 
+     * @OA\Parameter(
+     *      ref="../Swagger/definitions.yaml#/components/parameters/language_id"
+     *    ),          
+     *   @OA\Response(
+     *      response=200,
+     *      ref="../Swagger/definitions.yaml#/components/responses/Success"
+     *    ),
+     *   @OA\Response(
+     *      response=401,
+     *      ref="../Swagger/definitions.yaml#/components/responses/Unauthorized"
+     *    ),
+     *   @OA\Response(
+     *      response=500,
+     *      ref="../Swagger/definitions.yaml#/components/responses/InternalServerError"
+     *   ),
+     *  )
+     */
+    public function update_timezones(Request $request)
+    {
+        $input = $request->all();
+        $user_now = JWTAuth::parseToken()->authenticate();
+
+        $validator = Validator::make($input, [            
+            'timezone' => 'nullable|string',
+            'language_id' => 'nullable|integer'                        
+        ]);
+
+        if($validator->fails()){
+            return $this->sendError('Error de validación', $validator->errors());       
+        }
+
+        $usuario = Users::with('language')->find($user_now->email);
+        if(!$usuario){
+            return $this->sendError('Usuario no encontrado.');
+        }
+
+        if(!is_null($input['language_id'])){
+            $lang = Language::find($input['language_id']);        
+            if (is_null($lang)) {
+                return $this->sendError('Lenguaje no encontrado');
+            }
+            $usuario->language_id = $input['language_id'];
+        }
+
+        if(!is_null($input['timezone'])){            
+            $usuario->timezone = $input['timezone'];
+        }
+
+        $usuario->save();
+        return $this->sendResponse($usuario->toArray(), 'Usuario actualizado con éxito');
+    }
+
+    /**
+     *
+     * @OA\Post(
      *   path="/api/auth/user_profile",
      *   summary="update profile the user",
      *   operationId="update_profile",   
@@ -177,19 +240,16 @@ class UsersController extends BaseController
         $user_now = JWTAuth::parseToken()->authenticate();
 
         $validator = Validator::make($input, [
-            'email' => 'email|required',
             'idrol' => 'nullable|integer',
             'type_business' => 'nullable|integer',
             'password' => 'nullable|string|min:3',
             'c_password' => 'nullable|string|min:3|same:password',
+            'password_actual' => 'nullable|string|min:3',
             'firstname' => 'nullable|max:200',
             'lastname' => 'nullable|max:200',
             'phone' => 'nullable|max:200',
             'businessname' => 'nullable|required',
-            'email_business_user' => 'nullable|email',
-            'birthday' => 'nullable|date|date_format:Y-m-d',
-            'timezone' => 'nullable|string',
-            'language_id' => 'nullable|integer',
+            'birthday' => 'nullable|date|date_format:Y-m-d',            
             'address' => 'nullable|string|max:255',
             'postal_code' => 'nullable|string',
             'country_code' => 'nullable|string|max:2',
@@ -206,13 +266,10 @@ class UsersController extends BaseController
             return $this->sendError('Usuario no encontrado.');
         }
 
-
-        if(!is_null($input['language_id'])){
-            $lang = Language::find($input['language_id']);        
-            if (is_null($lang)) {
-                return $this->sendError('Lenguaje no encontrado');
-            }
-            $usuario->language_id = $input['language_id'];
+        if(!is_null($input['password_actual'])){       
+           if (!Hash::check($input['password_actual'], $user_now->password)) {
+              return $this->sendError('La contraseña actual no es correcta', null, 401);
+           }
         }
         
         if(!is_null($input['idrol'])){
@@ -239,14 +296,11 @@ class UsersController extends BaseController
         $usuario->lastname = $input['lastname'];
         $usuario->phone = $input['phone'];
         $usuario->businessname = $input['businessname'];
-        $usuario->email_business_user = $input['email_business_user'];
-        $usuario->birthday = $input['birthday'];
-        $usuario->timezone = $input['timezone'];       
+        $usuario->birthday = $input['birthday'];               
         $usuario->address = $input['address'];
         $usuario->postal_code = $input['postal_code'];
         $usuario->country_code = $input['country_code'];
         $usuario->city = $input['city'];
-
         
         $usuario->save();
 

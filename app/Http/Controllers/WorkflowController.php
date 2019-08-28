@@ -14,8 +14,7 @@ use App\Http\Models\Key;
 use App\Http\Models\KeyEventType;
 use App\Http\Models\File;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Input;
-use Illuminate\Support\Facades\Storage;
+use App\Exports\WorkflowExport;
 use Carbon\Carbon;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
@@ -23,6 +22,9 @@ use GuzzleHttp\Psr7;
 use App\Http\Services\FileService;
 use App\Http\Services\InvoiceService;
 use App\Http\Services\VerificationService;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Storage;
+use Maatwebsite\Excel\Facades\Excel;
 use Validator;
 use JWTAuth;
 
@@ -246,6 +248,26 @@ class WorkflowController extends BaseController
         }
 
         return $this->sendResponse($workflow->toArray(), 'Workflow devuelto con éxito');
+    }
+
+
+
+
+
+/*
+    EXPORT EXCEL
+*/
+    public function export_excel($id)
+    {
+       
+        $workflow = Workflow::find($id);
+        
+        if (!$workflow) {
+            return $this->sendError('Workflow no encontrado');
+        }
+
+       return (new WorkflowExport)->forId($id)->download('Report the '.$workflow->name.'.xlsx');
+        
     }
 
 
@@ -1358,12 +1380,12 @@ class WorkflowController extends BaseController
         if(!is_null($request->input("url_audio"))){
 
             if (!filter_var($request->input("url_audio"), FILTER_VALIDATE_URL)) {
-                return $this->sendError('La url del vídeo no es correcta');
+                return $this->sendError('La url del audio no es correcta');
             }
             
             $searulrFile = File::where('orig_filename',$request->input("url_audio"))->first();
             if(!$searulrFile){
-                return $this->sendError('La url del vídeo no es correcta');
+                return $this->sendError('La url del audio no es correcta');
             }           
             
             $urlFile = $request->input("url_audio");

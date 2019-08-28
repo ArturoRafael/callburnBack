@@ -158,6 +158,7 @@ return [
         Jackiedo\Timezonelist\TimezonelistServiceProvider::class,
         Laravel\Cashier\CashierServiceProvider::class,
         Cartalyst\Stripe\Laravel\StripeServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -217,7 +218,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
         'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class,
-        'Stripe' => Cartalyst\Stripe\Laravel\Facades\Stripe::class
+        'Stripe' => Cartalyst\Stripe\Laravel\Facades\Stripe::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class
 
     ],
 

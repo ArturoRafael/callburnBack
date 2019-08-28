@@ -5,6 +5,7 @@ use App\Http\Models\File;
 use File as LaravelFile;
 use App\Helper;
 use App\Http\Models\Users;
+use App\Http\Services\TTS\TextToSpeechTTSService;
 use Carbon\Carbon;
 use Storage;
 use Illuminate\Support\Facades\DB;
@@ -136,7 +137,7 @@ class FileService{
         }
         $ttsEngine = config('tts.engine');
         if($ttsEngine == 'SPEECH'){
-            $nuanceTTSRepo = new \App\Http\Services\TTS\TextToSpeechTTSService();
+            $nuanceTTSRepo = new TextToSpeechTTSService();
             $resp = $nuanceTTSRepo->createFromText($text, $language, $gender, $user, $ttsPrice, $savedFrom);
         }else{
             $response->error = "no_tts_configured";
