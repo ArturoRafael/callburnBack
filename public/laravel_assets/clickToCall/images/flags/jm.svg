@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>JM</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-113.000000, -489.000000)">
+            <g id="JM" transform="translate(113.000000, 489.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <rect id="Mask-Copy" fill="#1DBE4F" mask="url(#mask-2)" x="0" y="0" width="23" height="16"></rect>
+                <polygon id="Rectangle-253" fill="#262626" mask="url(#mask-2)" points="0 0 9.85714286 8 0 16"></polygon>
+                <polygon id="Rectangle-253" fill="#262626" mask="url(#mask-2)" transform="translate(18.071429, 8.000000) scale(-1, 1) translate(-18.071429, -8.000000) " points="13.1428571 0 23 8 13.1428571 16"></polygon>
+                <path d="M11.5,6.71336752 L-1.06943378,-1.76482262 L-2.26237864,0.00379087227 L9.59248891,8 L-2.26237864,15.9962091 L-1.06943378,17.7648226 L11.5,9.28663248 L24.0694338,17.7648226 L25.2623786,15.9962091 L13.4075111,8 L25.2623786,0.00379087227 L24.0694338,-1.76482262 L11.5,6.71336752 Z" id="Rectangle-2" fill="#FFD646" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

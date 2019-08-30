@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="86px" height="80px" viewBox="0 0 86 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>pause_audio</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pause_audio" transform="translate(2.000000, 1.000000)">
+            <g id="Page-1">
+                <g id="Voice-message">
+                    <g id="Group-19" transform="translate(0.000000, 0.500000)">
+                        <g id="Group-13">
+                            <g id="Group-20">
+                                <circle id="Oval-4" fill="#23BDFF" cx="45" cy="39" r="39"></circle>
+                                <circle id="Oval-2" stroke="#000000" stroke-width="3" cx="38.5" cy="38.5" r="38.5"></circle>
+                                <g id="Group" transform="translate(31.000000, 22.000000)" stroke="#FFFFFF" stroke-width="2.58899999" stroke-linecap="square">
+                                    <path d="M0.600951605,0.581795968 L2.69364582,30.5087175" id="Line"></path>
+                                    <path d="M18.9486994,3.51713082 C18.9486994,3.51713082 18.9248728,4.06344628 18.8966013,4.71167925 L17.6403005,33.5171308" id="Line"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="59px" height="53px" viewBox="0 0 59 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Graphicdesign</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="31.5777778" width="59" height="10.8888889"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="59" height="10.8888889" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <ellipse id="path-3" cx="29.5" cy="37.0222222" rx="2.18518519" ry="2.17777778"></ellipse>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="4.37037037" height="4.35555556" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Contact-Us" transform="translate(-482.000000, -1137.000000)" stroke="#314E55">
+            <g id="SendMessage" transform="translate(278.000000, 1139.000000)">
+                <g id="Graphicdesign" transform="translate(204.000000, 0.000000)">
+                    <path d="M1.09259259,2.16864965 C1.09259259,0.970937522 2.05488145,0 3.25042378,0 L55.7495762,0 C56.9413135,0 57.9074074,0.959960092 57.9074074,2.16864965 L57.9074074,32.6666667 L1.09259259,32.6666667 L1.09259259,2.16864965 Z" id="Rectangle-549" stroke-width="2.16" fill="#DBCF56"></path>
+                    <use id="Rectangle-550" mask="url(#mask-2)" stroke-width="4.32" fill="#EAEAEA" xlink:href="#path-1"></use>
+                    <use id="Oval-543" mask="url(#mask-4)" stroke-width="4.32" fill="#EAEAEA" xlink:href="#path-3"></use>
+                    <polygon id="Rectangle-551" stroke-width="2.16" stroke-linecap="round" stroke-linejoin="round" fill="#EAEAEA" points="24.037037 41.3777778 34.962963 41.3777778 38.2407407 49 20.7592593 49"></polygon>
+                    <g id="Mailsend" transform="translate(9.721844, 1.177778)" stroke-width="1.2096">
+                        <g id="Group" transform="translate(14.651934, 13.215708) rotate(-30.000000) translate(-14.651934, -13.215708) translate(3.151934, 5.715708)">
+                            <rect id="Rectangle-323" fill="#E9E7D1" x="0.663885716" y="0.186792101" width="21.7447349" height="14.1379928" rx="1.2096"></rect>
+                            <polygon id="Triangle-17" stroke-linejoin="round" fill="#E9E7D1" points="1.906442 0.186792101 21.1660644 0.186792101 11.5362532 8.79252687"></polygon>
+                            <path d="M8.42986248,6.02639784 L0.974524786,14.0174373" id="Line"></path>
+                            <path d="M22.0979816,6.02639784 L14.6426439,14.0174373" id="Line" fill="#E9E7D1" transform="translate(18.370313, 10.021918) scale(-1, 1) translate(-18.370313, -10.021918) "></path>
+                        </g>
+                        <g id="Line-+-Rectangle-323" transform="translate(29.723935, 16.105763) rotate(-30.000000) translate(-29.723935, -16.105763) translate(22.723935, 13.105763)">
+                            <path d="M0.369418413,3.34262236 L12.7949812,3.34262236" id="Line" stroke-linecap="square"></path>
+                            <polyline id="Rectangle-320" stroke-linecap="round" stroke-linejoin="round" transform="translate(10.620508, 3.342622) rotate(-315.000000) translate(-10.620508, -3.342622) " points="8.75667331 1.49853634 12.4843422 1.49853634 12.4843422 5.18670839"></polyline>
+                        </g>
+                        <g id="Line-+-Rectangle-323" transform="translate(23.511153, 24.377806) rotate(-30.000000) translate(-23.511153, -24.377806) translate(16.511153, 21.377806)">
+                            <path d="M0.369418413,3.34262236 L12.7949812,3.34262236" id="Line" stroke-linecap="square"></path>
+                            <polyline id="Rectangle-320" stroke-linecap="round" stroke-linejoin="round" transform="translate(10.620508, 3.342622) rotate(-315.000000) translate(-10.620508, -3.342622) " points="8.75667331 1.49853634 12.4843422 1.49853634 12.4843422 5.18670839"></polyline>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

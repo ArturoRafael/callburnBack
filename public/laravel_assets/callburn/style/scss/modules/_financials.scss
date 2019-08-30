@@ -1,0 +1,38 @@
+.financials{
+
+  .href-style{
+    color: $callburn-blue;
+  }
+  .mb-20{
+    margin-bottom: 20px;
+  }
+  .image-select{
+    margin-top: 4px;
+    width: 10px;
+  }
+  .mt-20{
+    display: block;
+    margin-top: 20px;
+  }
+  .input-big{
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .table-border-none{
+    tr{
+      td{
+        border: none;
+
+      }
+    }
+  }
+
+  .bordered-dotted{
+  border-bottom: 1px solid $callburn-border!important;
+  display: block;
+  }
+  .buy{
+
+    margin-top: 20px;
+  }
+}

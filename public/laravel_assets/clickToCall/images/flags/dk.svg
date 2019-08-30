@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>DK</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-113.000000, -256.000000)">
+            <g id="DK" transform="translate(113.000000, 256.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask" stroke="#F5F5F5" mask="url(#mask-2)" fill="#FFFFFF">
+                    <use mask="url(#mask-4)" xlink:href="#path-1"></use>
+                </g>
+                <path d="M0,1.62221599 C0,0.726290836 0.726331586,0 1.61731534,0 L21.3826847,0 C22.2759033,0 23,0.729063034 23,1.62221599 L23,14.377784 C23,15.2737092 22.2736684,16 21.3826847,16 L1.61731534,16 C0.724096741,16 0,15.270937 0,14.377784 L0,1.62221599 Z M0,9.6 L6.57142857,9.6 L6.57142857,16 L9.85714286,16 L9.85714286,9.6 L23,9.6 L23,6.4 L9.85714286,6.4 L9.85714286,0 L6.57142857,0 L6.57142857,6.4 L0,6.4 L0,9.6 Z" id="Combined-Shape" fill="#EF264D" mask="url(#mask-3)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

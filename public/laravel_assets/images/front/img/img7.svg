@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="49px" height="36px" viewBox="0 0 49 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="Voice-Messages" transform="translate(-488.000000, -865.000000)" stroke="#314E55">
+            <g id="Cheaper" transform="translate(362.000000, 866.000000)">
+                <g id="Icon" transform="translate(127.000000, 0.000000)">
+                    <path d="M0,32 C0,33.1045695 2.46243388,34 5.5,34 C8.53756612,34 11,33.1045695 11,32 L11,2.08419301" id="Oval-1412" stroke-width="2" stroke-linecap="round" fill="#E4AD40"></path>
+                    <path d="M5.68434189e-14,30.051279 C5.68434189e-14,31.1558485 2.46243388,32.051279 5.5,32.051279 C8.53756612,32.051279 11,31.1558485 11,30.051279 L11,-2.84217094e-14" id="Oval-1417" stroke-width="2" stroke-linecap="round" fill="#E4AD40" transform="translate(5.500000, 16.025640) rotate(-180.000000) translate(-5.500000, -16.025640) "></path>
+                    <path d="M0,27 C0,28.1045695 2.46243388,29 5.5,29 C8.53756612,29 11,28.1045695 11,27" id="Oval-1412" stroke-width="2" stroke-linecap="round" fill="#E4AD40"></path>
+                    <path d="M0,22 C0,23.1045695 2.46243388,24 5.5,24 C8.53756612,24 11,23.1045695 11,22" id="Oval-1412" stroke-width="2" stroke-linecap="round" fill="#E4AD40"></path>
+                    <path d="M0,22 C0,23.1045695 2.46243388,24 5.5,24 C8.53756612,24 11,23.1045695 11,22" id="Oval-1415" stroke-width="2" stroke-linecap="round" fill="#E4AD40"></path>
+                    <path d="M0,17 C0,18.1045695 2.46243388,19 5.5,19 C8.53756612,19 11,18.1045695 11,17 L11.3476562,3.1484375" id="Oval-1413" stroke-width="2" stroke-linecap="round" fill="#E4AD40"></path>
+                    <path d="M0,12 C0,13.1045695 2.46243388,14 5.5,14 C8.53756612,14 11,13.1045695 11,12" id="Oval-1414" stroke-width="2" stroke-linecap="round" fill="#E4AD40"></path>
+                    <path d="M0,12 C0,13.1045695 2.46243388,14 5.5,14 C8.53756612,14 11,13.1045695 11,12" id="Oval-1418" stroke-width="2" stroke-linecap="round" fill="#E4AD40"></path>
+                    <path d="M0,7 C0,8.1045695 2.46243388,9 5.5,9 C8.53756612,9 11,8.1045695 11,7" id="Oval-1416" stroke-width="2" stroke-linecap="round" fill="#E4AD40"></path>
+                    <path d="M0,2 C0,3.1045695 2.46243388,4 5.5,4 C8.53756612,4 11,3.1045695 11,2" id="Oval-1417" stroke-width="2" stroke-linecap="round" fill="#E4AD40"></path>
+                    <path d="M17,27 L28,27" id="Line" stroke-width="2" stroke-linecap="square"></path>
+                    <polyline id="Rectangle-1567" stroke-width="2" stroke-linecap="round" transform="translate(25.000000, 27.000000) rotate(-315.000000) translate(-25.000000, -27.000000) " points="22 24 28 24 28 30"></polyline>
+                    <circle id="Oval-1438" stroke-linecap="round" fill="#E4AD40" cx="41" cy="28" r="6"></circle>
+                    <circle id="Oval-1439" stroke-linecap="round" fill="#E4AD40" cx="41" cy="28" r="4.5"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

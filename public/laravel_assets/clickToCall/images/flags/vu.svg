@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>VU</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+        <rect id="path-3" x="0" y="9.6" width="23" height="6.4"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-4">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-5" x="0" y="0" width="23" height="6.4"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-6">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+        <polygon id="path-7" points="-1.0952381 1.06666667 8.76190476 8 -1.0952381 14.9333333"></polygon>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="9.85714286" height="13.8666667" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-308.000000, -956.000000)">
+            <g id="VU" transform="translate(308.000000, 956.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <g id="Rectangle-2" mask="url(#mask-2)">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                    <use fill="#009543" fill-rule="evenodd" xlink:href="#path-3"></use>
+                </g>
+                <g id="Rectangle-2" mask="url(#mask-2)">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                    <use fill="#D21034" fill-rule="evenodd" xlink:href="#path-5"></use>
+                </g>
+                <rect id="Rectangle-2" fill="#262626" mask="url(#mask-2)" x="0" y="6.4" width="23" height="3.2"></rect>
+                <polygon id="Rectangle-83" fill="#262626" mask="url(#mask-2)" points="0 0 10.952381 8 0 16"></polygon>
+                <g id="Rectangle-83" mask="url(#mask-2)" stroke-width="2.16" stroke="#FDCE12">
+                    <use mask="url(#mask-8)" xlink:href="#path-7"></use>
+                </g>
+                <rect id="Rectangle-2" fill="#FDCE12" mask="url(#mask-2)" x="7.66666667" y="7.46666667" width="15.3333333" height="1.06666667"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

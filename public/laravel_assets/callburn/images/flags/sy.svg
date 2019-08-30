@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>SY</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-541.000000, -839.000000)">
+            <g id="SY" transform="translate(541.000000, 839.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask" stroke="#F5F5F5" mask="url(#mask-2)" fill="#FFFFFF">
+                    <use mask="url(#mask-4)" xlink:href="#path-1"></use>
+                </g>
+                <rect id="Rectangle-2" fill="#262626" mask="url(#mask-3)" x="0" y="10.6666667" width="23" height="5.33333333"></rect>
+                <rect id="Rectangle-2" fill="#E32139" mask="url(#mask-3)" x="0" y="0" width="23" height="5.33333333"></rect>
+                <polygon id="Star-33" fill="#128A49" mask="url(#mask-3)" points="7.66666667 8.87466666 6.37913707 9.72590292 6.81252735 8.27028686 5.58340001 7.34076375 7.13877954 7.29237981 7.66666667 5.86666667 8.1945538 7.29237981 9.74993332 7.34076375 8.52080599 8.27028686 8.95419627 9.72590292"></polygon>
+                <polygon id="Star-33" fill="#128A49" mask="url(#mask-3)" points="15.3333333 8.87466666 14.0458037 9.72590292 14.479194 8.27028686 13.2500667 7.34076375 14.8054462 7.29237981 15.3333333 5.86666667 15.8612205 7.29237981 17.4166 7.34076375 16.1874727 8.27028686 16.6208629 9.72590292"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

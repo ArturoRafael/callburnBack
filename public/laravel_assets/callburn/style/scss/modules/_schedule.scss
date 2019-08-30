@@ -1,0 +1,275 @@
+body > .container {
+  background: #ffffff;
+}
+
+.header .bg-primary.text-center.panel-heading p {
+  padding: 2px;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0px 10px;
+  color: #ffffff;
+}
+
+.header .bg-primary.text-center.panel-heading {
+  background: $callburn-blue;
+}
+
+.header p.text-center.pgraph {
+  color: $callburn-blue-light;
+  margin: 25px 10px 50px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.pgraph-container {
+  margin-top: 30px;
+}
+
+.full button span {
+  background-color: limegreen;
+  border-radius: 32px;
+  color: black;
+}
+
+.partially button span {
+  background-color: orange;
+  border-radius: 32px;
+  color: black;
+}
+
+.modal-dialog.modal-90 {
+  width: 90%;
+}
+
+table.uib-daypicker th {
+  vertical-align: middle;
+  padding-bottom: 10px;
+}
+
+.modal-body ul li {
+  list-style-type: none;
+  display: flex;
+}
+
+li.row {
+  list-style-type: none;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+.square {
+  height: 37px !important;
+  width: 37px !important;
+  margin-top: 19px;
+}
+
+.round{
+  margin-top: 16px;
+}
+
+.week-cl.item-field,
+.week-picker.item-field {
+  padding-top: 15px;
+}
+
+.col-md-2.sel {
+  padding-right: 0;
+  padding-left: 10px;
+}
+
+select.form-control.hours, select.form-control.minutes {
+  height: 38px;
+  border-radius: 15px;
+  border: 1px solid $callburn-blue-light;
+}
+
+.week-picker .form-group .form-control label,
+.week-picker .form-group .form-control input,
+.week-picker .form-group .form-control p {
+  display: inline-block;
+}
+
+.week-picker input {
+  height: 38px;
+  border-radius: 15px;
+  border: 1px solid $callburn-blue-light;
+  width: 60px !important;
+}
+
+.scroller p {
+  font-size: 12px;
+  min-width: 120px;
+  margin-top: 0px;
+}
+
+.item-field {
+  float: left;
+  margin-right: 12px;
+}
+
+.item-field button {
+  border-radius: 50%;
+  min-height: 38px;
+}
+
+.schedule .btn {
+  min-height: 38px;
+}
+
+.send-event-to-trash-container{
+  width: 100%;
+  .external-events {
+    width: 56px;
+    float: none !important;
+  }
+}
+
+.modal-body.schedule {
+  width: 1300px;
+}
+div#calendar {
+  overflow: visible;
+  width: 1300px;
+  background: #fff;
+}
+
+span.glyphicon.glyphicon-trash {
+  padding-top: 2px;
+}
+
+.time-slot-container{
+  display:none;
+  float:left;
+  padding-top: 17px;
+  margin-right: 12px;
+  .btn {
+    width: auto;
+    float: none !important;
+    font-size: 21px;
+    padding: 0px 11px;
+    font-weight: bold;
+    min-height: 37px;
+  }
+}
+
+.time-slot-container.active{
+  display:inline-block;
+}
+
+.fc-scroller.fc-day-grid-container {
+  height: inherit !important;
+}
+
+.header p.text-center.pgraph {
+  color: $callburn-blue-light;
+  margin: 9px 0px 6px 0px;
+}
+
+.scroller.item-field {
+  width: 90px;
+}
+
+.col-xs-6.col-sm-4.block-1 {
+  text-align: center;
+}
+
+.block-2 {
+  margin-top: 17px;
+  padding-left: 5px;
+}
+
+.week-cl .btn-group label.btn {
+  padding: 8px;
+  background-color: #ffffff !important;
+  font-weight: bold;
+}
+
+.week-cl label.btn.btn-default.active {
+  background-color: $callburn-blue-light !important;
+  color: #ffffff !important;
+}
+
+.rzslider .rz-pointer {
+  top: -8px;
+  width: 20px;
+  height: 20px;
+}
+
+.rzslider .rz-pointer:after {
+  top: 7px;
+  left: 7px;
+  width: 6px;
+  height: 6px;
+}
+
+.timezone-img-container, .delivery-img-container, .default-by-day-container {
+  display: inline-block;
+}
+
+.timezone-img-container {
+  margin-left: 47px;
+}
+
+.delivery-img-container {
+  margin-left: 90px;
+}
+
+.default-by-day-container {
+  margin-left: 45px;
+}
+
+.default-by-day-container label {
+  margin-top: 0px;
+}
+
+span.time {
+  padding-left: 14px;
+  color: $callburn-blue;
+  font-weight: bold;
+}
+
+.customize-modal.calendar button.close {
+  margin-top: 15px !important;
+  margin-right: 12px;
+  font-size: 35px;
+}
+
+.customize-modal.calendar button.close span {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+td.fc-day.fc-past {
+  background-color: #EEEEEE;
+  pointer-events: none;
+  cursor: default;
+}
+
+.modal-body ul li:first-of-type .danger,
+.modal-body ul li:nth-of-type(0) .danger,
+.modal-body ul li .danger.passive
+{
+  display:none;
+}
+
+.col-xs-6.col-sm-4.block-1 .calendar-span {
+  display: inline-block;
+}
+
+div#external-events {
+  width: 56px;
+  display: inline-block;
+  text-align:left;
+  float:none;
+}
+
+div#external-events .btn-danger {
+  cursor:initial;
+}
+
+.block-2 li.row.ng-scope {
+  margin-bottom: 0px;
+}
+.Why-i-cannot-select {
+  color: #df635d;
+}

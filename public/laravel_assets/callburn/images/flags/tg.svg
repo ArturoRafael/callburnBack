@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>TG</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-308.000000, -878.000000)">
+            <g id="TG" transform="translate(308.000000, 878.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <rect id="Mask-Copy" fill="#FFD44D" mask="url(#mask-2)" x="0" y="0" width="23" height="16"></rect>
+                <path d="M9.85714286,0 L23,0 L23,3.2 L9.85714286,3.2 L9.85714286,0 Z M9.85714286,6.4 L23,6.4 L23,9.6 L9.85714286,9.6 L9.85714286,6.4 Z M0,12.8 L23,12.8 L23,16 L0,16 L0,12.8 Z" id="Rectangle-537" fill="#159A74" mask="url(#mask-2)"></path>
+                <rect id="Rectangle-1568" fill="#ED1F45" mask="url(#mask-2)" x="0" y="0" width="9.85714286" height="9.6"></rect>
+                <polygon id="Star-8" fill="#FFFFFF" mask="url(#mask-2)" points="4.92857143 6.04800005 2.99727703 7.38885438 3.70986039 5.18565322 1.80367145 3.81114562 4.17536658 3.79034675 4.92857143 1.6 5.68177627 3.79034675 8.05347141 3.81114562 6.14728247 5.18565322 6.85986583 7.38885438"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

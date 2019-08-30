@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="50px" viewBox="0 0 46 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Seabath</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="Homepage" transform="translate(-489.000000, -433.000000)" stroke="#314E55" stroke-width="2">
+            <g id="Seabath" transform="translate(490.000000, 434.000000)">
+                <path d="M14.6666667,48 C14.6666667,43.9833836 11.3834215,40.7272727 7.33333333,40.7272727 C3.28324517,40.7272727 0,43.9833836 0,48" id="Oval-238-Copy-17" stroke-linecap="round"></path>
+                <path d="M29.3333333,48 C29.3333333,43.9833836 26.0500882,40.7272727 22,40.7272727 C17.9499118,40.7272727 14.6666667,43.9833836 14.6666667,48" id="Oval-238-Copy-18" stroke-linecap="round"></path>
+                <path d="M44,48 C44,43.9833836 40.7167548,40.7272727 36.6666667,40.7272727 C32.6165785,40.7272727 29.3333333,43.9833836 29.3333333,48" id="Oval-238-Copy-19" stroke-linecap="round"></path>
+                <ellipse id="Oval-239" stroke-linecap="round" fill="#E4AD40" cx="22" cy="8.72727273" rx="8.8" ry="8.72727273"></ellipse>
+                <path d="M19.0666667,10.1818182 C19.0666667,11.7884647 20.3799647,13.0909091 22,13.0909091 L22,13.0909091 C23.6200353,13.0909091 24.9333333,11.7884647 24.9333333,10.1818182" id="Oval-239-Copy" stroke-linecap="round"></path>
+                <path d="M17.6,36.3636364 L15.8513104,27.6924482 C15.1970497,24.4481805 17.3567594,21.8181818 20.6744796,21.8181818 L23.3255204,21.8181818 C26.6435439,21.8181818 28.8021288,24.4522539 28.1486896,27.6924482 L26.4,36.3636364" id="Rectangle-358" stroke-linecap="round"></path>
+                <polyline id="Path-697" stroke-linecap="round" points="27.8666667 23.2727273 35.2 19.2727273 42.5333333 6.54545455"></polyline>
+                <polyline id="Path-697-Copy" stroke-linecap="round" transform="translate(10.266667, 14.909091) scale(-1, 1) translate(-10.266667, -14.909091) " points="2.93333333 23.2727273 10.2666667 19.2727273 17.6 6.54545455"></polyline>
+                <path d="M19.0666667,5.81818182 L19.0666667,5.81818182" id="Line-Copy-3" stroke-linecap="square"></path>
+                <path d="M24.9333333,5.81818182 L24.9333333,5.81818182" id="Line-Copy-4" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>

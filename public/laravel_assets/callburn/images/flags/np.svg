@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>NP</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M0,1.62221599 C0,0.726290836 0.71724383,6.77295619e-10 1.61495436,1.5248902e-09 L1.66022301,1.56763166e-09 C1.95307375,1.8441336e-09 2.39691909,0.134038291 2.64288308,0.293736651 L14.4299715,7.94680278 C14.9288845,8.27073466 14.8497747,8.53333333 14.2589518,8.53333333 L6.57142857,8.53333333 L14.5090346,15.2975541 C14.9642822,15.6855043 14.8576232,16 14.2551231,16 L1.61195452,16 C0.721696621,16 0,15.270937 0,14.377784 L0,1.62221599 Z" id="path-5"></path>
+        <path d="M0,0 L1.66022301,0 C1.95307375,0 2.39691909,0.134038289 2.64288308,0.293736649 L14.4299715,7.94680278 C14.9288845,8.27073466 14.8497747,8.53333333 14.2589518,8.53333333 L6.57142857,8.53333333 L14.5090346,15.2975541 C14.9642822,15.6855043 14.8576232,16 14.2551231,16 L0,16 L0,0 Z" id="path-7"></path>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="14.7834189" height="16" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-308.000000, -645.000000)">
+            <g id="NP" transform="translate(308.000000, 645.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask" stroke="#F5F5F5" mask="url(#mask-2)" fill="#FFFFFF">
+                    <use mask="url(#mask-4)" xlink:href="#path-1"></use>
+                </g>
+                <mask id="mask-6" fill="white">
+                    <use xlink:href="#path-5"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-5"></use>
+                <g id="Mask-Copy" mask="url(#mask-6)" stroke="#0543A8" stroke-width="2.16" fill="#EE1B44" stroke-linejoin="round">
+                    <use mask="url(#mask-8)" xlink:href="#path-7"></use>
+                </g>
+                <path d="M3.13343153,6.24131263 C2.81690247,6.15703879 2.5251241,6.04161432 2.26714278,5.9009128 C2.52231943,6.80360761 3.371275,7.46666667 4.3792445,7.46666667 C5.38721399,7.46666667 6.23616956,6.80360761 6.49134621,5.9009128 C6.23407714,6.04122586 5.94319738,6.15640126 5.62767857,6.24061391 L5.20238095,5.86666667 L5.89875447,5.25437317 L4.96179009,5.30098124 L5.00964659,4.38845941 L4.38095238,5.06666667 L3.75225817,4.38845941 L3.80011467,5.30098124 L2.86315029,5.25437317 L3.55952381,5.86666667 L3.13343153,6.24131263 Z M4.38095238,12.8 L3.54269343,13.7042763 L3.6065021,12.4875806 L2.35721626,12.5497247 L3.28571429,11.7333333 L2.35721626,10.916942 L3.6065021,10.9790861 L3.54269343,9.76239033 L4.38095238,10.6666667 L5.21921133,9.76239033 L5.15540267,10.9790861 L6.4046885,10.916942 L5.47619048,11.7333333 L6.4046885,12.5497247 L5.15540267,12.4875806 L5.21921133,13.7042763 L4.38095238,12.8 Z" id="Star-93" fill="#FFFFFF" mask="url(#mask-6)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

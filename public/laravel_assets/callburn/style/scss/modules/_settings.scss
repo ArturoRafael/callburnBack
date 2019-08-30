@@ -1,0 +1,36 @@
+.settings{
+  .user-account-info{
+    span{
+      display: block;
+
+    }
+
+  }
+  .mt-30{
+    margin-top: 30px;
+  }
+  .email{
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 4px;
+    padding-left: 20px;
+    background-color: $callburn-grey-disabled;
+  }
+  .btn-think{
+    min-height: 40px;
+    padding-left: 20px;
+    padding-right:  20px;
+  }
+  .mt-60{
+    margin-top: 120px;
+  }
+  .btn-add{
+    margin-bottom: 16px;
+    min-height: 30px;
+  }
+}
+.settings .select-open{
+  width: 91% !important;
+  list-style-type: none;
+  padding-left: 15px;
+}

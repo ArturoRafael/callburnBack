@@ -1,0 +1,59 @@
+.support{
+  .mt-20{
+    margin-top: 20px;
+  }
+  .mt-10{
+    margin-top: 10px;
+  }
+
+  .dropdown-menu{
+    position: relative;
+    float: none;
+    margin-left: 0;
+    &:before{
+      display: none;
+    }
+    box-shadow: none;
+    li{
+      a{
+        background-color: $white;
+      }
+    }
+
+  }
+  .dropdown{
+    a{
+      background-color: #d8d8d8;
+    }
+  }
+  .support-section{
+    padding: 0;
+
+  }
+.support-team{
+  color: $callburn-gray;
+  margin-top: 20px;
+  margin-left: 20px;
+  display: block;
+  font-size: 17px;
+  margin-bottom: 20px;
+
+}
+textarea{
+  height: 120px;
+  width: 100%;
+  max-width: 100%;
+  max-height: 150px;
+  border: none;
+
+  &:focus{
+    border: 1px solid $callburn-blue;
+    box-shadow: none;
+    outline: none;
+  }
+}
+}
+
+.panel-open > div[role='tab'] {
+  background: #d8d8d8 !important;
+}

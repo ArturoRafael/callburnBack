@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="45px" viewBox="0 0 60 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Retouchphoto</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="ClickToCall" transform="translate(-145.000000, -1715.000000)" stroke-width="2.178">
+            <g id="Group-28" transform="translate(25.000000, 1717.000000)">
+                <g id="Retouchphoto" transform="translate(122.000000, 0.000000)">
+                    <rect id="Rectangle-2616" stroke="#314E55" fill="#73C9C9" x="0" y="0" width="56" height="41"></rect>
+                    <rect id="Rectangle-2617" stroke="#FFE9E1" fill="#FFE9E1" x="5.49019608" y="5.39473684" width="45.0196078" height="30.2105263"></rect>
+                    <g id="Rectangle-2618-+-Triangle-128" transform="translate(33.699830, 20.112536) rotate(-315.000000) translate(-33.699830, -20.112536) translate(30.699830, 7.112536)">
+                        <rect id="Rectangle-2618" stroke="#D26CBA" fill="#D26CBA" x="1.26476607e-12" y="3.23684211" width="5.49019608" height="17.2631579"></rect>
+                        <rect id="Rectangle-2618" stroke="#90A9AE" fill="#90A9AE" x="1.90425453e-12" y="1.82609483e-12" width="5.49019608" height="3.23684211"></rect>
+                        <polygon id="Triangle-128" stroke="#90A9AE" fill="#90A9AE" points="-3.41060513e-13 20.5 5.49019608 20.5 2.74509804 25.8947368"></polygon>
+                    </g>
+                    <path d="M5.49019608,19.4210526 C5.49019608,19.4210526 9.33333333,17.2631579 12.0784314,18.8815789 C14.8235294,20.5 13.7254902,30.2105267 20.3137255,31.2894737 C26.9019608,32.3684206 32.9411765,29.6710531 37.3333333,30.75 C41.7254902,31.8289469 42.8235294,35.6052632 42.8235294,35.6052632" id="Path-5816" stroke="#D26CBA"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

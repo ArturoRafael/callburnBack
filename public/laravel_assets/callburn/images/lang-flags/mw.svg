@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>MW</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-229.000000, -606.000000)">
+            <g id="MW" transform="translate(229.000000, 606.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <rect id="Rectangle-2" fill="#262626" mask="url(#mask-2)" x="0" y="0" width="23" height="5.33333333"></rect>
+                <ellipse id="Oval-200" fill="#E42038" mask="url(#mask-2)" cx="11.5" cy="5.86666667" rx="3.83333333" ry="3.73333333"></ellipse>
+                <rect id="Rectangle-2" fill="#E42038" mask="url(#mask-2)" x="0" y="5.33333333" width="23" height="5.33333333"></rect>
+                <rect id="Rectangle-2" fill="#47B849" mask="url(#mask-2)" x="0" y="10.6666667" width="23" height="5.33333333"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

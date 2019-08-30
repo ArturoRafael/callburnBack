@@ -1,0 +1,45 @@
+.nav-aside{
+  ul{
+    li{
+    padding-right : 60px;
+    display: block;
+    clear: both;
+    float : left;
+    margin-bottom: 20px;
+    &.active{
+      border-left : 4px solid $callburn-blue;
+        a{
+          margin-left: 26px;
+            color: $callburn-blue;
+        }
+    }
+      a{
+        font-family: HelveticaNeue;
+        font-size: 18px;
+        color: $callburn-gray;
+        margin-left: 30px;
+        display: block;
+        float: left;
+
+        span{
+          span{
+            padding-top: 3px;
+            padding-left: 10px;
+            &:hover{
+              color: $callburn-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  span{
+    display: block;
+    float: left;
+    span{
+      display: block;
+      float : left;
+    }
+  }
+}

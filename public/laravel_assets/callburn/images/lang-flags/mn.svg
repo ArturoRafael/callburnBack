@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>MN</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#F9D346" offset="0%"></stop>
+            <stop stop-color="#F9CE2F" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-385.000000, -606.000000)">
+            <g id="MN" transform="translate(385.000000, 606.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <rect id="Rectangle-2-Copy" fill="#146BBC" mask="url(#mask-2)" x="7.66666667" y="0" width="7.66666667" height="16"></rect>
+                <rect id="Rectangle-2" fill="#E43642" mask="url(#mask-2)" x="0" y="0" width="7.66666667" height="16"></rect>
+                <rect id="Rectangle-2" fill="#E43642" mask="url(#mask-2)" x="15.3333333" y="0" width="7.66666667" height="16"></rect>
+                <path d="M4.38095238,9.6 L5.47619048,9.6 L5.47619048,12.8 L4.38095238,12.8 L4.38095238,9.6 Z M2.19047619,9.6 L3.28571429,9.6 L3.28571429,12.8 L2.19047619,12.8 L2.19047619,9.6 Z M3.28571429,11.7333333 L4.38095238,11.7333333 L3.83333333,12.8 L3.28571429,11.7333333 Z M3.28571429,9.6 L4.38095238,9.6 L3.83333333,10.6666667 L3.28571429,9.6 Z M3.28571429,8.53333333 L4.38095238,8.53333333 L3.83333333,8 L3.28571429,8.53333333 Z M3.83333333,9.6 C4.13577498,9.6 4.38095238,9.36121853 4.38095238,9.06666667 C4.38095238,8.7721148 4.13577498,8.53333333 3.83333333,8.53333333 C3.53089168,8.53333333 3.28571429,8.7721148 3.28571429,9.06666667 C3.28571429,9.36121853 3.53089168,9.6 3.83333333,9.6 Z M3.83333333,11.7333333 C4.13577498,11.7333333 4.38095238,11.4945519 4.38095238,11.2 C4.38095238,10.9054481 4.13577498,10.6666667 3.83333333,10.6666667 C3.53089168,10.6666667 3.28571429,10.9054481 3.28571429,11.2 C3.28571429,11.4945519 3.53089168,11.7333333 3.83333333,11.7333333 Z" id="Rectangle-1611" fill="url(#linearGradient-3)" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

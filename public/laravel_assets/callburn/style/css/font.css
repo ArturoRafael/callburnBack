@@ -1,0 +1,77 @@
+ @font-face {
+    font-family: Helvetica-Light;
+    src:url('../../fonts/HelveticaLight.ttf');
+ }
+
+ @font-face {
+    font-family: HelveticaNeue;
+    src:url('../../fonts/HelveticaNeueLTStd Lt.otf');
+ }
+
+ @font-face {
+    font-family: Helvetica-Bold;
+    src:url('../../fonts/HelveticaBold.ttf');
+ }
+
+ @font-face {
+    font-family: HelveticaNeue-Bold;
+    src:url('../../fonts/helvetica-neue-bold.ttf');
+ }
+
+@font-face {
+    font-family: HelveticaNeue-BoldItalic;
+    src:url('../../fonts/helvetica-neue-bold-italic.ttf');
+ }
+ 
+ /*before pages fonts*/
+ @font-face {
+    font-family: Raleway-Bold;
+    src:url('../../fonts/Raleway-Bold.ttf');
+ }
+
+@font-face {
+    font-family: Raleway-SemiBold;
+    src:url('../../fonts/Raleway-SemiBold.ttf');
+ }
+
+  @font-face {
+    font-family: Raleway-Regular;
+    src:url('../../fonts/Raleway-Regular.ttf');
+ }
+  @font-face {
+    font-family: Raleway-ExtraBold;
+    src:url('../../fonts/Raleway-ExtraBold.ttf');
+ }
+
+@font-face {
+    font-family: Raleway-Medium;
+    src:url('../../fonts/Raleway-Medium.ttf');
+ }
+
+ @font-face {
+    font-family: Raleway-Light;
+    src:url('../../fonts/raleway.light.ttf');
+ }
+
+ @font-face {
+    font-family: Helvetica-Light;
+    src:url('../../fonts/HelveticaLight.ttf');
+ }
+  @font-face {
+    font-family: Montserrat-Bold;
+    src:url('../../fonts/Montserrat-Bold.ttf');
+ }
+   @font-face {
+    font-family: Montserrat-Regular;
+    src:url('../../fonts/Montserrat-Regular.ttf');
+ } 
+
+@font-face {
+    font-family: SourceSansPro-Semibold;
+    src:url('../../fonts/source-sans-pro.semibold.ttf');
+}
+
+@font-face {
+    font-family: Montserrat-Light;
+    src:url('../../fonts/montserrat-light.ttf');
+}  

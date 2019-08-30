@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="16px" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>-g-Export Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="NewBackend" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Messages---Overview-Statistics" transform="translate(-860.000000, -444.000000)" fill="#777777">
+            <g id="-g-Export-Icon" transform="translate(860.000000, 444.000000)">
+                <path d="M7.53846154,8 L3.23076923,13.0909091 L3.23076923,10.1818182 L0,10.1818182 L0,5.81818182 L3.23076923,5.81818182 L3.23076923,2.90909091 L7.53846154,8 L7.53846154,8 L7.53846154,8 L7.53846154,8 Z M5.38461538,0 L9.69230769,0 C10.8769231,0 11.8910256,0.569212121 12.7346154,1.70909091 C13.5782051,2.84848485 14,4.21818182 14,5.81818182 L14,10.1818182 C14,11.7813333 13.5782051,13.1515152 12.7346154,14.2904242 C11.8910256,15.430303 10.8769231,16 9.69230769,16 L5.38461538,16 L5.38461538,13.0909091 L10.7692308,13.0909091 C11.0639487,13.0909091 11.3170256,12.9478788 11.5288205,12.6618182 C11.7402564,12.3757576 11.8461538,12.0339394 11.8461538,11.6363636 L11.8461538,4.36363636 C11.8461538,3.96557576 11.7402564,3.62424242 11.5288205,3.33769697 C11.3170256,3.05163636 11.0639487,2.90909091 10.7692308,2.90909091 L5.38461538,2.90909091 L5.38461538,0 L5.38461538,0 Z" id="Export-Icon"></path>
+                <text id="PDF" font-family="Helvetica-Bold, Helvetica" font-size="1.84615385" font-weight="bold">
+                    <tspan x="7.8974359" y="5.39393939">PDF</tspan>
+                </text>
+                <text id="XLS" font-family="Helvetica-Bold, Helvetica" font-size="1.84615385" font-weight="bold">
+                    <tspan x="7.8974359" y="11.2121212">XLS</tspan>
+                </text>
+                <text id="CSV" font-family="Helvetica-Bold, Helvetica" font-size="1.84615385" font-weight="bold">
+                    <tspan x="7.8974359" y="8.3030303">CSV</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

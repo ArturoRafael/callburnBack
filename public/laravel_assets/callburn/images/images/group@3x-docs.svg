@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="10px" viewBox="0 0 18 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="9.625" y="1.45454545" width="4.95833333" height="5.09090909" rx="0.5"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1.152" y="-1.152" width="7.26233333" height="7.39490909">
+            <rect x="8.473" y="0.302545455" width="7.26233333" height="7.39490909" fill="white"></rect>
+            <use xlink:href="#path-1" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="NewHomepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Developers" transform="translate(0.000000, -236.000000)">
+            <g id="Group" transform="translate(1.000000, 237.000000)">
+                <path d="M0.354166667,4 L7.35416667,4" id="Line" stroke="#3190E6" stroke-width="2" stroke-linecap="square"></path>
+                <g id="Rectangle-6" transform="translate(12.104167, 4.000000) rotate(-315.000000) translate(-12.104167, -4.000000) ">
+                    <use fill="#3190E6" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <use stroke="#3190E6" mask="url(#mask-2)" stroke-width="2.304" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

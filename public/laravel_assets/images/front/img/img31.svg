@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="55px" height="52px" viewBox="0 0 55 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Airplane</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="32 12 54 24 54 32 32 26"></polygon>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="22" height="20" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <polygon id="path-3" points="32 29 44 35.6 44 40 32 36.7"></polygon>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="12" height="11" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <polygon id="path-5" points="10 29 22 35.6 22 40 10 36.7"></polygon>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="12" height="11" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <polygon id="path-7" points="-1.77635684e-12 12 22 24 22 32 -1.77635684e-12 26"></polygon>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="22" height="20" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+        <path d="M20,6.99944708 C20,3.1337592 23.1418733,-2.28794761e-12 27,-2.28794761e-12 L27,-2.28794761e-12 C30.8659932,-2.28794761e-12 34,3.13572892 34,6.99944708 L34,52 L20,52 L20,6.99944708 Z" id="path-9"></path>
+        <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="14" height="52" fill="white">
+            <use xlink:href="#path-9"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="ClickToCall" transform="translate(-485.000000, -1543.000000)">
+            <g id="Group-25" transform="translate(362.000000, 1526.000000)">
+                <g id="Airplane" transform="translate(150.000000, 43.500000) rotate(-45.000000) translate(-150.000000, -43.500000) translate(123.000000, 9.000000)">
+                    <use id="Rectangle-1171" stroke="#456782" mask="url(#mask-2)" stroke-width="4" stroke-linecap="round" fill="#456782" xlink:href="#path-1"></use>
+                    <use id="Rectangle-1171" stroke="#456782" mask="url(#mask-4)" stroke-width="4" stroke-linecap="round" fill="#456782" xlink:href="#path-3"></use>
+                    <use id="Rectangle-1171" stroke="#456782" mask="url(#mask-6)" stroke-width="4" stroke-linecap="round" fill="#456782" transform="translate(16.000000, 34.500000) scale(-1, 1) translate(-16.000000, -34.500000) " xlink:href="#path-5"></use>
+                    <use id="Rectangle-1171" stroke="#456782" mask="url(#mask-8)" stroke-width="4" stroke-linecap="round" fill="#456782" transform="translate(11.000000, 22.000000) scale(-1, 1) translate(-11.000000, -22.000000) " xlink:href="#path-7"></use>
+                    <use id="Rectangle-1170" stroke="#4A8F9E" mask="url(#mask-10)" stroke-width="4" stroke-linecap="round" fill="#4A8F9E" xlink:href="#path-9"></use>
+                    <path d="M30,7 C30,5.34314575 28.6568542,4 27,4 C25.3431458,4 24,5.34314575 24,7" id="Oval-968" stroke="#DBEEF7" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M27,45 L27,55" id="Line" stroke="#FFDC82" stroke-width="2" stroke-linecap="square"></path>
+                    <path d="M21.9490633,55.0298635 L21.9490633,62.4788252" id="Line" stroke="#FFDC82" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M32,54.3227567 L32,66.3643514" id="Line" stroke="#FFDC82" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M27,61.0506608 L27,68.8496148" id="Line" stroke="#FFDC82" stroke-width="2" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

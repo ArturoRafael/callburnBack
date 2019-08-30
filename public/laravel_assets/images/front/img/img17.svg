@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="Voice-Messages" transform="translate(-483.000000, -2062.000000)" stroke="#314E55" stroke-width="2">
+            <g id="Group-32" transform="translate(362.000000, 2063.000000)">
+                <g id="Group-2" transform="translate(122.000000, 0.000000)">
+                    <path d="M18.2175263,20.1030668 C19.1763646,14.9022841 23.1919096,11 28,11 C32.8080904,11 36.8236354,14.9022841 37.7824737,20.1030668 C39.059885,20.4472565 40,21.6138405 40,23 C40,24.4718405 38.9400728,25.6961217 37.5418728,25.9511894 C36.2672899,30.6162482 32.4772613,34 28,34 C23.5227387,34 19.7327101,30.6162482 18.4581272,25.9511894 C17.0599272,25.6961217 16,24.4718405 16,23 C16,21.6138405 16.940115,20.4472565 18.2175263,20.1030668 Z" id="Oval-1406" stroke-linecap="round" fill="#5ECB66"></path>
+                    <circle id="Oval-1415" stroke-linecap="round" cx="28" cy="28" r="28"></circle>
+                    <path d="M56,28 L49,28" id="Line" stroke-linecap="square"></path>
+                    <path d="M28,0 L28,6" id="Line" stroke-linecap="square"></path>
+                    <path d="M28,50 L28,56" id="Line" stroke-linecap="square"></path>
+                    <path d="M7,28 L0,28" id="Line" stroke-linecap="square"></path>
+                    <path d="M39,45 C39,38.9248678 34.0751322,34 28,34 C21.9248678,34 17,38.9248678 17,45 L39,45 Z" id="Oval-1404" stroke-linecap="round" fill="#5ECB66"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

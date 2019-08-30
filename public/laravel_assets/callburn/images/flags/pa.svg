@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>PA</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-152.000000, -723.000000)">
+            <g id="PA" transform="translate(152.000000, 723.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask" stroke="#F5F5F5" mask="url(#mask-2)" fill="#FFFFFF">
+                    <use mask="url(#mask-4)" xlink:href="#path-1"></use>
+                </g>
+                <path d="M0,7.46666667 L23,7.46666667 L23,0 L0,0 L0,7.46666667 Z M0,7.46666667 L10.952381,7.46666667 L10.952381,0 L0,0 L0,7.46666667 Z" id="Combined-Shape" fill="#E52448" mask="url(#mask-3)"></path>
+                <path d="M0,16 L23,16 L23,7.46666667 L0,7.46666667 L0,16 Z M10.952381,16 L23,16 L23,7.46666667 L10.952381,7.46666667 L10.952381,16 Z" id="Combined-Shape" fill="#1367AE" mask="url(#mask-3)"></path>
+                <polygon id="Star-33" fill="#1367AE" mask="url(#mask-3)" points="5.47619048 4.60799999 4.18866088 5.45923625 4.62205116 4.0036202 3.39292382 3.07409708 4.94830334 3.02571314 5.47619048 1.6 6.00407761 3.02571314 7.55945713 3.07409708 6.3303298 4.0036202 6.76372008 5.45923625"></polygon>
+                <polygon id="Star-33" fill="#E52448" mask="url(#mask-3)" points="16.9761905 12.608 15.6886609 13.4592363 16.1220512 12.0036202 14.8929238 11.0740971 16.4483033 11.0257131 16.9761905 9.6 17.5040776 11.0257131 19.0594571 11.0740971 17.8303298 12.0036202 18.2637201 13.4592363"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

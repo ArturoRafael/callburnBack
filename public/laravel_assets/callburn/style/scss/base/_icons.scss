@@ -1,0 +1,419 @@
+
+
+
+  .icon{
+    padding-left: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    span{
+      margin-left: 5px;
+      display: block;
+      &:hover{
+      span{
+        color: $callburn-blue;
+      }
+    }
+  }
+}
+  .icon-lg{
+    padding-left: 32px;
+    background-repeat: no-repeat;
+    background-size : contain;
+    span{
+      margin-top: 10px;
+      margin-left: 5px;
+      display: block;
+      &:hover{
+      span{
+        color: $callburn-blue;
+      }
+    }
+    }
+
+   }
+
+
+.callburn-icon{
+    width: 20px;
+      height: 20px;
+      padding-left: 20px;
+      background-repeat: no-repeat;
+      background-size : cover;
+}
+
+.icon-settings{
+  background-image: url("../../../maket/assets/images/tweak-icon@3x.svg");
+    &:hover{
+    background-image: url("../../../maket/assets/images/tweak-icon@3x.svg");
+}
+
+}
+
+.navbar ul.navbar-nav.header-menu li a .icon-dashboard {
+  background-position: 0 5px;
+  background-size: initial;
+}
+.icon-dashboard{
+  background-image: url("../../../maket/assets/images/dashboard-icon@2x.svg");
+  background-size: contain;
+    &:hover{
+    background-image: url("../../../maket/assets/images/dashboard-icon-blue@2x.svg");
+    }
+    &.active{
+      background-image: url("../../../maket/assets/images/dashboard-icon-blue@2x.svg");
+    }
+
+}
+
+.navbar ul.navbar-nav.header-menu li a .icon-phonebook {
+  background-size: initial;
+}
+.icon-messages {
+  background-image: url("../../../maket/assets/images/messages-icon@2x.svg");
+  background-size: contain;
+  background-color: white;
+    &:hover{
+    background-image: url("../../../maket/assets/images/messages-icon-blue@2x.svg");
+    }
+    &.active{
+      background-image: url("../../../maket/assets/images/messages-icon-blue@2x.svg");
+    }
+}
+
+.navbar ul.navbar-nav.header-menu li a .icon-phonebook {
+  background-size: initial;
+}
+.icon-click-to-call {
+  background-image: url("../../../maket/assets/images/callerid-icon-grey.svg");
+  background-size: contain;
+  background-color: white;
+    &:hover{
+    background-image: url("../../../maket/assets/images/callerid-icon-blue.svg");
+    }
+    &.active{
+      background-image: url("../../../maket/assets/images/callerid-icon-blue.svg");
+    }
+}
+
+.navbar ul.navbar-nav.header-menu li a .icon-phonebook {
+  background-position: 0 4px;
+  background-size: initial;
+}
+.icon-phonebook{
+  background-image: url("../../../maket/assets/images/phonebook-icon@2x.svg");
+  background-size: contain;
+    &:hover{
+    background-image: url("../../../maket/assets/images/phonebook-icon-blue@2x.svg");
+    }
+    &.active{
+      background-image: url("../../../maket/assets/images/phonebook-icon-blue@2x.svg");
+    }
+}
+
+.navbar ul.navbar-nav.header-menu li a .icon-api {
+  background-position: 0 5px;
+  background-size: initial;
+}
+.icon-api{
+  background-image: url("../../../maket/assets/images/a-p-i-icon@2x.svg");
+  background-size: contain;
+    &:hover{
+    background-image: url("../../../maket/assets/images/a-p-i-icon-blue@2x.svg");
+  }
+  &.active{
+    background-image: url("../../../maket/assets/images/a-p-i-icon-blue@2x.svg");
+  }
+  &.api-dark{
+      background-image: url("../../../maket/assets/images/a-p-i-icon@2x.svg");
+    &:hover{
+      background-image: url("/assets/callburn/images/images/Lighter@3x.svg");
+    }
+    &.disabled{
+      background-image: url("/assets/callburn/images/images/Lighter@3x.svg");
+    }
+  }
+
+}
+
+
+.navbar ul.navbar-nav.header-menu li a .icon-support {
+  background-position: 0 5px;
+  background-size: initial;
+}
+
+.icon-support{
+  background-image: url("../../../maket/assets/images/support-icon-copy@2x.svg");
+  background-size: contain;
+    &:hover{
+      background-image: url("../../../maket/assets/images/support-icon-blue@2x.svg");
+    }
+    &.active{
+    background-image: url("../../../maket/assets/images/support-icon-blue@2x.svg");
+  }
+}
+  .icon-invoice{
+    background-image: url("/assets/callburn/images/images/invoice-icon-normal.svg");
+      &:hover{
+        background-image: url("/assets/callburn/images/images/Invoices-Icon@3x.svg");
+    }
+    width: 20px;
+  }
+  .overview .filter-checkbox .callburn-checkbox-white .icon-overview {
+    width: 20px;
+    height: 27px;
+    display: inline-block;
+  }
+  .overview .filter-checkbox .callburn-checkbox-white .scheduled-icon.icon-overview {
+    background-size: 27px;
+    width: 27px;
+  }
+  .overview .filter-checkbox .callburn-checkbox-white span.draft-icon.icon-overview {
+    margin-top: 5px;
+    width: 18px;
+  }
+  .choose_lang_and_voice_container.overview-filter ul.select-open {
+    padding: 0;
+    width:88%;
+  }
+  .choose_lang_and_voice_container.overview-filter ul.select-open li {
+    padding: 5px 8px;
+  }
+  .col-lg-7.pull-right.filter-checkbox {
+    margin-top: 17px;
+  }
+
+.icon-overview{
+  background-image: url("/assets/callburn/images/images/subsections/normal/Overview@3x.svg");
+    &:hover{
+      background-image: url("/assets/callburn/images/images/subsections/active/Overview@3x.svg");
+      }
+    &.active{
+      background-image: url("/assets/callburn/images/images/subsections/active/Overview@3x.svg");
+    }
+  }
+.icon-templates{
+  background-image: url("/assets/callburn/images/images/subsections/normal/Templates38@3x.svg");
+    &:hover{
+      background-image: url("/assets/callburn/images/images/subsections/active/Templates38@3x.svg");
+      color: $callburn-blue
+  }
+  &.active{
+    background-image: url("/assets/callburn/images/images/subsections/active/Templates38@3x.svg");
+    color: $callburn-blue
+  }
+}
+.icon-batch{
+  background-image: url("/assets/callburn/images/images/subsections/normal/Batch_send@3x.svg");
+    &:hover{
+      background-image: url("/assets/callburn/images/images/subsections/active/Batch_send3x.svg");
+      color: $callburn-blue
+    }
+    &.active{
+      background-image: url("/assets/callburn/images/images/subsections/active/Batch_send3x.svg");
+      color: $callburn-blue
+    }
+}
+
+  .icon-trash{
+    background-image: url("/assets/callburn/images/images/icons-trash@3x.svg");
+      &:hover{
+        background-image: url("/assets/callburn/images/images/icons-trash@3x-hover.svg");
+    }
+  }
+
+  .icon-phone{
+    background-image: url("/assets/callburn/images/images/phone-icon@3x-table.svg");
+      &:hover{
+        background-image: url("/assets/callburn/images/images/phone-icon@3x-table.svg");
+  }
+  }
+
+  .icon-play{
+    padding: 15px !important;
+    opacity: 0.8;
+    display: block;
+    background-image: url("/assets/callburn/images/images/Play_Icon@3x.svg");
+      &:hover{
+        opacity: 1;
+    }
+    &.black{
+      background-image: url("/assets/callburn/images/images/PauseIcon@3x.svg");
+    }
+    &.active{
+      &.play{
+      background-image: url("/assets/callburn/images/images/WhitePlay@3x.svg");
+      }
+      &.pause{
+        background-image: url("/assets/callburn/images/images/WhitePauseIcon@3x.svg")!important;
+      }
+    }
+  }
+
+  .icon-people{
+    background-image: url("/assets/callburn/images/images/subsections/normal/Overviews@3x.svg");
+      &:hover{
+        background-image: url("/assets/callburn/images/images/subsections/active/Overviews@3x.svg");
+      }
+      &.active{
+        background-image: url("/assets/callburn/images/images/subsections/active/Overviews@3x.svg");
+      }
+  }
+
+  .icon-groups{
+    background-image: url("/assets/callburn/images/images/subsections/normal/Templates3x.svg");
+      &:hover{
+        background-image: url("/assets/callburn/images/images/subsections/active/Templates3x.svg");
+  }
+    &.active{
+      background-image: url("/assets/callburn/images/images/subsections/active/Templates3x.svg");
+    }
+  }
+
+
+  .icon-import{
+    background-image: url("/assets/callburn/images/images/subsections/normal/Batch3x.svg");
+      &:hover{
+        background-image: url("/assets/callburn/images/images/subsections/active/Batch3x.svg");
+      }
+      &.active{
+        background-image: url("/assets/callburn/images/images/subsections/active/Batch3x.svg");
+      }
+  }
+
+  .icon-evro{
+    background-image: url("/assets/callburn/images/images/group@3x.svg");
+      &:hover{
+        background-image: url("/assets/callburn/images/images/import-icon@3x.svg");
+      }
+  }
+
+  .icon-caller-id{
+    background-image: url("/assets/callburn/images/images/group@3x.svg");
+      &:hover{
+        background-image: url("/assets/callburn/images/images/import-icon@3x.svg");
+    }
+    &.active{
+        background-image: url("/assets/callburn/images/images/import-icon@3x.svg");
+    }
+  }
+
+  .icon-pdf{
+    height: 20px;
+    background-image: url("/assets/callburn/images/images/p-d-f-icon@3x.svg");
+      &:hover{
+        background-image: url("/assets/callburn/images/images/p-d-f-icon@3x.svg");
+  }
+    &.active{
+      background-image: url("/assets/callburn/images/images/p-d-f-icon@3x.svg");
+  }
+  }
+
+  .icon-overview {
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    float: left;
+  }
+  span.text-span {
+    display: inline-block;
+    float: left;
+    margin-top: 6px;
+    margin-left: 5px;
+  }
+  .phone-all {
+    .phone-all-icon {
+      background-image: url("/assets/callburn/images/images/template-phone.svg");
+      &:hover{
+        background-image:  url("/assets/callburn/images/images/template-phone-active.svg");
+      }
+    }
+    &:hover {
+      color: $callburn-blue;
+      .phone-all-icon {
+        background-image: url("/assets/callburn/images/images/template-phone-active.svg");
+      }
+    }
+  }
+  .sent-one {
+    .sent-icon {
+      background-image: url("/assets/callburn/images/messages_menu_icons/send-icon@3x.svg");
+      &:hover{
+        background-image:  url("/assets/callburn/images/messages_menu_icons/send-icon-blue@3x.svg");
+      }
+    }
+    &:hover {
+      color: $callburn-blue;
+      .sent-icon{
+        background-image: url("/assets/callburn/images/messages_menu_icons/send-icon-blue@3x.svg");
+      }
+    }
+  }
+  .scheduled-one {
+    .scheduled-icon {
+      background-image: url("/assets/callburn/images/messages_menu_icons/scheduled-icon@3x.svg");
+      background-size: cover;
+      width: 27px;
+      &:hover {
+        background-image: url("/assets/callburn/images/messages_menu_icons/scheduled-icon-blue@3x.svg");
+      }
+    }
+    &:hover {
+      color: $callburn-blue;
+      .scheduled-icon {
+        background-image: url("/assets/callburn/images/messages_menu_icons/scheduled-icon-blue@3x.svg");
+      }
+    }
+  }
+  .draft-one {
+    .draft-icon {
+      background-image: url("/assets/callburn/images/messages_menu_icons/draft-icon@3x.svg");
+      margin-top: 5px;
+      &:hover {
+        background-image: url("/assets/callburn/images/messages_menu_icons/draft-icon-blue@3x.svg");
+      }
+    }
+    &:hover {
+      color: $callburn-blue;
+      .draft-icon {
+        background-image: url("/assets/callburn/images/messages_menu_icons/draft-icon-blue@3x.svg");
+      }
+      label:before{
+        border: 1px solid #3190e6;
+      }
+    }
+  }
+  .callburn-checkbox-white [type="checkbox"]:checked + label {
+    span.draft-icon {
+      background-image: url("/assets/callburn/images/messages_menu_icons/draft-icon-blue@3x.svg");
+    }
+    .scheduled-icon {
+      background-image: url("/assets/callburn/images/messages_menu_icons/scheduled-icon-blue@3x.svg");
+    }
+    .sent-icon{
+      background-image: url("/assets/callburn/images/messages_menu_icons/send-icon-blue@3x.svg");
+    }
+    .phone-all-icon {
+      background-image: url("/assets/callburn/images/messages_menu_icons/phone-icon-blue@3x.svg");
+    }
+  }
+
+  a.invoices {
+    width: 100%;
+    &:hover {
+      .icon-invoice {
+        background-image: url("/assets/callburn/images/images/Invoices-Icon@3x.svg");
+      }
+    }
+  }
+  .row.compose_now .icon-support {
+    position: absolute;
+    display: inline-block;
+    margin-left: 15px;
+    width: 32px;
+    height: 24px;
+  }
+  .row.compose_now.financials .icon-support {
+    margin-left: 7px;
+    width: 29px;
+    height: 23px;
+  }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="51px" viewBox="0 0 35 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Importspeed</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ClickToCall" transform="translate(-832.000000, -1964.000000)" stroke="#314E55">
+            <g id="Group-33" transform="translate(699.000000, 1965.000000)">
+                <g id="Importspeed" transform="translate(134.000000, 0.000000)">
+                    <g id="Rectangle-328-+-Rectangle-357-+-Oval-415">
+                        <path d="M0,1.7921238 C0,0.802361154 0.802446446,0 1.79823184,0 L24.066633,0 C25.059769,0 25.8648649,0.797102178 25.8648649,1.7921238 L25.8648649,39.9042328 L0,39.9042328 L0,1.7921238 Z" id="Rectangle-328" stroke-width="1.3" fill="#EAEAEA"></path>
+                        <path d="M0,39.9259259 L25.8648649,39.9259259 L25.8648649,47.207255 C25.8648649,48.1973607 25.0624184,49 24.066633,49 L1.79823184,49 C0.805095817,49 0,48.1947365 0,47.207255 L0,39.9259259 Z" id="Rectangle-357" stroke-width="1.3" fill="#73C9C9"></path>
+                        <ellipse id="Oval-415" stroke-width="1.8" fill="#EAEAEA" cx="13.3783784" cy="44.462963" rx="1.78378378" ry="1.81481481"></ellipse>
+                    </g>
+                    <path d="M33,28.1296296 L18.7297297,28.1296296" id="Line" stroke-width="1.8" stroke-linecap="square" fill="#D8D8D8"></path>
+                    <path d="M33,14.5185185 L18.7297297,14.5185185" id="Line" stroke-width="1.8" stroke-linecap="square" fill="#D8D8D8"></path>
+                    <polygon id="Triangle-17" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="#E4AD40" points="17.8378378 24.5 17.8378378 31.7592593 10.7027027 28.1296296"></polygon>
+                    <polygon id="Triangle-17" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="#E4AD40" points="17.8378378 10.8888889 17.8378378 18.1481481 10.7027027 14.5185185"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="43px" viewBox="0 0 58 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Send</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Voice-Messages" transform="translate(-820.000000, -2077.000000)" stroke="#314E55" stroke-width="2" fill="#81A4E3">
+            <g id="Group-33" transform="translate(699.000000, 2078.000000)">
+                <g id="Send" transform="translate(122.000000, 0.000000)">
+                    <polyline id="Path-174" points="21.7595444 22.0029851 18.6515197 36.0604478 27.3539888 31.1708955"></polyline>
+                    <polyline id="Path-173" points="21.1379394 22.0029851 34.1916431 40.95 55.947816 0"></polyline>
+                    <polygon id="Path-172" points="0.00337153202 15.2798507 55.947816 0 21.1379394 22.0029851"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

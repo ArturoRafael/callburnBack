@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="28px" viewBox="0 0 40 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>it</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="40" height="28" rx="1.944"></rect>
+        <rect id="path-3" x="0" y="0" width="40" height="28" rx="1.944"></rect>
+        <rect id="path-5" x="0" y="0" width="40" height="28" rx="1.944"></rect>
+        <rect id="path-7" x="0" y="0" width="40" height="28" rx="1.944"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Contact-Us" transform="translate(-829.000000, -1504.000000)">
+            <g id="Callburn-Services-S.-+-Italy-Copy-2" transform="translate(699.000000, 1504.000000)">
+                <g id="it" transform="translate(130.000000, 0.000000)">
+                    <g id="IT">
+                        <g id="Page-1">
+                            <g id="Flags">
+                                <g id="IT">
+                                    <g id="Mask-Clipped">
+                                        <mask id="mask-2" fill="white">
+                                            <use xlink:href="#path-1"></use>
+                                        </mask>
+                                        <g id="path-1"></g>
+                                        <g id="Mask" mask="url(#mask-2)">
+                                            <g id="Clipped">
+                                                <mask id="mask-4" fill="white">
+                                                    <use xlink:href="#path-3"></use>
+                                                </mask>
+                                                <g id="path-1"></g>
+                                                <rect id="path-1" stroke="#F5F5F5" stroke-width="1.2" fill="#FFFFFF" mask="url(#mask-4)" x="0" y="0" width="40" height="28" rx="1.944"></rect>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    <g id="Mask-Clipped">
+                                        <mask id="mask-6" fill="white">
+                                            <use xlink:href="#path-5"></use>
+                                        </mask>
+                                        <g id="path-1"></g>
+                                        <rect id="Mask" fill="#E43D4C" mask="url(#mask-6)" x="26.6666666" y="0" width="13.3333333" height="28"></rect>
+                                    </g>
+                                    <g id="Rectangle-2-Clipped">
+                                        <mask id="mask-8" fill="white">
+                                            <use xlink:href="#path-7"></use>
+                                        </mask>
+                                        <g id="path-1"></g>
+                                        <rect id="Rectangle-2" fill="#1BB65D" mask="url(#mask-8)" x="0" y="0" width="13.3333333" height="28"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,158 @@
+.pricing{
+  .text-extra-big{
+  display: block;
+  text-align: center;
+  color: $callburn-gray;
+  font-family: Raleway-Regular;
+  font-size: 47px;
+  }
+  .text-big{
+    font-family: Raleway-Regular;
+    font-size: 33px;
+    color: $callburn-gray;
+    text-align: center;
+    display: block;
+    .bold{
+      font-weight: bold;
+  }
+    &.orange{
+      display: block;
+      color: $callburn-orange;
+  }
+}
+  .text-blue{
+    display: block;
+    text-align: center;
+    color: $callburn-blue;
+    font-family: Raleway-Bold;
+    font-size: 33px;
+
+
+  }
+  .mt-20{
+    margin-top: 20px;
+  }
+  .mt-60{
+    margin-top: 60px;
+  }
+  .text-normal{
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    &.blue{
+      color: $callburn-blue;
+  }
+    .bold{
+      font-weight: bold;
+      font-family: Raleway-Regular;
+  }
+}
+  .text-midle{
+    display: block;
+    font-family: Raleway-SemiBold;
+    color: $callburn-gray;
+    font-size: 25px;
+    text-align: center;
+  }
+  .lets-make-example{
+    .text{
+      display: block;
+      text-align: center;
+      font-family: Raleway-Regular;
+      color : $callburn-dark-text;
+      font-size: 20px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    .lets-make-example-item{
+      border: 1px solid $callburn-border;
+      .header{
+        max-height: 190px;
+        background-color: $callburn-blue;
+        img{
+          display: block;
+          margin: 25% auto;
+        }
+      }
+      .messages-count{
+        font-family: Raleway-Regular;
+        font-size: 20px;
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+      }
+      .messages-title{
+        font-family: Raleway-Bold;
+        color: $callburn-blue;
+        text-align: center;
+        display: block;
+        font-size: 14px;
+        margin-top: 20px;
+      }
+      .messages-price{
+        color: $callburn-light-green;
+        font-family: Raleway-Medium;
+        font-size: 30px;
+        text-align: center;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 60px;
+        .thin{
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .title{
+    display: block;
+    text-align: center;
+    font-family: Raleway-SemiBold;
+    font-size: 25px;
+    color: $callburn-gray;
+    margin-top: 20px;
+  }
+  .title-orange{
+    display: block;
+    text-align: center;
+    color: $callburn-orange;
+    font-family: Raleway-Regular;
+    font-size: 35px;
+    margin-top: 20px;
+    .bold{
+      font-size: 37px;
+      font-weight: bold;
+    }
+    .thin{
+      font-size: 30px;
+    }
+  }
+  .any-question{
+    background-color: $callburn-blue-light-nice;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .services-comment{
+    margin-top: 30px;
+    .text{
+      margin-top: 20px;
+      display: block;
+      font-family: Raleway-Regular;
+      font-size: 17px;
+      font-weight: 100;
+      text-align: center;
+     }
+    .title{
+      margin-top: 10px;
+      display: block;
+      font-size: 18px;
+      color: $callburn-blue;
+      }
+      img{
+        display: block;
+        margin: 0 auto;
+        height: 90px;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>KM</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-502.000000, -217.000000)">
+            <g id="KM" transform="translate(502.000000, 217.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask" stroke="#F5F5F5" mask="url(#mask-2)" fill="#FFFFFF">
+                    <use mask="url(#mask-4)" xlink:href="#path-1"></use>
+                </g>
+                <rect id="Rectangle-2" fill="#FFCB49" mask="url(#mask-3)" x="0" y="0" width="23" height="4.26666667"></rect>
+                <rect id="Rectangle-2" fill="#DC1D34" mask="url(#mask-3)" x="0" y="7.46666667" width="23" height="4.26666667"></rect>
+                <rect id="Rectangle-2" fill="#4985D4" mask="url(#mask-3)" x="0" y="11.7333333" width="23" height="4.26666667"></rect>
+                <polygon id="Rectangle-2" fill="#4BA343" mask="url(#mask-3)" points="0 16 10.952381 8 0 0"></polygon>
+                <path d="M5.20238095,11.099186 C4.93983602,11.1649976 4.66459131,11.2 4.38095238,11.2 C2.56630249,11.2 1.0952381,9.7673112 1.0952381,8 C1.0952381,6.2326888 2.56630249,4.8 4.38095238,4.8 C4.66459131,4.8 4.93983602,4.8350024 5.20238095,4.90081399 C3.78523003,5.25604822 2.73809524,6.50892846 2.73809524,8 C2.73809524,9.49107154 3.78523003,10.7439518 5.20238095,11.099186 Z M6.02380952,6.4 C6.32625117,6.4 6.57142857,6.16121853 6.57142857,5.86666667 C6.57142857,5.5721148 6.32625117,5.33333333 6.02380952,5.33333333 C5.72136788,5.33333333 5.47619048,5.5721148 5.47619048,5.86666667 C5.47619048,6.16121853 5.72136788,6.4 6.02380952,6.4 Z M6.02380952,8.53333333 C6.32625117,8.53333333 6.57142857,8.29455187 6.57142857,8 C6.57142857,7.70544813 6.32625117,7.46666667 6.02380952,7.46666667 C5.72136788,7.46666667 5.47619048,7.70544813 5.47619048,8 C5.47619048,8.29455187 5.72136788,8.53333333 6.02380952,8.53333333 Z M6.02380952,10.6666667 C6.32625117,10.6666667 6.57142857,10.4278852 6.57142857,10.1333333 C6.57142857,9.83878147 6.32625117,9.6 6.02380952,9.6 C5.72136788,9.6 5.47619048,9.83878147 5.47619048,10.1333333 C5.47619048,10.4278852 5.72136788,10.6666667 6.02380952,10.6666667 Z" id="Oval-12" fill="#FFFFFF" mask="url(#mask-3)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

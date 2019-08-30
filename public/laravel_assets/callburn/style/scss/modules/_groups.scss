@@ -1,0 +1,29 @@
+.groups{
+  .btn-add{
+    margin-top: 18px;
+    min-height: 30px;
+  }
+  .mt-30{
+    margin-top: 30px;
+    display: block;
+  }
+  .pull-right > .dropdown-menu{
+    right: -57px;
+  }
+
+    .success{
+      color : $callburn-blue;
+    }
+    .warrning{
+      color: $callburn-warning;
+    }
+  .blocked{
+    display: block;
+    float : left;
+    margin-top: 0;
+    padding-left: 10px;
+    &.callburn-checkbox-white [type="checkbox"]:not(:checked) + label, &.callburn-checkbox-white [type="checkbox"]:checked + label{
+      padding-top: 10px;
+    }
+  }
+}

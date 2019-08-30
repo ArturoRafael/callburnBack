@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="49px" viewBox="0 0 47 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Statsincrease</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 33 47 14 47 48 0 48"></polygon>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="47" height="34" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="ClickToCall" transform="translate(-826.000000, -1356.000000)" stroke="#49A25A">
+            <g id="Group-22" transform="translate(699.000000, 1357.000000)">
+                <g id="Statsincrease" transform="translate(127.000000, 0.000000)">
+                    <use id="Rectangle-1499" mask="url(#mask-2)" stroke-width="4" stroke-linecap="round" fill="#E0D358" xlink:href="#path-1"></use>
+                    <polyline id="Rectangle-1500" stroke-width="2" stroke-linecap="round" transform="translate(36.442369, 4.837889) rotate(24.000000) translate(-36.442369, -4.837889) " points="32.9423689 1.33788865 39.9423689 1.33788865 39.9423689 8.33788865"></polyline>
+                    <path d="M37,47 L37,27.9737024" id="Line" stroke-width="2" stroke-linecap="square" fill="#49A25A"></path>
+                    <path d="M28,47 L28,33" id="Line" stroke-width="2" stroke-linecap="square" fill="#49A25A"></path>
+                    <path d="M40.4676571,3.34723552 L3.82015217,19.419215" id="Path-3390" stroke-width="2" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

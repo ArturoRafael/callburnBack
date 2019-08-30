@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="103px" height="59px" viewBox="0 0 103 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>AnyoneIcon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Voice-Messages" transform="translate(-126.000000, -1190.000000)" stroke="#314E55" stroke-width="1.76">
+            <g id="Group-4" transform="translate(25.000000, 1191.000000)">
+                <g id="AnyoneIcon" transform="translate(102.000000, 0.000000)">
+                    <g id="Group-3" transform="translate(70.000000, 5.000000)">
+                        <path d="M0,1.76934214 C0,0.792161461 0.797448888,0 1.75551569,0 L29.2444843,0 C30.2140289,0 31,0.781911787 31,1.76934214 L31,38.2754886 L0,38.2754886 L0,1.76934214 Z" id="Rectangle-328" fill="#EAEAEA"></path>
+                        <path d="M0,38.2962963 L31,38.2962963 L31,45.2386757 C31,46.2114282 30.2025511,47 29.2444843,47 L1.75551569,47 C0.785971148,47 0,46.2122535 0,45.2386757 L0,38.2962963 Z" id="Rectangle-357" fill="#73C9C9"></path>
+                        <ellipse id="Oval-415" fill="#EAEAEA" cx="16.0344828" cy="42.6481481" rx="2.13793103" ry="1.74074074"></ellipse>
+                        <path d="M25.9905158,5.22222224 L16.0344828,13.627262" id="Line" stroke-linecap="square" fill="#D8D8D8"></path>
+                    </g>
+                    <g id="Group-8">
+                        <rect id="Rectangle-484" fill="#D8D8D8" transform="translate(24.500000, 28.500000) rotate(-90.000000) translate(-24.500000, -28.500000) " x="-3.94642857" y="4.12962963" width="56.8928571" height="48.7407407" rx="1.76"></rect>
+                        <rect id="Rectangle-485" fill="#EAEAEA" x="30.8214286" y="9.35185185" width="16.8571429" height="38.2962963" rx="8.42857143"></rect>
+                        <rect id="Rectangle-486" fill="#F28544" x="0.267857143" y="13.7037037" width="6.32142857" height="5.22222222" rx="0.88"></rect>
+                        <rect id="Rectangle-487" fill="#F28544" x="9.75" y="13.7037037" width="6.32142857" height="5.22222222" rx="0.88"></rect>
+                        <rect id="Rectangle-488" fill="#F28544" x="19.2321429" y="13.7037037" width="6.32142857" height="5.22222222" rx="0.88"></rect>
+                        <rect id="Rectangle-491" fill="#F28544" x="0.267857143" y="22.4074074" width="6.32142857" height="5.22222222" rx="0.88"></rect>
+                        <rect id="Rectangle-489" fill="#F28544" x="9.75" y="22.4074074" width="6.32142857" height="5.22222222" rx="0.88"></rect>
+                        <rect id="Rectangle-490" fill="#F28544" x="19.2321429" y="22.4074074" width="6.32142857" height="5.22222222" rx="0.88"></rect>
+                        <rect id="Rectangle-494" fill="#F28544" x="0.267857143" y="31.1111111" width="6.32142857" height="5.22222222" rx="0.88"></rect>
+                        <rect id="Rectangle-492" fill="#F28544" x="9.75" y="31.1111111" width="6.32142857" height="5.22222222" rx="0.88"></rect>
+                        <rect id="Rectangle-493" fill="#F28544" x="19.2321429" y="31.1111111" width="6.32142857" height="5.22222222" rx="0.88"></rect>
+                        <path d="M5.00892857,40.6851852 L20.2857143,40.6851852" id="Line" stroke-linecap="round"></path>
+                        <path d="M5.00892857,44.1666667 L20.2857143,44.1666667" id="Line" stroke-linecap="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

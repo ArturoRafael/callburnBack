@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="98px" height="53px" viewBox="0 0 98 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>TTSIcon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Voice-Messages" transform="translate(-306.000000, -1020.000000)" stroke-width="2" stroke="#314E55">
+            <g id="Group-10" transform="translate(205.000000, 1021.000000)">
+                <g id="TTS">
+                    <g id="TTSIcon" transform="translate(102.000000, 0.000000)">
+                        <g id="Filechat">
+                            <path d="M37,21.1956522 L37,51 L0,51 L0,21.1956522 L0,0 L27.2058824,0 L37,9.7826087 L37,21.1956522 Z" id="Rectangle-1948" fill="#73C9C9"></path>
+                            <polygon id="Path-4339" points="27 10 37 10 27 0"></polygon>
+                            <path d="M15.2259518,36.4794924 C16.2562242,36.8172954 17.3567756,37 18.5,37 C24.2989899,37 29,32.2989899 29,26.5 C29,20.7010101 24.2989899,16 18.5,16 C12.7010101,16 8,20.7010101 8,26.5 C8,29.9379573 9.65229444,32.9900005 12.206104,34.9053504 L10.5,39 L15.2259518,36.4794924 Z" id="Oval-1751" fill="#D8D8D8"></path>
+                            <circle id="Oval-1752" cx="14" cy="26" r="1"></circle>
+                            <circle id="Oval-1753" cx="19" cy="26" r="1"></circle>
+                            <circle id="Oval-1754" cx="24" cy="26" r="1"></circle>
+                        </g>
+                        <g id="Fileplay" transform="translate(59.000000, 0.000000)">
+                            <path d="M37,21.1956522 L37,51 L0,51 L0,21.1956522 L0,0 L27.2058824,0 L37,9.7826087 L37,21.1956522 Z" id="Rectangle-1948" fill="#D26CBA"></path>
+                            <polygon id="Path-4339" points="27 10 37 10 27 0"></polygon>
+                            <polygon id="Triangle-89" fill="#5ECB66" points="13 37 13 21 27 29"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="54px" viewBox="0 0 44 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>iPadsmile</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="44" height="46" rx="2"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="44" height="46" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M0,44 L44,44 L44,52.000385 C44,53.1047419 43.1011449,54 41.9950767,54 L2.00492334,54 C0.897634756,54 0,53.1125667 0,52.000385 L0,44 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="44" height="10" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <circle id="path-5" cx="22" cy="49" r="2"></circle>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="4" height="4" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Voice-Messages" transform="translate(-490.000000, -1194.000000)" stroke="#535353">
+            <g id="Group-12" transform="translate(362.000000, 1194.000000)">
+                <g id="iPadsmile" transform="translate(128.000000, 0.000000)">
+                    <use id="Rectangle-619" mask="url(#mask-2)" stroke-width="4" fill="#E5D85A" xlink:href="#path-1"></use>
+                    <use id="Rectangle-620" mask="url(#mask-4)" stroke-width="4" fill="#EAEAEA" xlink:href="#path-3"></use>
+                    <use id="Oval-585" mask="url(#mask-6)" stroke-width="4" xlink:href="#path-5"></use>
+                    <circle id="Oval-589" stroke-width="2" fill="#5ECC66" cx="22" cy="24" r="15"></circle>
+                    <path d="M12,24 C12,29.5228475 16.4771525,34 22,34 C27.5228475,34 32,29.5228475 32,24" id="Oval-590" stroke-width="2"></path>
+                    <path d="M18,18 L18,21" id="Line" stroke-width="2"></path>
+                    <path d="M26,18 L26,21" id="Line-190" stroke-width="2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

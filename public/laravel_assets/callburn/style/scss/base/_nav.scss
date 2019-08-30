@@ -1,0 +1,243 @@
+@import "aside_nav";
+.navbar{
+  .notification{
+
+    }
+    .language_chnage{
+      .select{
+      margin-top: 20px;
+      }
+
+      .select-open{
+        padding: 3px 38px;
+        li{
+          padding-left: 0;
+          padding-right: 35px;
+          list-style: none;
+          img{
+
+            float: left;
+            display: block;
+          }
+        }
+      }
+    }
+    ul{
+      li{
+        margin-right: 3.2vw;
+        &:last-child{
+            margin-right: 0;
+        }
+        .divider{
+          display: block;
+          clear: both;
+        }
+        a{
+          float: left;
+          display: block;
+          &.active{
+            span{
+              span{
+                color: $callburn-blue;
+              }
+            }
+
+          }
+          span{
+            display: block;
+            font-family: HelveticaNeue;
+            font-size: 17px;
+            color: $callburn-gray;
+            float: left !important;
+            span{
+                display: block;
+                float: left;
+
+              &:hover{
+
+                color: $callburn-blue;
+                }
+              }
+            }
+            &:hover{
+            background: none;
+            }
+          &:focus{
+            background: none;
+            }
+          }
+
+          img{
+            display: block;
+            float: left;
+            width: 25px;
+            margin-right: 5px;
+          }
+          .corner-blue{
+            width: 15px;
+            margin-top: 10px;
+            margin-left: 5px;
+          }
+        }
+    }
+  .logo{
+    img{
+      width: 10vw;
+    }
+  }
+  .email{
+    span{
+      color: $callburn-blue;
+    }
+  }
+  .acount{
+    border-left: 1px solid black;
+    display: block;
+    float: left;
+  }
+  ul.dropdown-menu.user-acount li {
+    margin-right: 0vw;
+  }
+  .header-menu{
+    li{
+      margin-right: 2.4vw;
+      &:last-child{
+        margin-right: 0;
+      }
+      a{
+        span{
+          span{
+            border-bottom: 3px solid $white;
+          }
+        }
+        &:hover{
+          span.icon-lg{
+            border-bottom: 3px solid $white;
+              &:hover{
+                border-bottom: 3px solid $callburn-blue;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+}
+.navbar {
+  -webkit-transform: none !important;
+}
+.navbar-header.logo ul {
+  float: right;
+}
+.navbar-header.logo a {
+  float: left;
+}
+.navbar ul.navbar-nav.header-menu li a {
+  min-height: 75px;
+  padding-right: 0px;
+}
+.col-lg-12.compose-new-resp {
+  float: right;
+  clear: both;
+  width: 100%;
+  margin-top: 10px;
+}
+.col-lg-12.compose-new-resp button {
+  width: inherit;
+  margin-right: 20px;
+  float: right;
+  padding: 5px 15px 0 15px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.navbar-nav {
+  float: right;
+}
+@media (min-width: 1200px) {
+.dropdown-menu > li > a{
+  padding-right: 0;
+}
+.dropdown-menu {
+  margin-left: -47px;
+  margin-top: 5px !important;
+
+  &:before {
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    display: inline-block;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #ccc;
+    border-left: 7px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    content: ''; }
+  &:after {
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    display: inline-block;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #ffffff;
+    border-left: 6px solid transparent;
+    content: ''; } }
+}
+
+@media (max-width: 767px) {
+  .navbar{
+    ul{
+      li{
+        display: block;
+        clear: both;
+      }
+    }
+  }
+  .logo{
+    img{
+      width: 120px!important;
+    }
+  }
+  .navbar-toggle{
+    background-color: $callburn-blue;
+      span{
+        background-color: $white;
+      }
+  }
+  .acount{
+    border: none !important;
+  }
+}
+.language_change{
+  padding-top: 13px;
+  display: block;
+  #selectBoxMain{
+    border: none;
+  }
+  .image-select{
+    display: none;
+    margin-left: 10px;
+    float: right;
+  }
+  .select-open{
+    width: auto;
+    list-style: none;
+    padding-left: 0;
+    padding-right: 5px;
+
+
+    li{
+      margin-right: 0;
+      padding-right: 0;
+      img{
+        float: left;
+        display: block;
+        padding-left: 8px;
+      }
+      width: 73px;
+      padding-left: 23px;
+      &:hover{
+        color: $callburn-blue;
+      }
+    }
+  }
+}

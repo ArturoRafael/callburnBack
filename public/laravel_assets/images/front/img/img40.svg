@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="47px" viewBox="0 0 54 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Macsecurity</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="29" width="54" height="10"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="54" height="10" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <circle id="path-3" cx="27" cy="34" r="2"></circle>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="4" height="4" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ClickToCall" transform="translate(-485.000000, -2658.000000)" stroke="#314E55">
+            <g id="Group-11" transform="translate(362.000000, 2659.000000)">
+                <g id="Macsecurity" transform="translate(123.000000, 0.000000)">
+                    <path d="M1,1.99161703 C1,0.891677316 1.90255737,0 3.00659927,0 L50.9934007,0 C52.1016149,0 53,0.89784041 53,1.99161703 L53,30 L1,30 L1,1.99161703 Z" id="Rectangle-549" stroke-width="2" fill="#E0D358"></path>
+                    <use id="Rectangle-550" mask="url(#mask-2)" stroke-width="4" fill="#EAEAEA" xlink:href="#path-1"></use>
+                    <use id="Oval-543" mask="url(#mask-4)" stroke-width="4" fill="#EAEAEA" xlink:href="#path-3"></use>
+                    <polygon id="Rectangle-551" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="#EAEAEA" points="22 38 32 38 35 45 19 45"></polygon>
+                    <path d="M34,12 C34,8.6862915 31.3137085,6 28,6 C24.6862915,6 22,8.6862915 22,12" id="Oval-553" stroke-width="2"></path>
+                    <rect id="Rectangle-580" stroke-width="2" fill="#E65F58" x="20" y="12" width="16" height="13" rx="2"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

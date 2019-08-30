@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>GB Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M10.508494,0 C11.9261067,0 13.2827973,0.264993026 14.5768083,0.794979079 C15.8714051,1.32496513 16.9873358,2.03570432 17.9246004,2.92887029 C18.861865,3.82147838 19.6087478,4.88423989 20.1658345,6.11715481 C20.7217496,7.35006974 21,8.64714086 21,10.0078103 C21,11.8158996 20.5319535,13.4867503 19.594103,15.0209205 C18.6568384,16.5550907 17.3827443,17.7684798 15.7724065,18.66053 C14.1614829,19.553696 12.4064549,20 10.508494,20 C8.61053307,20 6.85316187,19.553696 5.23638037,18.66053 C3.61959887,17.7684798 2.3425758,16.5550907 1.40531117,15.0209205 C0.468046528,13.4867503 0,11.8158996 0,10.0078103 C0,8.64714086 0.277664649,7.35006974 0.834751318,6.11715481 C1.39066641,4.88423989 2.13754916,3.82147838 3.07539959,2.92887029 C4.01207844,2.03570432 5.12859494,1.32496513 6.42319172,0.794979079 C7.71720271,0.264993026 9.07916539,0 10.508494,0 C10.508494,0 9.07916539,0 10.508494,0 L10.508494,0 L10.508494,0 Z" id="path-1"></path>
+        <rect id="path-3" x="0" y="0" width="24.2307692" height="23.3333333" rx="2.29980465"></rect>
+        <rect id="path-5" x="0.576923077" y="0.777777778" width="23.0769231" height="21.7777778" rx="1.14990233"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage" transform="translate(-726.000000, -89.000000)">
+            <g id="Header-number-2" transform="translate(726.000000, 89.000000)">
+                <g id="Language">
+                    <g id="GB-Copy">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#D8D8D8" xlink:href="#path-1"></use>
+                        <g id="GB" mask="url(#mask-2)">
+                            <g transform="translate(-1.615385, -1.666667)">
+                                <mask id="mask-4" fill="white">
+                                    <use xlink:href="#path-3"></use>
+                                </mask>
+                                <use id="background" stroke="none" fill="#22438B" fill-rule="evenodd" xlink:href="#path-3"></use>
+                                <polygon id="band" stroke="none" fill="#FFFFFF" fill-rule="evenodd" mask="url(#mask-4)" points="3.46153843 1.5555555 1.12342246 1.59657116 1.15384618 4.66666666 20.7481857 21.8214647 23.0985901 21.7638837 23.0558791 18.7103546"></polygon>
+                                <polygon id="band" stroke="none" fill="#C7152A" fill-rule="evenodd" mask="url(#mask-4)" points="2.30769233 1.55555558 1.15384612 3.11111102 21.9230762 21.7777771 23.0769238 20.2222229"></polygon>
+                                <path d="M20.7692307,1.55555558 L23.0769231,1.55555554 L23.0769232,4.66666662 C23.0769232,4.66666662 9.51999524,16.1718858 3.48258252,21.8214656 C3.40918114,21.8901518 1.17727112,21.8264092 1.17727112,21.8264092 L0.997846205,18.8653561 L20.7692307,1.55555558 L20.7692307,1.55555558 Z" id="band" stroke="none" fill="#FFFFFF" fill-rule="evenodd" mask="url(#mask-4)"></path>
+                                <polygon id="band" stroke="none" fill="#C7152A" fill-rule="evenodd" mask="url(#mask-4)" points="21.9725242 1.51226457 23.0769231 3.1111111 2.30769196 21.7777781 1.15384616 20.2222222"></polygon>
+                                <polygon id="cross" stroke="none" fill="#FFFFFF" fill-rule="evenodd" mask="url(#mask-4)" points="9.23076923 1.55555556 15 1.55555556 15 7.77777778 23.0769231 7.77777778 23.0769231 15.5555556 15 15.5555556 15 21.7777778 9.23076923 21.7777778 9.23076923 15.5555556 1.15384615 15.5555556 1.15384615 7.77777778 9.23076923 7.77777778"></polygon>
+                                <polygon id="cross" stroke="none" fill="#C7152A" fill-rule="evenodd" mask="url(#mask-4)" points="10.3846154 1.55555556 13.8461538 1.55555556 13.8461538 9.33333333 23.0769231 9.33333333 23.0769231 14 13.8461538 14 13.8461538 21.7777778 10.3846154 21.7777778 10.3846154 14 1.15384615 14 1.15384615 9.33333333 10.3846154 9.33333333"></polygon>
+                                <mask id="mask-6" fill="white">
+                                    <use xlink:href="#path-5"></use>
+                                </mask>
+                                <use id="overlay" stroke-opacity="0.156646286" stroke="#2F343A" stroke-width="1.14990233" fill="none" xlink:href="#path-5"></use>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

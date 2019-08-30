@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>PK</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-113.000000, -723.000000)">
+            <g id="PK" transform="translate(113.000000, 723.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask" stroke="#F5F5F5" mask="url(#mask-2)" fill="#FFFFFF">
+                    <use mask="url(#mask-4)" xlink:href="#path-1"></use>
+                </g>
+                <path d="M0,0 L23,0 L23,16 L0,16 L0,0 Z M0,16 L6.57142857,16 L6.57142857,0 L0,0 L0,16 Z" id="Combined-Shape" fill="#0A632F" mask="url(#mask-3)"></path>
+                <g id="Star-8-+-Oval-3" mask="url(#mask-3)" fill="#FFFFFF">
+                    <g transform="translate(15.172939, 7.811438) rotate(-45.000000) translate(-15.172939, -7.811438) translate(9.833654, 2.611438)" id="Star-8">
+                        <path d="M7.78603902,8.69872674 C6.98507524,9.33360258 5.97746731,9.71185327 4.88291384,9.71185327 C2.27394628,9.71185327 0.158960186,7.56282007 0.158960186,4.91185327 C0.158960186,2.26088647 2.27394628,0.111853268 4.88291384,0.111853268 C5.97746731,0.111853268 6.98507524,0.490103955 7.78603902,1.12497979 C7.42237774,1.03346254 7.03940101,0.984580541 6.6439397,0.984580541 C4.27215101,0.984580541 2.34943638,2.74288043 2.34943638,4.91185327 C2.34943638,7.0808261 4.27215101,8.839126 6.6439397,8.839126 C7.03940101,8.839126 7.42237774,8.790244 7.78603902,8.69872674 L7.78603902,8.69872674 Z M7.82562685,5.7438533 L6.53809725,6.63775619 L7.01315283,5.16895542 L5.7423602,4.25261701 L7.32349029,4.2387511 L7.82562685,2.77851993 L8.32776342,4.2387511 L9.90889351,4.25261701 L8.63810088,5.16895542 L9.11315645,6.63775619 L7.82562685,5.7438533 L7.82562685,5.7438533 Z"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

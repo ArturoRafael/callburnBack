@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="49px" viewBox="0 0 56 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Circuitboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ClickToCall" transform="translate(-821.000000, -1709.000000)" stroke="#314E55" stroke-width="2">
+            <g id="Group-30" transform="translate(699.000000, 1709.000000)">
+                <g id="Circuitboard" transform="translate(123.000000, 0.000000)">
+                    <circle id="Oval-373" fill="#5ECC66" cx="12" cy="12" r="5"></circle>
+                    <circle id="Oval-373" fill="#E65F58" cx="49" cy="19" r="5"></circle>
+                    <circle id="Oval-373" fill="#5ECC66" cx="49" cy="33" r="5"></circle>
+                    <circle id="Oval-373" fill="#5ECC66" cx="5" cy="28" r="5"></circle>
+                    <path d="M17,13 L22,13 C24.7614237,13 27,15.2383594 27,18.0056458 L27,49" id="Rectangle-314"></path>
+                    <path d="M10,28 L15,28 C17.7614237,28 20,30.2473679 20,33.0033431 L20,49" id="Rectangle-314"></path>
+                    <path d="M34,33 L39,33 C41.7614237,33 44,35.2415785 44,37.9966858 L44,49" id="Rectangle-314" transform="translate(39.000000, 41.000000) scale(-1, 1) translate(-39.000000, -41.000000) "></path>
+                    <path d="M36.0100504,0 L39.8651568,0 C41.9942733,0 43.7202633,1.71963386 43.7202632,3.8563785 L43.720263,19" id="Rectangle-314" transform="translate(39.865157, 9.500000) rotate(-180.000000) translate(-39.865157, -9.500000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

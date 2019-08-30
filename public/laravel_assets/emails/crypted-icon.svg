@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="75px" height="90px" viewBox="0 0 75 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Crypted icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Password-Recovery" transform="translate(-445.000000, -335.000000)" fill="#6A8FC8">
+            <g id="Email" transform="translate(107.000000, 104.000000)">
+                <g id="Header" transform="translate(45.000000, 90.000000)">
+                    <path d="M302,222 L358.252199,222 L358.252199,188.25 L302,188.25 L302,222 Z M293,183.751945 C293,181.265589 295.024576,179.25 297.477592,179.25 L362.774606,179.25 C365.247511,179.25 367.252197,181.278661 367.252197,183.751945 L367.252197,226.498055 C367.252197,228.984411 365.227621,231 362.774606,231 L297.477592,231 C295.004686,231 293,228.971339 293,226.498055 L293,183.751945 L293,183.751945 Z M356,179.25 L347,179.25 L347,166.5 C347,157.416949 339.473978,150 330.125,150 C320.776022,150 313.25,157.416949 313.25,166.5 L313.25,179.25 L304.25,179.25 L356,179.25 Z M304.25,166.5 C304.25,152.416739 315.834632,141 330.125,141 C344.415368,141 356,152.416739 356,166.5 L356,181.490662 L304.25,181.490662 L304.25,166.5 Z" id="Crypted-icon"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

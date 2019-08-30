@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>TO</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#F0F0F0" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+        <mask id="mask-3" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-2"></use>
+        </mask>
+        <mask id="mask-5" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-2"></use>
+        </mask>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#DF0F1B" offset="0%"></stop>
+            <stop stop-color="#C00711" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-152.000000, -878.000000)">
+            <g id="TO" transform="translate(152.000000, 878.000000)">
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <g id="Mask" stroke="#F5F5F5" mask="url(#mask-3)" fill="#FFFFFF">
+                    <use mask="url(#mask-5)" xlink:href="#path-2"></use>
+                </g>
+                <path d="M0,0 L23,0 L23,16 L0,16 L0,0 Z M0,8.53333333 L13.1428571,8.53333333 L13.1428571,0 L0,0 L0,8.53333333 Z" id="Combined-Shape" fill="#E20F1B" mask="url(#mask-4)"></path>
+                <path d="M7.66666667,3.2 L7.66666667,1.34166667 C7.66666667,1.17775065 7.54641242,1.06666667 7.39807129,1.06666667 L5.74478585,1.06666667 C5.59395999,1.06666667 5.47619048,1.18978836 5.47619048,1.34166667 L5.47619048,3.2 L3.55146105,3.2 C3.39977373,3.2 3.28571429,3.31711718 3.28571429,3.46158854 L3.28571429,5.07174479 C3.28571429,5.21863607 3.40469316,5.33333333 3.55146105,5.33333333 L5.47619048,5.33333333 L5.47619048,7.19166667 C5.47619048,7.35558268 5.59644472,7.46666667 5.74478585,7.46666667 L7.39807129,7.46666667 C7.54889715,7.46666667 7.66666667,7.34354497 7.66666667,7.19166667 L7.66666667,5.33333333 L9.59139609,5.33333333 C9.74308341,5.33333333 9.85714286,5.21621615 9.85714286,5.07174479 L9.85714286,3.46158854 C9.85714286,3.31469727 9.73816398,3.2 9.59139609,3.2 L7.66666667,3.2 Z" id="Rectangle-1703" fill="url(#linearGradient-6)" mask="url(#mask-4)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

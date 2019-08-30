@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>RW</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+        <rect id="path-3" x="0" y="11.7333333" width="23" height="4.26666667"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-4">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-190.000000, -800.000000)">
+            <g id="RW" transform="translate(190.000000, 800.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <g id="Rectangle-2" mask="url(#mask-2)">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                    <use fill="#2D754D" fill-rule="evenodd" xlink:href="#path-3"></use>
+                </g>
+                <rect id="Rectangle-2" fill="#25B1EB" mask="url(#mask-2)" x="0" y="0" width="23" height="7.46666667"></rect>
+                <rect id="Rectangle-2" fill="#FECB2F" mask="url(#mask-2)" x="0" y="7.46666667" width="23" height="4.26666667"></rect>
+                <polygon id="Star-31" fill="#FECB2F" mask="url(#mask-2)" points="17.5238095 4.8 16.6855506 5.70427634 16.7493592 4.48758057 15.5000734 4.54972466 16.4285714 3.73333333 15.5000734 2.91694201 16.7493592 2.9790861 16.6855506 1.76239033 17.5238095 2.66666667 18.3620685 1.76239033 18.2982598 2.9790861 19.5475456 2.91694201 18.6190476 3.73333333 19.5475456 4.54972466 18.2982598 4.48758057 18.3620685 5.70427634"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>ExitWhite</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="ClickToCall---Snippets-versions" transform="translate(-1120.000000, -1332.000000)" stroke="#23BDFF">
+            <g id="ExitWhite" transform="translate(1121.000000, 1333.000000)">
+                <circle id="Combined-Shape" stroke-width="1.6" fill="#FFFFFF" cx="10" cy="10" r="10"></circle>
+                <g id="Group-3" transform="translate(5.000000, 5.000000)" stroke-width="0.9">
+                    <polyline id="Line" points="9.71153846 0.0961538462 0.0961538462 9.71153846 0 9.80769231 0.192307692 10 0.288461538 9.90384615 9.90384615 0.288461538 10 0.192307692 9.80769231 0 9.71153846 0.0961538462"></polyline>
+                    <polyline id="Line" points="0.0961538462 0.288461538 9.71153846 9.90384615 9.80769231 10 10 9.80769231 9.90384615 9.71153846 0.288461538 0.0961538462 0.192307692 0 0 0.192307692 0.0961538462 0.288461538"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

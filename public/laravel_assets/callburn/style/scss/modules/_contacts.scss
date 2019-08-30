@@ -1,0 +1,40 @@
+.contacts{
+  .callburn-checkbox-white{
+    float: left;
+    margin-left: 31px;
+  }
+  .image-select{
+    width: 17px;
+  }
+  .title{
+    display: block;
+    margin-top: -62px;
+    padding-bottom: 63px;
+  }
+  .transparent-danger{
+    min-height: 20px;
+    min-width: 85px;
+    background-color: transparent;
+    color: $btn-danger-bg;
+    &:hover{
+      background-color: $btn-danger-bg;
+      color: $white;
+    }
+
+  }
+  .transparent-info{
+    min-width: 85px;
+    margin-bottom: 10px;
+    min-height: 20px;
+    background-color: transparent;
+    &:hover{
+      background-color: $callburn-blue-button;
+      color: $white;
+    }
+
+    color: $callburn-blue-button;
+  }
+  .mt-30{
+    margin-top: 20px;
+  }
+}

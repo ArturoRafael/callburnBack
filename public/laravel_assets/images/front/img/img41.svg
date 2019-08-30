@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="72px" viewBox="0 0 64 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Dartstarget</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="ClickToCall" transform="translate(-480.000000, -3099.000000)">
+            <g id="Dartstarget" transform="translate(482.000000, 3101.000000)">
+                <path d="M20.74,58.2857143 L17.08,68" id="Line" stroke="#89714D" stroke-width="2.42" stroke-linecap="square"></path>
+                <path d="M41.48,58.2857143 L37.82,68" id="Line" stroke="#89714D" stroke-width="2.42" stroke-linecap="square" transform="translate(39.650000, 63.142857) scale(-1, 1) translate(-39.650000, -63.142857) "></path>
+                <ellipse id="Oval-823" stroke="#4F676D" stroke-width="2.42" stroke-linecap="round" fill="#E65F58" cx="29.28" cy="29.1428571" rx="29.28" ry="29.1428571"></ellipse>
+                <ellipse id="Oval-831" stroke="#E4AD40" stroke-width="2.42" stroke-linecap="round" fill="#E4AD40" cx="29" cy="29" rx="22" ry="22"></ellipse>
+                <ellipse id="Oval-842" stroke="#FFFFFF" stroke-width="2.42" stroke-linecap="round" fill="#FFFFFF" cx="29.28" cy="29.1428571" rx="7.32" ry="7.28571429"></ellipse>
+                <g id="Dollarcoin" transform="translate(12.000000, 12.000000)" stroke="#314E55">
+                    <circle id="Oval-1362" stroke-width="1.26" stroke-linecap="round" fill="#5ECB66" cx="17" cy="17" r="17"></circle>
+                    <circle id="Oval-1363" stroke-width="1.26" stroke-linecap="round" fill="#5ECB66" cx="17" cy="17" r="14.4814815"></circle>
+                    <path d="M28.3333333,4.4074074 L26.7874539,5.99566981" id="Path-3255" stroke-width="1.26" stroke-linecap="round"></path>
+                    <path d="M9.44444445,29.6720317 L7.89856505,31.2602941" id="Path-3255" stroke-width="1.26" stroke-linecap="round"></path>
+                    <path d="M21.4221646,12.5778354 C21.4221646,10.1355414 19.4422941,8.15567085 17,8.15567085 C14.5577059,8.15567085 12.5778354,10.1355414 12.5778354,12.5778354 C12.5778354,15.0201295 14.5577059,17 17,17" id="Oval-1364" stroke-width="1.26" stroke-linecap="round"></path>
+                    <path d="M12.5778354,21.4221646 C12.5778354,23.8644586 14.5577059,25.8443292 17,25.8443292 C19.4422941,25.8443292 21.4221646,23.8644586 21.4221646,21.4221646 C21.4221646,18.9798705 19.4422941,17 17,17" id="Oval-1364" stroke-width="1.26" stroke-linecap="round"></path>
+                    <path d="M17.13,6.2962963 L17.13,7.55555556" id="Line" stroke-width="2.25999999" stroke-linecap="square"></path>
+                    <path d="M17.13,26.4444444 L17.13,27.7037037" id="Line" stroke-width="2.25999999" stroke-linecap="square"></path>
+                    <path d="M21.4221646,12.5778354 C21.4221646,10.1355414 19.4422941,8.15567085 17,8.15567085 C14.5577059,8.15567085 12.5778354,10.1355414 12.5778354,12.5778354 C12.5778354,15.0201295 14.5577059,17 17,17" id="Oval-1366" stroke-width="2.25999999" stroke-linecap="round"></path>
+                    <path d="M12.5778354,21.4221646 C12.5778354,23.8644586 14.5577059,25.8443292 17,25.8443292 C19.4422941,25.8443292 21.4221646,23.8644586 21.4221646,21.4221646 C21.4221646,18.9798705 19.4422941,17 17,17" id="Oval-1365" stroke-width="2.25999999" stroke-linecap="round"></path>
+                    <path d="M17,6.2962963 L17,7.55555556" id="Line-318" stroke-width="1.26" stroke-linecap="square"></path>
+                    <path d="M17,26.4444444 L17,27.7037037" id="Line-319" stroke-width="1.26" stroke-linecap="square"></path>
+                </g>
+                <polyline id="Path-1934" stroke="#89714D" stroke-width="2.42" stroke-linecap="round" points="30.071645 29.0270724 54.8999998 54.6428572 54.7299483 59.8988307"></polyline>
+                <path d="M54.9481683,54.6290821 L60.5138182,54.6290821" id="Path-1935" stroke="#89714D" stroke-width="2.42" stroke-linecap="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

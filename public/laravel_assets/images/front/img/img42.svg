@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="59px" height="61px" viewBox="0 0 59 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Headset</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M7.0212766,24.1313321 L7.0212766,12.5084428 C7.0212766,6.08929826 12.7809695,0.885553471 19.8961652,0.885553471 L35.1038348,0.885553471 C42.2144394,0.885553471 47.9787234,6.08788687 47.9787234,12.5084428 L47.9787234,24.1313321" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="40.9574468" height="23.2457786" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Contact-Us" transform="translate(-483.000000, -623.000000)">
+            <g id="LiveChat" transform="translate(337.000000, 623.000000)">
+                <g id="Headset" transform="translate(148.000000, 0.000000)">
+                    <use id="Rectangle-246" stroke="#456782" mask="url(#mask-2)" stroke-width="6.864" xlink:href="#path-1"></use>
+                    <path d="M0,29.9822154 C0,26.7508618 2.62618586,24.1313321 5.85106383,24.1313321 L11.7021277,24.1313321 L11.7021277,47.3771107 L5.85106383,47.3771107 C2.61961051,47.3771107 0,44.7557111 0,41.5262274 L0,29.9822154 Z" id="Rectangle-244" stroke="#4A8F9E" stroke-width="2.288" fill="#4A8F9E"></path>
+                    <path d="M43.2978723,29.9822154 C43.2978723,26.7508618 45.9240582,24.1313321 49.1489362,24.1313321 L55,24.1313321 L55,47.3771107 L49.1489362,47.3771107 C45.9174828,47.3771107 43.2978723,44.7557111 43.2978723,41.5262274 L43.2978723,29.9822154 Z" id="Rectangle-244-Copy" stroke="#4A8F9E" stroke-width="2.288" fill="#4A8F9E" transform="translate(49.148936, 35.754221) scale(-1, 1) translate(-49.148936, -35.754221) "></path>
+                    <path d="M46.8085106,47.3771107 C46.8085106,47.3771107 48.5638298,57.2565666 31.0106383,57.2565666" id="Path-573" stroke="#456782" stroke-width="2.288"></path>
+                    <rect id="Rectangle-246" stroke="#4A8F9E" stroke-width="2.288" fill="#4A8F9E" x="23.4042553" y="54.3508443" width="7.0212766" height="4.64915572" rx="2.32457786"></rect>
+                    <g id="Bubblechat" transform="translate(14.473684, 20.146341)" stroke-width="1.0378368">
+                        <path d="M7.60444915,24.5225618 C9.25525394,25.2685517 11.0915247,25.684405 13.0263158,25.684405 C20.2205513,25.684405 26.0526316,19.9347551 26.0526316,12.8422025 C26.0526316,5.74964991 20.2205513,0 13.0263158,0 C5.83208023,0 0,5.74964991 0,12.8422025 C0,16.1347332 1.25683426,19.1378635 3.32332316,21.4107342 L2.52122241,27.3414634 L7.60444915,24.5225618 Z" id="Oval-12" stroke="#EA86A5" fill="#EA86A5"></path>
+                        <ellipse id="Oval-13" stroke="#FFFFFF" fill="#FFFFFF" cx="9.22697368" cy="13.4026781" rx="1.08552632" ry="1.07221425"></ellipse>
+                        <path d="M13.0263158,14.4748924 C13.6258354,14.4748924 14.1118421,13.9948457 14.1118421,13.4026781 C14.1118421,12.8105106 13.6258354,12.3304639 13.0263158,12.3304639 C12.4267962,12.3304639 11.9407895,12.8105106 11.9407895,13.4026781 C11.9407895,13.9948457 12.4267962,14.4748924 13.0263158,14.4748924 Z" id="Oval-13-Copy" stroke="#FFFFFF" fill="#FFFFFF"></path>
+                        <ellipse id="Oval-13-Copy-2" stroke="#FFFFFF" fill="#FFFFFF" cx="16.8256579" cy="13.4026781" rx="1.08552632" ry="1.07221425"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

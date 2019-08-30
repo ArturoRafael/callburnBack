@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>CM</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#FFDC43" offset="0%"></stop>
+            <stop stop-color="#FDD216" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-385.000000, -217.000000)">
+            <g id="CM" transform="translate(385.000000, 217.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <rect id="Mask" fill="url(#linearGradient-3)" mask="url(#mask-2)" x="10.952381" y="0" width="12.047619" height="16"></rect>
+                <rect id="Rectangle-2" fill="#059170" mask="url(#mask-2)" x="0" y="0" width="7.66666667" height="16"></rect>
+                <rect id="Rectangle-2-Copy" fill="#E21A30" mask="url(#mask-2)" x="7.66666667" y="0" width="7.66666667" height="16"></rect>
+                <rect id="Rectangle-2-Copy-2" fill="#FFDC44" mask="url(#mask-2)" x="15.3333333" y="0" width="7.66666667" height="16"></rect>
+                <polygon id="Star-8" fill="#FFDC42" mask="url(#mask-2)" points="11.5 9.04000004 9.890588 10.1573787 10.4844075 8.32137769 8.89591668 7.17595468 10.8723293 7.15862229 11.5 5.33333333 12.1276707 7.15862229 14.1040833 7.17595468 12.5155925 8.32137769 13.109412 10.1573787"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

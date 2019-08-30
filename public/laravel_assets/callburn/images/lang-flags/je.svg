@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>JE</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M0.547619048,3.06666667 L0.547619048,2.13948161 C0.547619048,1.54698228 1.03243751,1.06666667 1.62348479,1.06666667 L2.75746759,1.06666667 C3.35165183,1.06666667 3.83333333,1.55307313 3.83333333,2.13948161 L3.83333333,3.06666667 C3.83333333,4.4952381 2.19047619,5.06666667 2.19047619,5.06666667 C2.19047619,5.06666667 0.547619048,4.4952381 0.547619048,3.06666667 Z" id="path-5"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-229.000000, -489.000000)">
+            <g id="JE" transform="translate(229.000000, 489.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask" stroke="#F5F5F5" mask="url(#mask-2)" fill="#FFFFFF">
+                    <use mask="url(#mask-4)" xlink:href="#path-1"></use>
+                </g>
+                <rect id="Rectangle-1278" fill="#E3243B" mask="url(#mask-3)" transform="translate(12.041344, 8.378561) rotate(-55.000000) translate(-12.041344, -8.378561) " x="10.9461059" y="-11.3547721" width="2.19047619" height="39.4666667"></rect>
+                <rect id="Rectangle-1278" fill="#E3243B" mask="url(#mask-3)" transform="translate(12.041344, 8.378561) scale(-1, 1) rotate(-55.000000) translate(-12.041344, -8.378561) " x="10.9461059" y="-11.3547721" width="2.19047619" height="39.4666667"></rect>
+                <g id="Group" mask="url(#mask-3)">
+                    <g transform="translate(9.857143, 1.066667)">
+                        <path d="M1.30816968,1.06666667 L1.3798812,1.02570526 L0.569286214,0.569836242 L1.61729894,0.683803493 L1.46994731,0 L2.19047619,0.569836242 L2.91100507,0 L2.76365348,0.683803493 L3.81166617,0.569836258 L3.00107118,1.02570526 L3.0727827,1.06666667 L1.30816968,1.06666667 Z" id="Star-1" stroke="none" fill="#FBEF32" fill-rule="evenodd"></path>
+                        <mask id="mask-6" fill="white">
+                            <use xlink:href="#path-5"></use>
+                        </mask>
+                        <use id="Mask" stroke="none" fill="#E3243B" fill-rule="evenodd" xlink:href="#path-5"></use>
+                        <rect id="Rectangle-1281" stroke="none" fill="#FBEF32" fill-rule="evenodd" mask="url(#mask-6)" x="1.91666667" y="4.26666667" width="0.547619048" height="0.533333333" rx="0.266666667"></rect>
+                        <rect id="Rectangle-1281" stroke="none" fill="#FBEF32" fill-rule="evenodd" mask="url(#mask-6)" x="1.0952381" y="3.2" width="2.19047619" height="0.533333333" rx="0.266666667"></rect>
+                        <rect id="Rectangle-1281" stroke="none" fill="#FBEF32" fill-rule="evenodd" mask="url(#mask-6)" x="1.0952381" y="2.13333333" width="2.19047619" height="0.533333333" rx="0.266666667"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

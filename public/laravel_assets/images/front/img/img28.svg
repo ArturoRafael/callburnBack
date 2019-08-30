@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Dollarbag</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ClickToCall" transform="translate(-484.000000, -1352.000000)">
+            <g id="Group-10" transform="translate(362.000000, 1355.000000)">
+                <g id="Dollarbag" transform="translate(125.000000, 0.000000)">
+                    <path d="M29.2656297,13.0287866 L31.3333333,4 C31.3333333,4 26.4976367,6.99879866 24.6615818,6.99879866 C22.6087478,6.99879866 19.6666667,4 19.6666667,4 L21.7343703,13.0287866 C22.9472617,12.5527594 24.2072614,12.3018868 25.5,12.3018868 C26.7927386,12.3018868 28.0527383,12.5527594 29.2656297,13.0287866 Z" id="Rectangle-1492" stroke="#314E55" stroke-width="1.512" stroke-linecap="round" stroke-linejoin="round" fill="#5ECB66"></path>
+                    <path d="M43,43.6226415 C43,26.3246663 35.1649831,12.3018868 25.5,12.3018868 C15.8350169,12.3018868 8,26.3246663 8,43.6226415 L43,43.6226415 Z" id="Oval-1381" stroke="#314E55" stroke-width="1.512" stroke-linecap="round" stroke-linejoin="round" fill="#5ECB66"></path>
+                    <path d="M29.7488824,12.5478608 C29.7488824,12.5478608 32.3489024,8.64584882 35.6965429,8.64584857" id="Path-3373" stroke="#314E55" stroke-width="1.512" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M40.295481,10.257762 C40.295481,10.257762 38.6091967,13.5290414 29.7001701,12.6880031" id="Path-3374" stroke="#314E55" stroke-width="1.512" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M27.4444444,26.6415094 C27.4444444,25.3910534 26.3997755,24.3773585 25.1111111,24.3773585 C23.8224467,24.3773585 22.7777778,25.3910534 22.7777778,26.6415094 C22.7777778,27.8919655 23.8224467,28.9056604 25.1111111,28.9056604" id="Oval-1383" stroke="#314E55" stroke-width="1.512" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M25.1111111,33.4339623 L25.1111111,34.9433962" id="Line-325" stroke="#314E55" stroke-width="1.512" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M25.1111111,22.8679245 L25.1111111,24.3773585" id="Line-326" stroke="#314E55" stroke-width="1.512" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M22.7777778,31.1698113 C22.7777778,32.4202674 23.8224467,33.4339623 25.1111111,33.4339623 C26.3997755,33.4339623 27.4444444,32.4202674 27.4444444,31.1698113 C27.4444444,29.9193553 26.3997755,28.9056604 25.1111111,28.9056604" id="Oval-1382" stroke="#314E55" stroke-width="1.512" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <circle id="Oval" stroke="#E65F58" stroke-width="5" cx="25" cy="25" r="25"></circle>
+                    <path d="M5.5,38.5 L44.5,10.5" id="Line" stroke="#E65F58" stroke-width="6" stroke-linecap="square"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

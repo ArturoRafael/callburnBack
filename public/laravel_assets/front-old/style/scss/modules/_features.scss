@@ -1,0 +1,246 @@
+.features{
+  .nav-tabs{
+    margin-top: 0;
+
+  }
+  .nav-justified > li{
+    border-bottom: 5px solid $callburn-blue-light-nice;
+    a{
+      font-family: Raleway-SemiBold;
+      color: $callburn-gray-not-selected;
+      height: 60px;
+      padding-top: 20px;
+      font-size: 16px;
+
+    }
+    &.active{
+      border-bottom: 5px solid $callburn-blue;
+      a{
+        color: $callburn-gray;
+
+      }
+
+    }
+
+  }
+  .callburn-message{
+    padding-top: 30px;
+    padding-bottom: 60px;
+    background-color: $callburn-blue-light-nice;
+    .title{
+      display: block;
+      font-family: Raleway-Regular;
+      font-size: 30px;
+      color: $callburn-gray;
+      .bold{
+        font-size: 32px;
+        font-weight: bold;
+      }
+    }
+    .callburn-message-content{
+      .text{
+        font-family: Raleway-SemiBold;
+        font-size: 20px;
+        color: $callburn-gray;
+        margin-top: 20px;
+        display: block;
+      }
+      button{
+        margin-top: 20px;
+      }
+
+    }
+  }
+  .message{
+    padding: 10px;
+    border-radius : 10px;
+    background-color: $callburn-gray;
+    min-height: 237px;
+    span{
+      color: $white;
+      font-family: Raleway-Bold;
+      font-size: 17px;
+
+    }
+    &:before{
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 23px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 15px solid $callburn-gray;
+      margin-left: -27px;
+      margin-top: 75px;
+      float: left;
+      -webkit-transform: rotate(236deg);
+      -moz-transform: rotate(236deg);
+      -o-transform: rotate(236deg);
+      -ms-transform: rotate(236deg);
+      transform: rotate(236deg);
+    }
+  }
+  .img-speaker{
+    margin-top: 100px;
+  }
+  .img-speaker-text{
+    margin-top: 50px;
+  }
+  .slider-paginate{
+    div{
+      width: 20px;
+      height: 20px;
+      border: 1px solid $callburn-border;
+      border-radius: 100%;
+      float: left;
+      margin-right: 1.1vw;
+      margin-top: 20px;
+      &.active{
+        background-color: $callburn-gray;
+      }
+    }
+  }
+  .rings-like{
+    margin-top: 100px
+  }
+  .rings-like-text{
+      margin-top: 40px;
+      padding-bottom: 60px;
+      .title{
+        font-family: Raleway-Bold;
+        color: $callburn-gray;
+        font-size: 25px;
+        display: block;
+        text-align: center;
+      }
+      .text{
+          font-family: Raleway-SemiBold;
+          color: $callburn-gray;
+          font-size: 20px;
+          text-align: left;
+          display: block;
+          margin-top : 20px;
+      }
+  }
+  .send-it{
+    border-bottom: 1px solid $callburn-border;
+    background-color: $callburn-blue-light-nice;
+    .title{
+      text-align: left;
+    }
+    .text{
+      text-align: left;
+    }
+  }
+  .profesional-dashborad-item{
+    span{
+      display: block;
+      color: $callburn-blue;
+      font-family: Raleway-Bold;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: right;
+    }
+    .align-left{
+      span{
+        text-align: left;
+        margin-left: 20px;
+      }
+    }
+  }
+  .profesional-dashborad{
+    margin-top: 80px;
+  }
+  .dashoard{
+    padding-top: 40px;
+    img{
+      display: block;
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+    span{
+      font-family: Montserrat-Regular;
+      font-size: 28px;
+
+      display: block;
+      color: $callburn-blue;
+      text-align: center;
+      .extra{
+        margin-top: 40px;
+        font-weight: bold;
+        font-size: 33px;
+      }
+      .big{
+
+        font-weight: bold;
+        font-size: 31px;
+      }
+    }
+  }
+  .dashoard-futers{
+    margin-top: 50px;
+    border-bottom: 1px solid $callburn-border;
+    padding-bottom: 30px;
+    .dashboadrd-futers-item{
+      margin-top: 20px;
+
+      img{
+        display: block;
+        margin: 0 auto;
+      }
+      span{
+        display: block;
+        text-align: center;
+        font-size: 22px;
+        color: $callburn-blue;
+        font-family: Raleway-Regular;
+      }
+    }
+  }
+  .advanced-functionality{
+    p{
+      font-family: Raleway-Regular;
+      font-size: 16px;
+      color: $callburn-blue;
+      &.centred{
+        text-align: center;
+      }
+      .bold{
+      font-size: 18px;
+      font-family: Raleway-Bold;
+      font-weight: bold;
+      }
+
+    }
+    img{
+      float: left;
+      margin-top: 80px;
+    }
+  }
+  .shedule{
+    padding-top: 50px;
+    padding-bottom: 60px;
+    img{
+      display: block;
+      margin: 0 auto;
+    }
+    .title{
+      font-family: Raleway-Bold;
+      display: block;
+      text-align: center;
+      font-size: 30px;
+      color: $callburn-gray;
+    }
+    .text{
+      display: block;
+      text-align: center;
+      font-size: 25px;
+      font-family: Raleway-Regular;
+
+      .bold{
+        font-family: Raleway-SemiBold;
+        font-weight: bold;
+      }
+    }
+  }
+}

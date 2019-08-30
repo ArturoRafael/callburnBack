@@ -1,0 +1,228 @@
+.callburn_blue {
+	color: #3190e6;
+}
+
+.table_orange {
+	color: #ec4600;
+}
+
+.dark_orange {
+	color: #df635d;
+}
+
+.size_4_5 {
+	font-size: 10px;
+}
+
+.size_5_6 {
+	font-size: 12px;
+}
+
+.heading_height {
+	height: 25px;
+}
+
+.uploaded_audio_pos {
+	margin-bottom: 20px;
+}
+
+.small_button {
+	height: 30px !important;
+}
+
+.height_20px {
+	height: 20px;
+	clear: both;
+	margin: 10px 0;
+}
+
+.helvetica-light {
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	letter-spacing: normal;
+	color: #777777;
+}
+
+.normal_weight {
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	letter-spacing: normal;
+}
+
+.min_height_30 {
+	min-height: 30px;
+}
+
+.tab_border_top {
+	border-top: 3px solid #3190e6 !important;
+}
+
+.bordered_box {
+	width: 370px;
+	border-radius: 5px;
+	background-color: #ffffff;
+	border: solid 0.5px #b7bbc0;
+	padding: 10px;
+}
+
+.bordered_box_blue {
+	border-radius: 3px;
+	border: solid 3px #3190e6;
+	padding: 5px 20px;
+	display: inline;
+	margin: 3px;
+}
+
+.centering {
+	margin: 0 auto;
+}
+
+.connect_to_call_box {
+	min-width: 270px;
+	padding: 20px;
+	float: left;
+	margin: 5px 10px;
+}
+
+.wait_time_box {
+	min-width: 80px;
+	padding: 5px;
+	float: left;
+	margin: 2px;
+}
+
+.enabled_country_box {
+	min-width: 150px;
+	padding: 20px;
+	float: left;
+	margin: 2px;
+}
+
+#phone_number {
+	width: 80px;
+}
+
+#at_input_hours, #at_input_minutes {
+	width: 45px;
+}
+
+.width_100 {
+	width: 100%;
+}
+
+.simple_box {
+	min-width: 60px;
+	padding: 5px;
+	margin: 2px;
+	float: left;
+}
+
+.add_range {
+	min-width: 60px;
+	border-radius: 3px;
+	height: 20px;
+	padding: 0 2px;
+	margin: 8px 2px 0 2px;
+	float: left;
+	color: white;
+}
+
+.add_range:hover {
+	background-color: #3190e6;
+
+}
+
+#add_range {
+	text-decoration: none;
+}
+
+#add_range:hover {
+	color: white;
+}
+
+.opacity_07 {
+	opacity: 0.7;
+}
+
+.dashed_border {
+	border: dashed 1px;
+	margin: 8px;
+	padding: 2px;
+	border-radius: 3px;
+}
+
+#tag_input {
+	background-image: url('/assets/callburn/images/click_to_call_icons/tag-icon.svg');
+	background-position: 15px 15px;
+    background-repeat: no-repeat;
+    padding: 2px 40px;
+    height: 50px;
+}
+
+.nav > li.disabled > a{
+	opacity: 0.5;
+}
+
+#calendar_icon {
+	width: 30px;
+}
+
+#custom_snippet_box {
+	padding: 0;
+}
+
+#custom_snippet_box_content {
+	padding: 40px 30px 80px 30px;
+}
+
+.snippet_footer {
+
+}
+
+.disabled_btn {
+	background-color: #D8D8D8;
+	border-color: #D8D8D8;
+}
+
+.choosen_digit_status {
+	margin-left: 30px;
+}
+
+.button_padding_60px {
+	padding: 3px 60px;
+}
+
+.color_white {
+	color: white;
+}
+
+.font-size-20px {
+	font-size: 20px;
+}
+
+.js_scrollbar {
+	background: #F5F5F5;
+	overflow-x: scroll;
+	margin-bottom: 25px;
+}
+
+#js_area::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#js_area::-webkit-scrollbar
+{
+	height: 10px;
+	background-color: #a8c6ff;
+}
+
+#js_area::-webkit-scrollbar-thumb
+{
+	background-color: #3190e6;
+	border: 1px solid #3190e6;
+}
+

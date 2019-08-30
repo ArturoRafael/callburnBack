@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="41px" viewBox="0 0 40 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>facebook icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage-Copy" transform="translate(-464.000000, -3679.000000)">
+            <g id="Footer-group" transform="translate(217.000000, 3523.000000)">
+                <g id="Social-icons" transform="translate(247.000000, 156.000000)">
+                    <g id="facebook-icon" transform="translate(0.000000, 0.803922)">
+                        <path d="M20,40.1960784 C31.045695,40.1960784 40,31.1978798 40,20.0980392 C40,8.99819866 31.045695,0 20,0 C8.954305,0 0,8.99819866 0,20.0980392 C0,31.1978798 8.954305,40.1960784 20,40.1960784 Z" id="Oval-31" fill="#6A8FC8"></path>
+                        <path d="M21.3552,14.9658039 L21.3552,17.1798039 L25.2,17.1798039 L25.2,20.3926765 L21.3552,20.3926765 L21.3552,29.9866765 L17.6832,29.9866765 L17.6832,20.3926765 L14.4,20.3926765 L14.4,17.1798039 L17.6832,17.1798039 L17.6832,15.313098 C17.6832,12.6215686 19.584,10.4509804 22.1328,10.4509804 L25.2,10.4509804 L25.2,13.8375 L22.1328,13.8375 C21.744,13.8375 21.3552,14.3146275 21.3552,14.9658039 Z" id="Imported-Layers" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

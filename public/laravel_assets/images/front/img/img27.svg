@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Fireworks</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="ClickToCall" transform="translate(-148.000000, -1350.000000)" stroke-width="2">
+            <g id="Group-23" transform="translate(25.000000, 1351.000000)">
+                <g id="Fireworks" transform="translate(124.000000, 0.000000)">
+                    <path d="M32,52 C32,48.6862915 29.3137085,46 26,46 C22.6862915,46 20,48.6862915 20,52 L32,52 Z" id="Oval-1738" stroke="#456782" fill="#456782"></path>
+                    <path d="M36,52 C36,46.4771525 31.5228475,42 26,42 C20.4771525,42 16,46.4771525 16,52" id="Oval-1738" stroke="#FCC24C"></path>
+                    <path d="M36,52 L52,52" id="Line" stroke="#FCC24C"></path>
+                    <path d="M0,52 L16,52" id="Line" stroke="#FCC24C"></path>
+                    <path d="M26,39 L26,0" id="Line" stroke="#4A8F9E"></path>
+                    <g id="Star-47-+-Path-4323" transform="translate(29.000000, 5.000000)">
+                        <polygon id="Star-47" stroke="#FD5A5A" fill="#FD5A5A" transform="translate(9.737523, 5.638108) rotate(16.000000) translate(-9.737523, -5.638108) " points="9.73752267 8.31781996 7.09248903 9.70839643 7.59764551 6.7631082 5.45776834 4.67724348 8.41500585 4.24753172 9.73752267 1.56781996 11.0600395 4.24753172 14.017277 4.67724348 11.8773998 6.7631082 12.3825563 9.70839643"></polygon>
+                        <polygon id="Path-4323" stroke="#50CCD3" fill="#50CCD3" points="0.5 34 5 12 9.5 13.5"></polygon>
+                    </g>
+                    <g id="Star-47-+-Path-4323" transform="translate(15.500000, 22.000000) scale(-1, 1) translate(-15.500000, -22.000000) translate(8.000000, 5.000000)">
+                        <polygon id="Star-47" stroke="#FD5A5A" fill="#FD5A5A" transform="translate(9.737523, 5.638108) rotate(16.000000) translate(-9.737523, -5.638108) " points="9.73752267 8.31781996 7.09248903 9.70839643 7.59764551 6.7631082 5.45776834 4.67724348 8.41500585 4.24753172 9.73752267 1.56781996 11.0600395 4.24753172 14.017277 4.67724348 11.8773998 6.7631082 12.3825563 9.70839643"></polygon>
+                        <polygon id="Path-4323" stroke="#50CCD3" fill="#50CCD3" points="0.5 34 5 12 9.5 13.5"></polygon>
+                    </g>
+                    <path d="M33,40.5 L42,27" id="Path-4325" stroke="#4A8F9E"></path>
+                    <path d="M9.5,40.5 L18.5,27" id="Path-4325" stroke="#4A8F9E" transform="translate(14.000000, 33.750000) scale(-1, 1) translate(-14.000000, -33.750000) "></path>
+                    <polygon id="Star-49" stroke="#FCC24C" fill="#FCC24C" transform="translate(42.055305, 41.659958) rotate(55.000000) translate(-42.055305, -41.659958) " points="42.0553055 44.6374153 39.1163792 46.1825003 39.6776642 42.9099578 37.3000229 40.5923303 40.5858423 40.1148728 42.0553055 37.1374153 43.5247686 40.1148728 46.8105881 40.5923303 44.4329468 42.9099578 44.9942317 46.1825003"></polygon>
+                    <polygon id="Star-49" stroke="#FCC24C" fill="#FCC24C" transform="translate(9.273085, 41.659958) scale(-1, 1) rotate(55.000000) translate(-9.273085, -41.659958) " points="9.27308488 44.6374153 6.33415862 46.1825003 6.89544359 42.9099578 4.5178023 40.5923303 7.80362175 40.1148728 9.27308488 37.1374153 10.742548 40.1148728 14.0283675 40.5923303 11.6507262 42.9099578 12.2120111 46.1825003"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

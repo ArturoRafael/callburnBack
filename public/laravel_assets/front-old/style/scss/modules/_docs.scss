@@ -1,0 +1,139 @@
+.list-group-item-default{
+  background-color : $callburn-docs-grey;
+}
+.list-group-item{
+  background-color: $callburn-docs-grey-ligten;
+  &:hover{
+    background-color : $callburn-docs-grey;
+  }
+
+}
+.list-group-submenu{
+
+  .list-group-item{
+    &.active{
+      background-image: url("/assets/callburn/images/images/group@3x.svg");
+      background-repeat : no-repeat;
+      background-color : $callburn-docs-grey-ligten;
+      color: #555;
+      background-position: 0 12px;
+    }
+    padding-left: 30px;
+    border: none!important;
+  }
+}
+#sidebar.affix-top {
+  position: static;
+  margin-top : 25px;
+  width : 228px;
+}
+
+  #sidebar.affix {
+    position: fixed;
+    top : 25px;
+    width : 228px;
+}
+.list-group-item[aria-expanded="true"]{
+  background-color: $callburn-docs-grey;
+  margin-bottom: 0;
+  &:hover{
+   background-color: $callburn-docs-grey;
+  }
+
+}
+.fixed-menu{
+  float: left;
+  overflow: auto;
+  position: fixed;
+  height: calc(100vh - 80px);
+  top: 80px;
+  background-color: #F3F2F6;
+}
+.container-for-docs{
+  position: fixed;
+  height: calc(100vh - 80px);
+  overflow: auto;
+  padding-left: 25px;
+  top: 80px;
+}
+.set-code{
+
+  background-color : $callburn-docs-dark-blue;
+  h3{
+    color: $wite;
+    font-family : Helvetica;
+    background-color: $callburn-docs-dark;
+    padding: 20px;
+    margin-top: 60px;
+  }
+  .code{
+    overflow: auto;
+    margin-top: 20px;
+    h4{
+      margin-top: 20px;
+      color : $text-blue;
+      margin-bottom: 20px;
+      font-family: Helvetica;
+    }
+    code{
+      padding: 13px;
+      background-color: $callburn-docs-dark;
+      color: #A7B3B8;
+      width: 100%;
+      font-size: 14px;
+      display: inline-table;
+      pre{
+        background-color: $callburn-docs-dark;
+        border: none!important;
+        color : $text-code;
+      }
+      }
+
+  }
+}
+
+.set-description{
+  h3{
+  background-color: $wite-blue;
+  padding: 19px;
+  margin-top: 60px;
+  color : $blue;
+  border: 1px solid $callburn-docs-grey;
+  }
+}
+.mt-20{
+  margin-top: 20px;
+}
+.tablist{
+  .active{
+    background-color: red;
+  }
+}
+.custom-dropdown{
+  li{
+    padding-left: 0!important;
+  background-color: #F3F2F6!important;
+    margin-top: 0;
+    a{
+      padding-left: 30px;
+    }
+  }
+
+  .active{
+    background-image: url("/assets/callburn/images/images/group@3x.svg");
+    background-repeat: no-repeat;
+
+  }
+}
+.panel{
+  box-shadow: none;
+  border: none;
+  background-color: #D8D8D8;
+  border-bottom: 1px solid $callburn-border;
+}
+.panel-default > .panel-heading{
+  background-color: #F3F2F6;
+}
+.panel-group .panel + .panel{
+  margin-top: 0;
+}

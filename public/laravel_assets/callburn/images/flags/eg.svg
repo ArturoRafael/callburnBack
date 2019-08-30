@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>EG</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M8.76190476,6.94283638 C8.76190476,6.64303613 8.99417659,6.4 9.30952381,6.4 L9.58076804,6.4 C9.73340564,6.4 9.91574769,6.51415202 9.98415411,6.64739583 L10.4047619,7.46666667 C10.4047619,7.46666667 11.0064097,6.4 11.5,6.4 C12.047619,6.4 12.5952381,7.46666667 12.5952381,7.46666667 L13.0158459,6.64739583 C13.0859923,6.51076289 13.2600668,6.4 13.419232,6.4 L13.6904762,6.4 C13.9929178,6.4 14.2380952,6.65109863 14.2380952,6.94283638 L14.2380952,9.05716362 C14.2380952,9.35696387 14.0366487,9.46920573 13.7891773,9.30852865 L12.5952381,8.53333333 L12.047619,8.53333333 L12.047619,9.06666667 C12.047619,9.36121853 11.8153472,9.6 11.5,9.6 L11.5,9.6 C11.1975584,9.6 10.952381,9.35260417 10.952381,9.06666667 L10.952381,8.53333333 L10.4047619,8.53333333 L9.2108227,9.30852865 C8.96289217,9.46950383 8.76190476,9.34890137 8.76190476,9.05716362 L8.76190476,6.94283638 Z" id="path-5"></path>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5.47619048" height="3.2" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-152.000000, -295.000000)">
+            <g id="EG" transform="translate(152.000000, 295.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask" stroke="#F5F5F5" mask="url(#mask-2)" fill="#FFFFFF">
+                    <use mask="url(#mask-4)" xlink:href="#path-1"></use>
+                </g>
+                <rect id="Rectangle-2" fill="#E41D33" mask="url(#mask-3)" x="0" y="0" width="23" height="5.33333333"></rect>
+                <rect id="Rectangle-2" fill="#262626" mask="url(#mask-3)" x="0" y="10.6666667" width="23" height="5.33333333"></rect>
+                <g id="Rectangle-129" mask="url(#mask-3)" stroke="#C6A846" stroke-width="1.08" fill="#F4B32E" fill-opacity="0.25">
+                    <use mask="url(#mask-6)" xlink:href="#path-5"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

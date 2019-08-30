@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="110px" height="197px" viewBox="0 0 110 197" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Stop</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Play-Stop" transform="translate(-464.000000, -101.000000)" stroke="#314E55" stroke-width="2">
+            <g id="Stop" transform="translate(465.000000, 102.000000)">
+                <rect id="Rectangle-328" fill="#EAEAEA" x="0" y="0" width="108" height="158.802559" rx="2"></rect>
+                <rect id="Rectangle-357" fill="#73C9C9" x="0" y="158.888889" width="108" height="36.1111111"></rect>
+                <ellipse id="Oval-415" fill="#EAEAEA" cx="55.862069" cy="176.944444" rx="7.44827586" ry="7.22222222"></ellipse>
+                <g id="Group" transform="translate(41.000000, 59.000000)" fill="#5ECB66" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9.663661,33.4333763 C9.663661,36.7952765 9.93000489,39.0763928 8.64303303,40 C6.32065413,41.6666766 1.70693188,40 0.972657364,40 C-1.2158217,40 0.972657364,-2.84217094e-14 0.972657364,-2.84217094e-14 L10.9435329,-2.84217094e-14 C10.9435329,-2.84217094e-14 9.663661,24.0048275 9.663661,33.4333763 Z" id="Triangle-89"></path>
+                    <path d="M25.663661,33.4333763 C25.663661,36.7952765 25.9300049,39.0763928 24.643033,40 C22.3206541,41.6666766 17.7069319,40 16.9726574,40 C14.7841783,40 16.9726574,-2.84217094e-14 16.9726574,-2.84217094e-14 L26.9435329,-2.84217094e-14 C26.9435329,-2.84217094e-14 25.663661,24.0048275 25.663661,33.4333763 Z" id="Triangle-89"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

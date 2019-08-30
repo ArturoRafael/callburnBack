@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="110px" height="197px" viewBox="0 0 110 197" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 15</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Voice-Messages" transform="translate(-457.000000, -1485.000000)" stroke="#314E55" stroke-width="2">
+            <g id="Group-15" transform="translate(458.000000, 1486.000000)">
+                <path d="M0,2.0078511 C0,0.898945559 0.901227258,0 1.99010877,0 L106.009891,0 C107.108998,0 108,0.893079856 108,2.0078511 L108,158.802559 L0,158.802559 L0,2.0078511 Z" id="Rectangle-328" fill="#EAEAEA"></path>
+                <path d="M0,158.888889 L108,158.888889 L108,193.007073 C108,194.107736 107.098773,195 106.009891,195 L1.99010877,195 C0.891002048,195 0,194.107361 0,193.007073 L0,158.888889 Z" id="Rectangle-357" fill="#73C9C9"></path>
+                <ellipse id="Oval-415" fill="#EAEAEA" cx="55.862069" cy="176.944444" rx="7.44827586" ry="7.22222222"></ellipse>
+                <polygon id="Triangle-89" stroke-linecap="round" stroke-linejoin="round" fill="#5ECB66" points="37 99 37 59 72 79"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

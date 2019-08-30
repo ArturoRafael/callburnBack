@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>ES</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+        <path d="M4.69997598,7.46174825 C4.67500494,7.16991275 4.88821036,6.93333333 5.19572141,6.93333333 L6.85189763,6.93333333 C7.15066132,6.93333333 7.37227693,7.17385343 7.34764307,7.46174825 L7.21174703,9.04995931 C7.16055056,9.64829026 6.63290996,10.1333333 6.03664408,10.1333333 L6.01097496,10.1333333 C5.41318,10.1333333 4.88816989,9.66116231 4.83587201,9.04995931 L4.69997598,7.46174825 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="2.65145306" height="3.2" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-268.000000, -295.000000)">
+            <g id="ES" transform="translate(268.000000, 295.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <rect id="Rectangle-2" fill="#DD172C" mask="url(#mask-2)" x="0" y="0" width="23" height="4.26666667"></rect>
+                <rect id="Rectangle-2" fill="#DD172C" mask="url(#mask-2)" x="0" y="11.7333333" width="23" height="4.26666667"></rect>
+                <rect id="Rectangle-2" fill="#FFD133" mask="url(#mask-2)" x="0" y="4.26666667" width="23" height="7.46666667"></rect>
+                <polygon id="Rectangle-139-Copy" fill="#FFEDB1" mask="url(#mask-2)" points="6.02380952 7.46666667 7.11904762 7.46666667 7.11904762 8 6.02380952 8"></polygon>
+                <g id="Rectangle-137" mask="url(#mask-2)" stroke-width="1.08" stroke="#A41517">
+                    <use mask="url(#mask-4)" xlink:href="#path-3"></use>
+                </g>
+                <polygon id="Rectangle-139" fill="#A41517" mask="url(#mask-2)" points="4.92857143 8 7.11904762 8 7.11904762 8.53333333 6.57142857 8.53333333 6.02380952 9.6 5.47619048 8.53333333 4.92857143 8.53333333"></polygon>
+                <rect id="Rectangle-135" fill="#A41517" mask="url(#mask-2)" x="3.28571429" y="6.4" width="1.0952381" height="3.73333333"></rect>
+                <rect id="Rectangle-135-Copy" fill="#A41517" mask="url(#mask-2)" x="7.66666667" y="6.4" width="1.0952381" height="3.73333333"></rect>
+                <rect id="Rectangle-138" fill="#A41517" mask="url(#mask-2)" x="4.92857143" y="5.33333333" width="2.19047619" height="1.06666667"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

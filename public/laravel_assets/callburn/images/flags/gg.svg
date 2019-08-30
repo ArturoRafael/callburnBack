@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>GG</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-579.000000, -373.000000)">
+            <g id="GG" transform="translate(579.000000, 373.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask" stroke="#F5F5F5" mask="url(#mask-2)" fill="#FFFFFF">
+                    <use mask="url(#mask-4)" xlink:href="#path-1"></use>
+                </g>
+                <rect id="Mask" fill="#E8112D" mask="url(#mask-3)" x="8.76190476" y="0" width="5.47619048" height="16"></rect>
+                <rect id="Mask" fill="#E8112D" mask="url(#mask-3)" x="0" y="5.33333333" width="23" height="5.33333333"></rect>
+                <g id="Group" mask="url(#mask-3)" fill="#F9DD16">
+                    <g transform="translate(5.476190, 2.133333)">
+                        <rect id="Rectangle-1229" x="5.47619048" y="0" width="1.0952381" height="11.7333333"></rect>
+                        <polygon id="Triangle-1" points="6.02380952 10.6666667 7.11904762 11.7333333 4.92857143 11.7333333"></polygon>
+                        <rect id="Rectangle-1229" x="0" y="5.33333333" width="12.047619" height="1.06666667"></rect>
+                        <polygon id="Triangle-1" transform="translate(6.023810, 0.533333) scale(1, -1) translate(-6.023810, -0.533333) " points="6.02380952 0 7.11904762 1.06666667 4.92857143 1.06666667"></polygon>
+                        <polygon id="Triangle-1" transform="translate(0.547619, 5.866667) scale(1, -1) rotate(-270.000000) translate(-0.547619, -5.866667) " points="0.547619048 5.33333333 1.64285714 6.4 -0.547619048 6.4"></polygon>
+                        <polygon id="Triangle-1" transform="translate(11.500000, 5.866667) scale(-1, -1) rotate(-270.000000) translate(-11.500000, -5.866667) " points="11.5 5.33333333 12.5952381 6.4 10.4047619 6.4"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

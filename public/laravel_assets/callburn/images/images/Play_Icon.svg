@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="18px" viewBox="0 0 19 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Play Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0.127403846" y="0" width="18" height="18" rx="0.2916"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="18" height="18" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Compose-new:-Templates" transform="translate(-305.000000, -575.000000)">
+            <g id="Play-Icon" transform="translate(305.000000, 575.000000)">
+                <polyline id="Fill-74" fill="#777777" points="4.12740385 15 4.12740385 4 15.1274038 9.5 4.12740385 15"></polyline>
+                <use id="Rectangle-43" stroke="#777777" mask="url(#mask-2)" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

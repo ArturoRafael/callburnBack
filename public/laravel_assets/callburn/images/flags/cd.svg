@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>CD</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-424.000000, -217.000000)">
+            <g id="CD" transform="translate(424.000000, 217.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <rect id="Mask-Copy" fill="#158AFF" mask="url(#mask-2)" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+                <polygon id="Rectangle-69-Copy" fill="#FDD216" mask="url(#mask-2)" transform="translate(10.939005, 8.334139) rotate(153.000000) translate(-10.939005, -8.334139) " points="-4.94194747 5.13413867 26.8199573 5.13413867 26.8199573 11.5341387 -4.94194747 11.5341387"></polygon>
+                <rect id="Rectangle-69" fill="#CE1120" mask="url(#mask-2)" transform="translate(11.241182, 8.139944) rotate(153.000000) translate(-11.241182, -8.139944) " x="-4.63977074" y="6.00661037" width="31.7619048" height="4.26666667"></rect>
+                <polygon id="Star-8" fill="#FDD216" mask="url(#mask-2)" points="3.83333333 4.77333337 2.22392133 5.89071198 2.8177408 4.05471102 1.22925001 2.90928802 3.20566263 2.89195563 3.83333333 1.06666667 4.46100404 2.89195563 6.43741665 2.90928802 4.84892587 4.05471102 5.44274533 5.89071198"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

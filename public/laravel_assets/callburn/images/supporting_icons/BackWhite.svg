@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>BackWhite</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ClickToCall---Snippets-versions" transform="translate(-1095.000000, -1333.000000)">
+            <g id="BackWhite" transform="translate(1096.000000, 1334.000000)">
+                <circle id="Combined-Shape" stroke="#23BDFF" stroke-width="1.6" stroke-linecap="square" cx="10" cy="10" r="10"></circle>
+                <polygon id="Back-Arrow" fill="#23BDFF" points="6 9.88 11.88 4 13 5.12 8.24 9.88 13 14.64 11.88 15.76"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

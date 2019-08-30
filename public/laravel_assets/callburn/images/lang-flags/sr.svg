@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>SR</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-424.000000, -839.000000)">
+            <g id="SR" transform="translate(424.000000, 839.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask" stroke="#F5F5F5" mask="url(#mask-2)" fill="#FFFFFF">
+                    <use mask="url(#mask-4)" xlink:href="#path-1"></use>
+                </g>
+                <rect id="Rectangle-2" fill="#43924C" mask="url(#mask-3)" x="0" y="0" width="23" height="3.2"></rect>
+                <rect id="Rectangle-2" fill="#43924C" mask="url(#mask-3)" x="0" y="12.8" width="23" height="3.2"></rect>
+                <rect id="Rectangle-2-Copy-4" fill="#CD153A" mask="url(#mask-3)" x="0" y="5.33333333" width="23" height="5.33333333"></rect>
+                <polygon id="Star-33" fill="#F5D24B" mask="url(#mask-3)" points="11.5 9.35999999 9.890588 10.4240453 10.4323258 8.60452524 8.89591668 7.44262135 10.8401411 7.38214143 11.5 5.6 12.1598589 7.38214143 14.1040833 7.44262135 12.5676742 8.60452524 13.109412 10.4240453"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

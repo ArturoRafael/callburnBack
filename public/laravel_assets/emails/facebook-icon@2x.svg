@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>facebook icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#A3C2E6" offset="0%"></stop>
+            <stop stop-color="#6A8FC8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ConfirmEmailChanged" transform="translate(-422.000000, -615.000000)">
+            <g id="Email" transform="translate(107.000000, 104.000000)">
+                <g id="Footer-group" transform="translate(80.000000, 510.000000)">
+                    <g id="Social-icons" transform="translate(235.000000, 0.000000)">
+                        <g id="facebook-icon" transform="translate(0.000000, 1.000000)">
+                            <path d="M25,50 C38.8071187,50 50,38.8071187 50,25 C50,11.1928813 38.8071187,0 25,0 C11.1928813,0 0,11.1928813 0,25 C0,38.8071187 11.1928813,50 25,50 Z" id="Oval-31" fill="url(#linearGradient-1)"></path>
+                            <path d="M26.694,18.616 L26.694,21.37 L31.5,21.37 L31.5,25.3665 L26.694,25.3665 L26.694,37.3005 L22.104,37.3005 L22.104,25.3665 L18,25.3665 L18,21.37 L22.104,21.37 L22.104,19.048 C22.104,15.7 24.48,13 27.666,13 L31.5,13 L31.5,17.2125 L27.666,17.2125 C27.18,17.2125 26.694,17.806 26.694,18.616 Z" id="Imported-Layers" fill="#FFFFFF"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>PT</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+        <ellipse id="path-3" cx="8.76190476" cy="8" rx="2.19047619" ry="2.13333333"></ellipse>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1.08" y="-1.08" width="6.54095238" height="6.42666667">
+            <rect x="5.49142857" y="4.78666667" width="6.54095238" height="6.42666667" fill="white"></rect>
+            <use xlink:href="#path-3" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-424.000000, -723.000000)">
+            <g id="PT" transform="translate(424.000000, 723.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <rect id="Mask-Copy" fill="#FF2936" mask="url(#mask-2)" x="0" y="0" width="23" height="16"></rect>
+                <rect id="Rectangle-2-Copy" fill="#128415" mask="url(#mask-2)" x="0" y="0" width="8.76190476" height="16"></rect>
+                <g id="Oval-1" mask="url(#mask-2)" stroke-width="2.16" stroke="#FAF94F">
+                    <use mask="url(#mask-4)" xlink:href="#path-3"></use>
+                </g>
+                <path d="M7.66666667,6.6728302 C7.66666667,6.52215024 7.78443618,6.4 7.93526204,6.4 L9.58854748,6.4 C9.73688861,6.4 9.85714286,6.52153625 9.85714286,6.6728302 L9.85714286,8.51662598 C9.85714286,9.11495693 9.37100519,9.6 8.77473932,9.6 L8.7490702,9.6 C8.15127524,9.6 7.66666667,9.11398888 7.66666667,8.51662598 L7.66666667,6.6728302 Z" id="Rectangle-429" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                <path d="M8.76190476,8.53333333 C9.06434641,8.53333333 9.30952381,7.76121853 9.30952381,7.46666667 C9.30952381,7.1721148 9.06434641,6.93333333 8.76190476,6.93333333 C8.45946311,6.93333333 8.21428571,7.1721148 8.21428571,7.46666667 C8.21428571,7.76121853 8.45946311,8.53333333 8.76190476,8.53333333 Z" id="Oval-27" fill="#1D50B5" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

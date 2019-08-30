@@ -1,0 +1,168 @@
+.blue-background{
+    background: #23bdff,#49e0ff; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient( #23bdff,#49e0ff); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient( #23bdff,#49e0ff ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#23bdff,#49e0ff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#23bdff,#49e0ff); /* Standard syntax */
+    background-repeat: repeat-y;
+    height: 130vh;
+}
+.white-registration-nav{
+    background-color: $white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.registration-container{
+    margin-top: 120px;
+    .first-step{
+        .title{
+            font-family: Helvetica;
+            color: $white;
+            font-size: 30px;
+        }
+        .text{
+            display: block;
+            text-align: left;
+            color: $white;
+            font-family: Helvetica;
+            font-size: 15px;
+        }
+        .reg-form-control{
+            border-radius: 10px;
+            height:45px;
+            padding-left: 20px;
+            color: $callburn-gray;
+        }
+
+    }
+    .mt-40{
+        margin-top: 40px;
+    }
+    .mt-20{
+        margin-top: 20px;
+    }
+    .mt-60{
+        margin-top: 60px;
+    }
+    .btn-callburn{
+        margin-top: 40px;
+        border-radius: 20px;
+        padding: 15px;
+    }
+    .btn-success{
+        background-color: $registration-success-grren;
+        border: 1px solid $registration-success-grren;
+        &:hover{
+            background-color: darken($registration-success-grren,15%);
+            border: 1px solid darken($registration-success-grren,15%);
+        }
+        &.disabled{
+            background-color: $callburn-gray;
+            border: 1px solid $callburn-gray;
+        }
+        &.btn-next{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
+
+            font-family: Helvetica;
+            font-size: 20px;
+            margin: 0 auto;
+            display: block;
+            margin-top: 20px;
+        }
+    }
+    .step-changer-area{
+        background-color: $white;
+        border-top-right-radius : 20px;
+        border-bottom-right-radius : 20px;
+        padding-bottom: 20px;
+        .error{
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            color: $google-color;
+            img{
+                padding-right: 10px;
+            }
+        }
+        .step-title{
+            display: block;
+            text-align: center;
+            font-family: Helvetica;
+            color: $callburn-gray;
+            margin-top: 20px;
+            font-size: 15px;
+            .bold{
+                font-weight: bold;
+            }
+        }
+    }
+    .next-step-disc{
+        div{
+            display: block;
+            border: 1px solid $callburn-border;
+            width: 10px;
+            height: 10px;
+            float: left;
+            margin-right: 12px;
+            border-radius: 100%;
+            &:last-child{
+                margin-right: 0;
+            }
+            &.active{
+                background-color: $callburn-gray;
+            }
+        }
+        margin-top: 15px;
+    }
+    .success{
+        margin-top: 40px;
+        display: block;
+        text-align: center;
+
+        color: $callburn-border-blue;
+        i{
+            font-size: 20px;
+            padding-top: 10px;
+
+
+            padding-right: 10px;
+        }
+        span{
+
+        }
+    }
+    .forgot-phone{
+        display: block;
+        text-align: center;
+        color: $callburn-gray;
+    }
+    .mt-120{
+        margin-top: 120px;
+    }
+    label{
+        color: $white;
+        font-family: HelveticaNeue;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
+.check_email_sp{
+    display: block;
+    text-align: center;
+    clear: both;
+}
+.registr-checkbox{
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    background-color: #eae9ee;
+    label{
+        color: $callburn-gray;
+        font-family: Helvetica-Light;
+        font-size: 15px;
+    }
+}

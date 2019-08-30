@@ -1,0 +1,173 @@
+.login-modal{
+  .modal-header{
+    border-bottom: 0;
+    padding-bottom: 0;
+
+  }
+  .modal-footer{
+    padding-bottom: 60px;
+  }
+  .modal-body{
+    padding-top: 0;
+    padding-bottom: 0;
+  .login-form-container{
+      margin-top: 40px;
+      input{
+        margin-bottom: 20px;
+        padding-right: 32px;
+        border: 1px solid $callburn-blue-light;
+        text-align: center;
+        font-family: Helvetica-Light;
+        &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+           text-align:center;
+        }
+        &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+           text-align:center;
+        }
+        &::-moz-placeholder { /* Mozilla Firefox 19+ */
+           text-align:center;
+        }
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+           text-align:center;
+        }
+        &.email{
+          background-repeat: no-repeat, no-repeat, no-repeat;
+          background-position: 10px,right 10px;
+          &.checked{
+            background-image: url("/assets/callburn/images/images/black/check-icon@3x.svg");
+            background-position: right 10px;
+          }
+        }
+        &.password{
+          background-repeat: no-repeat, no-repeat, no-repeat;
+          background-position: right 10px;
+          &.checked{
+            background-image: url("/assets/callburn/images/images/black/check-icon@3x.svg");
+            background-position: right 10px;
+          }
+        }
+      }
+    }
+    .form-buttons{
+      margin-top: 30px;
+      button{
+        margin: 0 auto;
+        display: block;
+        font-family: Raleway-SemiBold;
+        color: $white;
+        font-size: 100%;
+        box-shadow: 20px 3px;
+
+      }
+      .btn-login-cridentials{
+
+        background-color: $callburn-blue-light;
+        border: 1px solid $callburn-blue-light;
+        &:hover{
+          background-color: darken($callburn-blue-light,5%);
+        }
+      }
+      .btn-facebook{
+        background-color: $facebook-color;
+        border: 1px solid $facebook-color;
+        &:hover{
+          background-color: darken($facebook-color,5%);
+        }
+      }
+      .btn-google{
+        background-color: $google-color;
+        border: 1px solid $google-color;
+        &:hover{
+          background-color: darken($google-color,5%);
+        }
+      }
+    }
+  }
+  .close{
+    font-size: 50px;
+    font-weight: 100;
+  }
+  .login-title{
+    display: block;
+    text-align: center;
+    color: $callburn-orange;
+    font-family: Raleway-Regular;
+    font-size: 35px;
+    .bold{
+      font-family: Raleway-Bold;
+      font-weight: bold;
+    }
+  }
+  .login-subtitle{
+  display: block;
+    text-align: center;
+    color: $callburn-orange;
+    font-family: Raleway-Regular;
+    font-size: 25px;
+  }
+  .error{
+    display: block;
+    text-align: center;
+    color: $callburn-warning;
+    clear: both;
+    img{
+      padding-right: 10px;
+    }
+  }
+  .recovery{
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    font-family: Raleway-Regular;
+    color: $callburn-text-color;
+    font-size: 16px;
+    margin-bottom: 40px;
+    clear: both;
+  }
+  .text-extra{
+    font-family: Raleway-Regular;
+    display: block;
+    text-align: center;
+    font-size: 35px;
+    color: $callburn-orange;
+    .bold{
+      font-family: Raleway-Bold;
+      font-size: 37px;
+      color: $callburn-orange;
+
+    }
+    a{
+    &:hover{
+      text-decoration: none!important;
+    }
+    }
+  }
+  .text-big{
+    font-family: Raleway-Regular;
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    color: $callburn-orange;
+    a{
+      &:hover{
+      //text-decoration: none!important;
+      color: $callburn-orange;
+
+    }
+    }
+    .bold{
+      font-family: Raleway-Bold;
+      font-size: 27px;
+      color: $callburn-orange;
+
+    }
+  }
+}
+.scrolable{
+  max-height: 450px;
+  overflow: auto;
+}
+.modal-button-margin{
+  margin-top: 40px;
+  display: block;
+}

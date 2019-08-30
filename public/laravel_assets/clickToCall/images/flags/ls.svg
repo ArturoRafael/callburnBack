@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>LS</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <ellipse id="path-5" cx="11.5" cy="6.93333333" rx="1.0952381" ry="1.06666667"></ellipse>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="2.19047619" height="2.13333333" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-308.000000, -567.000000)">
+            <g id="LS" transform="translate(308.000000, 567.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask" stroke="#F5F5F5" mask="url(#mask-2)" fill="#FFFFFF">
+                    <use mask="url(#mask-4)" xlink:href="#path-1"></use>
+                </g>
+                <rect id="Rectangle-2" fill="#0C33B8" mask="url(#mask-3)" x="0" y="0" width="23" height="5.33333333"></rect>
+                <rect id="Rectangle-2" fill="#1DB158" mask="url(#mask-3)" x="0" y="10.6666667" width="23" height="5.33333333"></rect>
+                <path d="M10.952381,7.99999999 L11.3267299,6.90625 C11.4224243,6.62665584 11.5761441,6.62247314 11.6732701,6.90624998 L12.0476191,7.99999994 L12.990569,9.37752685 C13.0746754,9.50039538 13.0526123,9.67415771 12.9306815,9.75713298 C12.9306815,9.75713298 12.5952381,10.1333333 11.5,10.1333333 C10.4047619,10.1333333 10.0693185,9.75713298 10.0693185,9.75713298 C9.95213713,9.67035083 9.92900449,9.49501953 10.009431,9.37752685 L10.952381,7.99999999 Z" id="Rectangle-328" fill="#262626" mask="url(#mask-3)"></path>
+                <g id="Oval-17" mask="url(#mask-3)" stroke-width="1.08" stroke="#262626">
+                    <use mask="url(#mask-6)" xlink:href="#path-5"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

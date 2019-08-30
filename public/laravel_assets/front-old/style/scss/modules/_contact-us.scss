@@ -1,0 +1,132 @@
+.contact-us{
+  .can-help{
+    display: block;
+    text-align: center;
+    color: $callburn-gray;
+    font-family: Raleway-Regular;
+    font-size: 35px;
+    margin-top: 40px;
+    .bold{
+      font-weight: bold;
+    }
+  }
+  .mt-60{
+    margin-top: 60px;
+  }
+  .help-first{
+
+    img{
+      display: block;
+      margin: 0 auto;
+    }
+    .help-first-text{
+      font-family: Raleway-Regular;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    color: $callburn-gray;
+    }
+    .help-first-title{
+      font-family: Raleway-Bold;
+      margin-top: 20px;
+      font-size: 21px;
+        color: $callburn-blue;
+
+      display: block;
+      text-align: center;
+    }
+  }
+  .position{
+    display: block;
+    text-align: center;
+    font-family: Raleway-Regular;
+    font-size: 35px;
+    margin-top: 60px;
+    color: $callburn-gray;
+    img{
+      padding-right: 10px;
+    }
+    .bold{
+      font-family: Raleway-Bold;
+      font-weight: bold;
+    }
+  }
+  .position-subtitle{
+    display: block;
+    color: $callburn-gray;
+    text-align: center;
+    font-family: Raleway-Regular;
+    font-size: 20px;
+
+  }
+  .contact-support-position{
+    margin-top: 60px;
+    .title{
+      display: block;
+      text-align: center;
+      font-family: Raleway-Bold;
+      color: $callburn-blue;
+
+      font-size: 30px;
+    }
+    .text{
+      display: block;
+      text-align: center;
+      font-family: Raleway-Regular;
+      font-size: 20px;
+    }
+  }
+  .any-question{
+    background-color: $callburn-blue-light-nice;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .services-comment{
+    margin-top: 30px;
+    .text{
+      margin-top: 20px;
+      display: block;
+      font-family: Raleway-Regular;
+      font-size: 17px;
+      font-weight: 100;
+      text-align: center;
+    }
+    .title{
+      margin-top: 10px;
+      display: block;
+      font-size: 18px;
+      color: $callburn-blue;
+    }
+      img{
+        display: block;
+        margin: 0 auto;
+        height: 90px;
+      }
+    }
+  }
+  .title{
+    display: block;
+    text-align: center;
+    font-family: Raleway-SemiBold;
+    font-size: 25px;
+    color: $callburn-gray;
+    margin-top: 20px;
+}
+  .title-orange{
+    display: block;
+    text-align: center;
+    color: $callburn-orange;
+    font-family: Raleway-Regular;
+    font-size: 35px;
+    margin-top: 20px;
+    .bold{
+      font-size: 37px;
+      font-weight: bold;
+    }
+    .thin{
+      font-size: 30px;
+    }
+  }
+}

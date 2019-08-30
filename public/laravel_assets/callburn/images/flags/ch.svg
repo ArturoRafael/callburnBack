@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>CH</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-229.000000, -217.000000)">
+            <g id="CH" transform="translate(229.000000, 217.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <rect id="Mask-Copy" fill="#FF0000" mask="url(#mask-2)" x="0" y="0" width="23" height="16"></rect>
+                <path d="M9.85714286,9.6 L6.84031236,9.6 C6.69181194,9.6 6.57142857,9.47846375 6.57142857,9.3271698 L6.57142857,6.6728302 C6.57142857,6.52215024 6.69622026,6.4 6.84031236,6.4 L9.85714286,6.4 L9.85714286,3.4728302 C9.85714286,3.32215024 9.98193455,3.2 10.1260266,3.2 L12.8739734,3.2 C13.0224738,3.2 13.1428571,3.32153625 13.1428571,3.4728302 L13.1428571,6.4 L16.1596876,6.4 C16.3081881,6.4 16.4285714,6.52153625 16.4285714,6.6728302 L16.4285714,9.3271698 C16.4285714,9.47784976 16.3037797,9.6 16.1596876,9.6 L13.1428571,9.6 L13.1428571,12.5271698 C13.1428571,12.6778498 13.0180655,12.8 12.8739734,12.8 L10.1260266,12.8 C9.97752623,12.8 9.85714286,12.6784637 9.85714286,12.5271698 L9.85714286,9.6 Z" id="Rectangle-78" fill="#FFFFFF" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

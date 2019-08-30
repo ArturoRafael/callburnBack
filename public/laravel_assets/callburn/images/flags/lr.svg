@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>LR</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-229.000000, -567.000000)">
+            <g id="LR" transform="translate(229.000000, 567.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask" stroke="#F5F5F5" mask="url(#mask-2)" fill="#FFFFFF">
+                    <use mask="url(#mask-4)" xlink:href="#path-1"></use>
+                </g>
+                <path d="M10.952381,0 L23,0 L23,2.13333333 L10.952381,2.13333333 L10.952381,0 Z M10.952381,4.26666667 L23,4.26666667 L23,6.4 L10.952381,6.4 L10.952381,4.26666667 Z M10.952381,8.53333333 L23,8.53333333 L23,10.6666667 L10.952381,10.6666667 L10.952381,8.53333333 Z M0,12.8 L23,12.8 L23,14.9333333 L0,14.9333333 L0,12.8 Z" id="Rectangle-537" fill="#E1244A" mask="url(#mask-3)"></path>
+                <rect id="Rectangle-1568" fill="#0C3F8E" mask="url(#mask-3)" x="0" y="0" width="10.952381" height="10.6666667"></rect>
+                <polygon id="Star-8" fill="#FFFFFF" mask="url(#mask-3)" points="5.47619048 6.58133338 3.54489608 7.92218772 4.25747943 5.71898656 2.35129049 4.34447895 4.72298563 4.32368008 5.47619048 2.13333333 6.22939532 4.32368008 8.60109046 4.34447895 6.69490152 5.71898656 7.40748488 7.92218772"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

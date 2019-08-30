@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>KP</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-385.000000, -529.000000)">
+            <g id="KP" transform="translate(385.000000, 529.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <rect id="Rectangle-2" fill="#1461B6" mask="url(#mask-2)" x="0" y="0" width="23" height="3.2"></rect>
+                <rect id="Rectangle-2" fill="#1461B6" mask="url(#mask-2)" x="0" y="12.8" width="23" height="3.2"></rect>
+                <rect id="Rectangle-2" fill="#FFFFFF" mask="url(#mask-2)" x="0" y="3.2" width="23" height="9.6"></rect>
+                <rect id="Rectangle-2-Copy-4" fill="#F53846" mask="url(#mask-2)" x="0" y="4.26666667" width="23" height="7.46666667"></rect>
+                <path d="M8.21428571,10.6666667 C9.72649396,10.6666667 10.952381,9.47275933 10.952381,8 C10.952381,6.52724067 9.72649396,5.33333333 8.21428571,5.33333333 C6.70207747,5.33333333 5.47619048,6.52724067 5.47619048,8 C5.47619048,9.47275933 6.70207747,10.6666667 8.21428571,10.6666667 Z M8.21428571,9.07006279 L6.60487371,10.1573787 L7.16933597,8.33066759 L5.6102024,7.17595468 L7.56847126,7.13430102 L8.21428571,5.33333333 L8.86010017,7.13430102 L10.818369,7.17595468 L9.25923546,8.33066759 L9.82369771,10.1573787 L8.21428571,9.07006279 Z" id="Oval-12" fill="#FFFFFF" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

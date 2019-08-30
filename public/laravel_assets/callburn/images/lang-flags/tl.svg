@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>TL</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-268.000000, -878.000000)">
+            <g id="TL" transform="translate(268.000000, 878.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <rect id="Mask-Copy" fill="#FF323E" mask="url(#mask-2)" x="0" y="0" width="23" height="16"></rect>
+                <polygon id="Rectangle-83" fill="#FFCC51" mask="url(#mask-2)" points="0 0 14.2380952 8 0 16"></polygon>
+                <polygon id="Rectangle-83" fill="#262626" mask="url(#mask-2)" points="0 0 9.85714286 8 0 16"></polygon>
+                <polygon id="Star-8" fill="#FFFFFF" mask="url(#mask-2)" transform="translate(4.293831, 7.666491) rotate(-30.000000) translate(-4.293831, -7.666491) " points="4.29383075 8.81312504 2.86841505 9.80275915 3.39434601 8.17665931 1.98745971 7.16218698 3.73791861 7.14683612 4.29383075 5.53022364 4.8497429 7.14683612 6.6002018 7.16218698 5.1933155 8.17665931 5.71924645 9.80275915"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

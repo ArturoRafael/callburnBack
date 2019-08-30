@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="71px" viewBox="0 0 66 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>DocsIcon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M25.1320755,10.130017 L57.8037736,10.130017 C57.8037736,10.130017 65.951105,15.6171095 65.951105,18.3606557 C65.951105,21.104202 57.8037736,26.5912945 57.8037736,26.5912945 L25.1320755,26.5912945 L25.1320755,10.130017 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="40.8190295" height="16.4612776" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M0.324447517,29.1237988 L43.4831963,29.1237988 C43.4831963,29.1237988 51.5207547,34.6108913 51.5207547,37.3544375 C51.5207547,40.0979838 43.4831963,45.5850763 43.4831963,45.5850763 L0.324447517,45.5850763 L0.324447517,29.1237988 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="51.1963072" height="16.4612776" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <rect id="path-5" x="30.1584906" y="46.8513284" width="8.79622642" height="21.526286"></rect>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="8.79622642" height="21.526286" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <rect id="path-7" x="30.1584906" y="0" width="8.79622642" height="8.86376484"></rect>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="8.79622642" height="8.86376484" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Contact-Us" transform="translate(-480.000000, -863.000000)" stroke="#314E55">
+            <g id="Docs" transform="translate(308.000000, 863.000000)">
+                <g id="DocsIcon" transform="translate(172.000000, 0.000000)">
+                    <use id="Rectangle-1222" mask="url(#mask-2)" stroke-width="2.4" fill="#F28544" xlink:href="#path-1"></use>
+                    <use id="Rectangle-1222" mask="url(#mask-4)" stroke-width="2.4" fill="#73C9C9" transform="translate(25.922601, 37.354438) rotate(-180.000000) translate(-25.922601, -37.354438) " xlink:href="#path-3"></use>
+                    <use id="Rectangle-1224" mask="url(#mask-6)" stroke-width="2.4" xlink:href="#path-5"></use>
+                    <use id="Rectangle-1224" mask="url(#mask-8)" stroke-width="2.4" xlink:href="#path-7"></use>
+                    <path d="M49.0075472,62.0463539 C44.8435286,62.0463539 41.4679245,65.4478762 41.4679245,69.6438666" id="Oval-991" stroke-width="1.2"></path>
+                    <path d="M27.645283,62.0463539 C23.4812644,62.0463539 20.1056604,65.4478762 20.1056604,69.6438666" id="Oval-991" stroke-width="1.2" transform="translate(23.875472, 65.845110) scale(-1, 1) translate(-23.875472, -65.845110) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

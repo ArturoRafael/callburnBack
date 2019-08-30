@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>SB</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="16" rx="1.62"></rect>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#1CBE4F" offset="0%"></stop>
+            <stop stop-color="#159B3F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#0660D5" offset="0%"></stop>
+            <stop stop-color="#0051BB" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-5" points="0 0 23 0 0 16"></polygon>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-6">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-579.000000, -839.000000)">
+            <g id="SB" transform="translate(579.000000, 839.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <rect id="Mask-Copy" fill="url(#linearGradient-3)" mask="url(#mask-2)" x="0" y="0" width="23" height="16"></rect>
+                <g id="Rectangle-253" mask="url(#mask-2)">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                    <use fill="url(#linearGradient-4)" fill-rule="evenodd" xlink:href="#path-5"></use>
+                </g>
+                <polygon id="Rectangle-253" fill="#2C7442" mask="url(#mask-2)" transform="translate(11.500000, 8.000000) scale(-1, 1) translate(-11.500000, -8.000000) " points="0 0 23 16 0 16"></polygon>
+                <rect id="Rectangle-2" fill="#FFD646" mask="url(#mask-2)" x="-4.38095238" y="6.93333333" width="31.7619048" height="2.13333333"></rect>
+                <path d="M2.46428571,3.06666667 L1.65957971,3.47868933 L1.81326488,2.60601133 L1.16224406,1.98797734 L2.06193271,1.86065534 L2.46428571,1.06666667 L2.86663871,1.86065534 L3.76632737,1.98797734 L3.11530654,2.60601133 L3.26899171,3.47868933 L2.46428571,3.06666667 Z M7.94047619,3.06666667 L7.13577019,3.47868933 L7.28945536,2.60601133 L6.63843453,1.98797734 L7.53812319,1.86065534 L7.94047619,1.06666667 L8.34282919,1.86065534 L9.24251785,1.98797734 L8.59149702,2.60601133 L8.74518219,3.47868933 L7.94047619,3.06666667 Z M7.94047619,6.26666667 L7.13577019,6.67868933 L7.28945536,5.80601133 L6.63843453,5.18797734 L7.53812319,5.06065534 L7.94047619,4.26666667 L8.34282919,5.06065534 L9.24251785,5.18797734 L8.59149702,5.80601133 L8.74518219,6.67868933 L7.94047619,6.26666667 Z M2.46428571,6.26666667 L1.65957971,6.67868933 L1.81326488,5.80601133 L1.16224406,5.18797734 L2.06193271,5.06065534 L2.46428571,4.26666667 L2.86663871,5.06065534 L3.76632737,5.18797734 L3.11530654,5.80601133 L3.26899171,6.67868933 L2.46428571,6.26666667 Z M5.20238095,4.66666667 L4.39767495,5.07868933 L4.55136012,4.20601133 L3.90033929,3.58797734 L4.80002795,3.46065534 L5.20238095,2.66666667 L5.60473395,3.46065534 L6.50442261,3.58797734 L5.85340178,4.20601133 L6.00708695,5.07868933 L5.20238095,4.66666667 Z" id="Star-2" fill="#FFFFFF" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>
