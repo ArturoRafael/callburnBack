@@ -33,14 +33,16 @@ class NumberVerificationService{
 	public function createNumberVerification($numberData)
 	{
 		$phonenumber = $numberData['phone_number'];
-		$code = $numberData['code'];
-		$field = $this->phonenumber->where('phone_number', $phonenumber)->first();
+		$user = $numberData['user_email'];
+		$field = $this->phonenumber->where('phone_number', $phonenumber)->where('user_email', $user)->first();
 		if($field){
 			return $field->update($numberData);
 		}
 		$numField =  $this->phonenumber->create($numberData);
 		return $numField;
 	}
+
+	
 
 	/**
 	 * Get number by code.
@@ -51,7 +53,7 @@ class NumberVerificationService{
 	 */
 	public function getNumberVerification($code, $phonenumber)
 	{
-		$verificationRow = $this->phonenumber->where('phone_number', $phonenumber)->with('tariff')->first();
+		$verificationRow = $this->phonenumber->where('phone_number', $phonenumber)->first();
 		if(!$verificationRow){
 			return null;
 		}
@@ -78,24 +80,5 @@ class NumberVerificationService{
 		return $this->phonenumber->find($id)->delete();
 	}
 
-	/**
-	 * Check if users all caller ids are in the same country
-	 *
-	 * @param User $user
-	 * @param Tariff $newNumberTariff
-	 * @return bool
-	 */
-	public function checkIfAllCallerIdsHaveSameCountry($user, $newNumberTariff)
-	{
-		$callerIds = $user->numbers;
-		//If user does not have any caller id, 
-		//can add any valid number
-		if(!$callerIds){return true;}
-		foreach ($callerIds as $callerId) {
-			if($callerId->tariff->country->code != $newNumberTariff->country->code){
-				return false;
-			}
-		}
-		return true;
-	}
+	
 }

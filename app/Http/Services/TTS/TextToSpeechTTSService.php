@@ -83,7 +83,7 @@ class TextToSpeechTTSService{
 		file_put_contents($path, $audioContent);
 
 		$file = \App\Http\Models\File::create([
-			'orig_filename' => env('APP_URL').'uploads/audios_calls/'.$newName . '.mp3',
+			'orig_filename' => 'http://api.nelumbo.com.co/uploads/audios_calls/'.$newName . '.mp3',
 			'map_filename' => $newName . '.mp3',
 			'extension' => "mp3",
 			'stripped_name' => $newName,
@@ -101,8 +101,8 @@ class TextToSpeechTTSService{
 		$file->save();
         $file_s = \App\Http\Models\File::find($file->id);
         $gsmAudioFile = Helper::_stripFileExtension($newName).'.mp3';
-        $cmd = 'sox ' . $wavFileName . '.mp3 -r 8000 -c 1 ' . $uploadFolder . $gsmAudioFile . ' silence 1 0.1 1%';
-        $response = shell_exec( $cmd );
+        //$cmd = 'sox ' . $wavFileName . '.mp3 -r 8000 -c 1 ' . $uploadFolder . $gsmAudioFile . ' silence 1 0.1 1%';
+        //$response = shell_exec( $cmd );
         $length = $this->fileRepo->getFileSizeByPK($file_s->id);
         $file_s->length = ceil($length/1000);
         $file_s->save();

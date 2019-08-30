@@ -25,7 +25,6 @@ class NumberVerification extends Model {
 		'user_email', 
 		'phone_number', 
 		'code', 
-		'tariff_id', 
 		'retries', 
 		'created_at', 
 		'updated_at'
@@ -36,9 +35,6 @@ class NumberVerification extends Model {
 		return $this->belongsTo(\App\Http\Models\Users::class, 'user_email');
 	}
 
-	public function tariff()
-	{
-		return $this->belongsTo(\App\Http\Models\Tariff::class, 'tariff_id');
-	}
+	
 
 }

@@ -46,14 +46,14 @@ class SendEmailService{
 	 * @param User $user
 	 * @return void
 	 */
-	public function sendConfirmRegistrationEmail($user, $confirmation_code, $type_business, $rol)
+	public function sendConfirmRegistrationEmail($user, $confirmation_code)
 	{	
 		
-		$plainText = $this->stripHtmlTags((string)view('emails.new.confirm_registration', ['users' => $user, 'confirmation' => $confirmation_code,'business' => $type_business, 'rol' => $rol]));
+		$plainText = $this->stripHtmlTags((string)view('emails.new.confirm_registration', ['users' => $user, 'confirmation' => $confirmation_code]));
 		
-		\Mail::send('emails.new.confirm_registration', ['users' => $user, 'confirmation' => $confirmation_code, 'business' => $type_business, 'rol' => $rol], function ($m) use($user, $plainText) {
+		\Mail::send('emails.new.confirm_registration', ['users' => $user, 'confirmation' => $confirmation_code], function ($m) use($user, $plainText) {
             $m->from('support@callburn.com', 'Callburn');
-            $m->to($user->email, $user->first_name)->subject(trans('main.emails.subject_activate_your_account'));
+            $m->to($user->email, $user->first_name)->subject(trans('Subject activate your account'));
         	$m->addPart($plainText, 'text/plain');
 		});		
 	}

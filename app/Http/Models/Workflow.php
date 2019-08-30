@@ -21,11 +21,11 @@ class Workflow extends Eloquent
         'activate_before_hours' => 'bool'
 	];
 
-	protected $dates = [
-		'date_register',		
-		'date_begin',
-		'date_end'
-	];
+	// protected $dates = [
+	// 	'date_register',		
+	// 	'date_begin',
+	// 	'date_end'
+	// ];
     
     protected $fillable = [
         'id', 

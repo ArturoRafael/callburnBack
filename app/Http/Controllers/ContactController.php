@@ -97,8 +97,6 @@ class ContactController extends BaseController
         $groups = $request->input('array_group');
         $addGroup = false;
         if($request->input('array_group') != null && sizeof($request->input('array_group')) > 0){
-            
-
             for ($i=0; $i < sizeof($groups); $i++) { 
                 $group = Group::find($groups[$i]);
                 if (is_null($group)) {
@@ -108,7 +106,7 @@ class ContactController extends BaseController
         }
         $arrayContact = array();
         foreach ($phones as $phone) {            
-            $contact_exist = Contact::where('phone', $phone)->first();
+            $contact_exist = Contact::where('phone', $phone)->where('user_email', $user_now->email)->first();
 
             if (!$contact_exist) {
 
@@ -135,6 +133,24 @@ class ContactController extends BaseController
                     $addGroup = true;
                 }
 
+            }else if($request->input('array_group') != null && sizeof($request->input('array_group')) > 0){
+                
+                for ($i=0; $i < sizeof($groups); $i++) { 
+                    
+                    $group_contacto = GroupContact::where('id_contact', $contact_exist->id)->where('id_group', $groups[$i])->first();
+                    if(!$group_contacto){
+                        $group_contacto = new GroupContact();
+                        $group_contacto->id_contact = $contact_exist->id;
+                        $group_contacto->id_group = $groups[$i];
+                        $group_contacto->save();
+                    }
+                    
+                }
+                array_push($arrayContact, $contact_exist->toArray()); 
+                return $this->sendResponse($arrayContact, 'Contactos ya registrados, se asignaron a los grupos correspondientes.');
+
+            }else{
+                return $this->sendError('Los contactos ya se encuentran registrados');
             }
         }
         
@@ -359,6 +375,7 @@ class ContactController extends BaseController
                         
                         $cont->info_file = json_decode($cont->info_file);
 
+
                         array_push($arrayContact, $cont->toArray());
 
                     }
@@ -373,13 +390,11 @@ class ContactController extends BaseController
                     $contacts_bad = $arrayContactBad;
                     $contacts = compact('contacts_good', 'contacts_bad');
                     return $this->sendResponse($contacts, 'Contactos agregados y actualizados con éxito');
-                }
+                } 
                 $contacts_bad = $arrayContactBad;
                 $contacts = compact('contacts_bad');
                 return $this->sendResponse($contacts, 'Contactos con números inválidos');
-            }else{               
-                return $this->sendError('Los contactos ya se encuentran registrados');
-            }    
+            } 
         }
         
 

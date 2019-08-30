@@ -26,6 +26,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
 use Validator;
+
 use JWTAuth;
 
 class WorkflowController extends BaseController
@@ -331,11 +332,104 @@ class WorkflowController extends BaseController
      */
     public function workflow_user($email)
     {
-        $workflow = Workflow::with('usuario')->where('user_email', $email)->get();
+        
+        $user_now = JWTAuth::parseToken()->authenticate();
+        $email = $user_now->email;
+        $workflow = Workflow::where('user_email', $email)
+                    ->with("sms_recurrent")
+                    ->with("call_recurrent")
+                    ->with("keys")
+                    ->where('filter_type',3)
+                    ->orWhere('filter_type',4)
+                    ->orWhere('filter_type',5)
+                    ->get();        
+
+        //$workflow = Workflow::with('usuario')->where('user_email', $email)->get();
         if (is_null($workflow)) {
             return $this->sendError('Workflow no encontrado');
         }
-        return $this->sendResponse($workflow->toArray(), 'Workflows devueltos con éxito');
+        
+        $arr = array();
+        foreach ($workflow as $work) { 
+            
+            $startTime   = strtotime($work["date_register"]);
+            $work["date_register"] = date("d/m/Y",$startTime);
+
+            if(!is_null($work["date_begin"])){
+                $startTime   = strtotime($work["date_begin"]);
+                $work["date_begin"] = date("d/m/Y",$startTime);
+            }
+            
+            if(!is_null($work["date_end"])){
+                $startTime   = strtotime($work["date_end"]);
+                $work["date_end"] = date("d/m/Y",$startTime);
+            }
+
+            $total_sms = 0;
+            $total_call = 0;
+            $success_call = 0;
+            $success_sms = 0;
+
+            if($work["filter_type"] == 3){
+                foreach ($work["sms_recurrent"] as $sms) {
+                    $total_sms = $total_sms + 1;
+                    if($sms["status_code"] == 1){
+                        $success_sms = $success_sms + 1;
+                    }
+                }
+
+                $work['total_sms'] = $total_sms;
+                $work['success_sms'] = $success_sms;
+
+            }else if($work["filter_type"] == 4){
+
+                foreach ($work["call_recurrent"] as $call) {
+                    $total_call = $total_call + 1;
+                    if($call["call_status"] == 'ANSWERED'){
+                        $success_call = $success_call + 1;
+                    }
+                }
+
+                $work['total_call'] = $total_call;
+                $work['success_call'] = $success_call;
+
+            }else{
+
+                if($work["filter_type"] == 5){
+
+                    foreach ($work["call_recurrent"] as $call) {
+                        $total_call = $total_call + 1;
+                        if($call["call_status"] == 'ANSWERED'){
+                            $success_call = $success_call + 1;
+                        }
+                    }                   
+
+                    foreach ($work["sms_recurrent"] as $sms) { 
+                        $total_sms = $total_sms + 1;
+                        $total_call = $total_call + 1;                  
+                        if($sms["status_code"] == 1){
+                            $success_sms = $success_sms + 1;
+                        }
+                    }
+
+                    $work['total_call'] = $total_call;
+                    $work['success_call'] = $success_call;
+                    
+                    $work['total_sms'] = $total_sms;
+                    $work['success_sms'] = $success_sms;
+
+                }
+
+            }
+
+
+            
+            array_push($arr, $work);
+            
+        }
+       
+
+        return $this->sendResponse($arr, 'Workflows devueltos con éxito');
     }
 
    

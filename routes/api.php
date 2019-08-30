@@ -33,6 +33,7 @@ Route::group(['prefix' => 'auth', 'middleware' => 'jwt.auth'], function () {
     Route::post('block_user','UsersController@block_user');
     Route::get('user_invoice','UsersController@user_invoice');
     Route::post('languages_site','UsersController@languages_site');
+    Route::post('update_timezones','UsersController@update_timezones');
     Route::get('language_json','UsersController@language_json');
 
 
@@ -66,6 +67,8 @@ Route::group(['prefix' => 'auth', 'middleware' => 'jwt.auth'], function () {
 	Route::get('templates_workflows', 'WorkflowController@templates_workflows');
 	Route::get('groupworkflow_user/{email}', 'WorkflowController@groupworkflow_user');
 	Route::post('calculate_cost','WorkflowController@calculate_cost');
+	Route::get('export/{id}', 'WorkflowController@export_excel');
+	
 	
 	Route::apiResource('groupworkflow', 'GroupWorkflowController');
 	
@@ -86,9 +89,11 @@ Route::group(['prefix' => 'auth', 'middleware' => 'jwt.auth'], function () {
 	Route::apiResource('workflowcontactkey','WorkflowContactKeyController');
 
 	Route::post('verification/send-verification', 'VerificationsController@postSendVerificationCode');
+    Route::get('verification/verifacation-code', 'VerificationsController@verifacation_callerid_code');
     Route::get('verification/check-status', 'VerificationsController@getCheckCallStatus');
     Route::get('verification/caller-list', 'VerificationsController@getCaller');
     Route::post('verification/verify-number', 'VerificationsController@verifyPhonenumbers');
+    Route::post('verification/name-update', 'VerificationsController@postNameCallerid');
 
     Route::post('stripe/makepayment', 'StripeController@postMakePayment');
     Route::get('stripe/getCards', 'StripeController@getCards');

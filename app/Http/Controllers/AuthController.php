@@ -133,11 +133,8 @@ class AuthController extends BaseController
             'c_password' => 'string|min:3|same:password|required',
             'firstname' => 'required|max:200',
             'lastname' => 'required|max:200',
-            'phone' => 'nullable|max:200',
-            'businessname' => 'required',
-            'type_business' => 'integer|required',
-            'email_business_user' => 'nullable|email',
-            'idrol' => 'integer|required'           
+            'phone' => 'required|max:200',
+            'businessname' => 'required'                      
         ]);
 
 
@@ -151,56 +148,33 @@ class AuthController extends BaseController
         $firstname = $request['firstname'];
         $lastname = $request['lastname'];
         $phone = $request['phone'];
-        $businessname = $request['businessname'];
-        $type_business = $request['type_business']; 
-        $email_business_user = $request['email_business_user'];
-        $idrol = $request['idrol'];
+        $businessname = $request['businessname'];                 
+        $idrol = 1;
         $confirmation_code = str_random(60);
 
-        $type = TypeBusiness::find($type_business);
-        if (is_null($type)) {
-            return $this->sendError('Tipo de negocio indicado no encontrado');
-        }
+        $userData = [
+			'email' => $emailAddress,
+            'password' => bcrypt($password),
+            'firstname' => $firstname,
+			'lastname' => $lastname,
+            'phone' => $phone,
+            'businessname' => $businessname,            
+            'idrol' => $idrol,
+            'confirmation_code' => $confirmation_code
+		];
 
-        $rol = Rol::find($idrol);
-        if (is_null($rol)) {
-            return $this->sendError('Rol indicado no encontrado');
-        }
+        $newUser = Users::find($emailAddress);
 
-        if(!is_null($email_business_user)){
-
-            $user = Users::find($email_business_user);
-            if (is_null($user)) {
-            return $this->sendError('Usuario de negocio indicado no encontrado');
-            }
-
-        }
-		
-            $userData = [
-				'email' => $emailAddress,
-                'password' => bcrypt($password),
-                'firstname' => $firstname,
-				'lastname' => $lastname,
-                'phone' => $phone,
-                'businessname' => $businessname,
-                'id_type_business' => $type_business,
-                'idrol' => $idrol,
-                'email_business_user' => $email_business_user,
-                'confirmation_code' => $confirmation_code
-			];
-
-            $newUser = Users::find($emailAddress);
-
-            if (is_null($newUser)) {
-				
-                $newUser = Users::create($userData);                 
+        if (is_null($newUser)) {
 			
-			} else {
-                return $this->sendError('Usuario ya se encuentra registrado');			
-			}
+            $newUser = Users::create($userData);                 
+		
+		} else {
+            return $this->sendError('Usuario ya se encuentra registrado');			
+		}
 
-			/*Envío de confirmacion de email*/
-            $this->sendEmailRepo->sendConfirmRegistrationEmail($newUser, $confirmation_code ,$type->description, $rol->description);			
+		/*Envío de confirmacion de email*/
+        $this->sendEmailRepo->sendConfirmRegistrationEmail($newUser, $confirmation_code);			
 		
         return $this->sendResponse($newUser->toArray(), 'Usuario registrado exitosamente');
     }
