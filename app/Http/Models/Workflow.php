@@ -47,9 +47,7 @@ class Workflow extends Eloquent
         'date_begin', 
         'date_end',
         'activate_hours',
-        'activate_before_hours',
-        'created_at',
-        'updated_at'
+        'activate_before_hours'
     ];
     
    

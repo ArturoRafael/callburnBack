@@ -335,13 +335,13 @@ class WorkflowController extends BaseController
         
         $user_now = JWTAuth::parseToken()->authenticate();
         $email = $user_now->email;
-        $workflow = Workflow::where('user_email', $email)
-                    ->with("sms_recurrent")
+        $workflow = Workflow::with("sms_recurrent")
                     ->with("call_recurrent")
                     ->with("keys")
+                    ->where('user_email', $email)
                     ->where('filter_type',3)
                     ->orWhere('filter_type',4)
-                    ->orWhere('filter_type',5)
+                    ->orWhere('filter_type',5)                    
                     ->get();        
 
         //$workflow = Workflow::with('usuario')->where('user_email', $email)->get();
@@ -363,6 +363,18 @@ class WorkflowController extends BaseController
             if(!is_null($work["date_end"])){
                 $startTime   = strtotime($work["date_end"]);
                 $work["date_end"] = date("d/m/Y",$startTime);
+            }
+
+            if(!is_null($work["created_at"])){
+                $created = $work["created_at"]->toDateTimeString();
+                $startTime   = strtotime($created);
+                $work["created_at_at"] = date("d/m/Y",$startTime);
+            }
+
+            if(!is_null($work["updated_at"])){
+                $updated = $work["updated_at"]->toDateTimeString();
+                $startTime   = strtotime($updated);
+                $work["updated_at_at"] = date("d/m/Y",$startTime);
             }
 
             $total_sms = 0;
@@ -422,9 +434,10 @@ class WorkflowController extends BaseController
 
             }
 
-
+            if($user_now->email == $work['user_email']){
+                array_push($arr, $work);
+            }          
             
-            array_push($arr, $work);
             
         }
        
@@ -1380,7 +1393,11 @@ class WorkflowController extends BaseController
         $new_camping->is_blocked = 0;
         $new_camping->sms = $request->input("text_sms");
         $new_camping->cost = $valuetotal;
-        $new_camping->status = 1;
+        if($request->input("save")){
+            $new_camping->status = 4;
+        }else{
+            $new_camping->status = 1;
+        }
         $new_camping->filter_type = 3;
         $new_camping->user_email = $user_now->email;
         $new_camping->date_register = Carbon::now();
@@ -1576,7 +1593,6 @@ class WorkflowController extends BaseController
         //     return $this->sendError('No se pudo encontrar el pago');
         // }
 
-
         if( !is_null($request->input("interaccion")) ){
             $this->addInteraccion($request->input("interaccion"), $camping_id);            
         }
@@ -1711,7 +1727,7 @@ class WorkflowController extends BaseController
                         if($i%2 == 0){
                             array_push($phoneNumbersForSendCall,  $phonconvert);
                         }else{
-                            array_push($phoneNumbersForSendSms,  $number_cost);
+                            array_push($phoneNumbersForSendSms,  array("phone" =>  $phonconvert, "cost" => $value));
                         }
                     }else{
                         array_push($phoneNumbersForSendCall,  $phonconvert);
@@ -1774,7 +1790,7 @@ class WorkflowController extends BaseController
                
         }
 
-       
+
     
         $name = $request->input("name");
         $smsText = $request->input("text_sms");
@@ -1804,6 +1820,23 @@ class WorkflowController extends BaseController
 
         $new_camping->save();
         $camping_id = $new_camping->id;
+
+
+        $part = 1;        
+        if(strlen($smsText) > 153){
+            $cut = 153;
+            $i = 1 ;
+            $part = 1;            
+            do{
+                $i = $i + 1;
+                if(strlen($smsText) > $cut){
+                    $part = $part + 1;
+                }else{
+                    break;
+                }
+                $cut = 153 * $i;
+            }while(1);
+        }
 
         
         // $invoice = $this->invoiceRepo->setInvoiceWorkflow($request->input("id_invoice"), $camping_id);
@@ -1846,17 +1879,19 @@ class WorkflowController extends BaseController
 
             $senderName = $request->input("sender_name_sms");
             $simulacion = $request->input("simulacion");
-            if(!$simulacion){
-                $callSmsResponse = $this->sendSmsToMultipleRecipients($phoneNumbersForSendSms, $smsText, $senderName, $camping_id);
-            }else{
-                $callSmsResponse = $this->simulacionSmsToMultipleRecipients($phoneNumbersForSendSms, $smsText, $senderName, $camping_id);
+            
+            if(count($phoneNumbersForSendSms) > 0){
+                if($simulacion){
+                    $callSmsResponse = $this->simulacionSmsToMultipleRecipients($phoneNumbersForSendSms, $smsText, $senderName, $part, $camping_id);
+
+                    if($callSmsResponse->status == false){
+                        return $this->sendError('Error SMS', $callSmsResponse);
+                    }
+                }
             }
 
             Workflow::find($camping_id)->update(['updated_at' => Carbon::now(), 'date_end' => Carbon::now(), 'date_begin' => Carbon::now()]); 
-
-            if($callSmsResponse->status == false){
-                return $this->sendError('Error SMS', $callSmsResponse);
-            }
+            
             return $this->sendResponse_message('El workflow recurrente CALL-SMS se ha ejecutado de forma exitosa.');
 
         }else{
@@ -2083,7 +2118,7 @@ class WorkflowController extends BaseController
         
         if($type == 1){
 
-            $response = GroupWorkflow::where('destination_number',$phoneNumbers)
+            $response = GroupWorkflow::where('destination_number',$phoneNumbers['phone'])
                           ->where('id_workflow',$idCampaign)->first();
 
             if(!$response){
